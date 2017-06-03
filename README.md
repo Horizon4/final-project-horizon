@@ -1,7 +1,9 @@
 # final-project-horizon
-(the following will be removed from read.md before sprint 0 submission)  
+The following is to be removed from read.md before sprint 0 submission.  
 
 ## Tasks: ##
+Product Backlog -> Zain
+
 UI/UX Tasks -> Howard
 
 summary.md -> Jason
