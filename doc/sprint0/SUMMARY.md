@@ -13,11 +13,11 @@ Leo Thompson - Eighteen-year-old Leo Thompson is one of two children in a family
 
 # **Key Scenarios**:
 
-Michael Bordan doesn't know what he wants to do after graduation so his father suggested a vacation to clear up his mind, he went with it. However he doesn't have any plans of where to go and what to do where ever he decides to. He feels a vacation would definitely help him but, he needs suggestions to help him decide where to go.
+Michael Bordan doesn't know what he wants to do after graduation so his father suggested a vacation to several countries in Europe like France, Rome, Germany and Sweden to clear up his mind, and he went with it. However he doesn't have any plans of where to go in those countries. He feels a vacation would definitely help him but, he needs suggestions to help him decide where to go and something within his budget of $2000.
 
-Peter Garret has been planning for a vacation for 2 years and has most of his trip planned out already but, he noticed quite a few gaps on some days inbetween his events. He has room in his budget to add a couple more events to his itinerary but, doesn't know what else to add. 
+Peter Garret has been planning for a vacation to 3 week Mozambique for 2 years and has most of his trip planned out already but, he noticed on his last day he doesn't really have any events to go to. He has $250 left in his budget of $5000 to add a couple more events to his itinerary but, doesn't know what else to add. 
 
-Leo Thompson and his friends got a paid vacation from their parents as a present for graduating but, on the circumstance that they would come up with a suitable itinerary and present it to their parents for a review. Leo didn't want to make one but, came up short when he and his friends drew straws. He and his friends mostly want to visit the big tourist attractions and eat cultural food within their budget.
+Leo Thompson and his friends got a paid vacation of $1000 to Mexico for 5 days from their parents as a present for graduating but, on the circumstance that they would come up with a suitable itinerary and present it to their parents for a review. Leo didn't want to make one but, came up short when he and his friends drew straws. He and his friends mostly want to visit Coba, Chapultepec and the National Museum of Antrhopology and eat tacos.
 
 # **Key Principles**:
 Customer Satisfaction over System Efficieny-The design should provide a seamless itinerary even if it incurs an expense or inefficieny in the flight system.
