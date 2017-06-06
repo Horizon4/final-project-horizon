@@ -54,4 +54,14 @@
 - Condition of Satisfaction
     1. When I enter origin and destination, I should see a list of all the itineraries that have been chosen from that origin and destination
 
-### Story 8 
+### Story 8
+
+- save changes as we go along
+
+### Story 9
+
+- As a developer, make recommendations if none exists
+
+### Story 10
+
+- Make 2 different destination point allowable
