@@ -9,3 +9,12 @@ Sketch Done (agreed in meeting):
 -done
 
 https://www.scrumalliance.org/community/articles/2008/september/definition-of-done-a-reference
+
+1. Identification of higher and lower priority tasks & features is noted and classified with respects to time by the team.
+2. Requirement analysis is regularly updated and implement. There are no remaining requirements.
+3. Initial components of original design is implemented completely and adjusted according to changing requirements. 
+4. Implementation of all noted features is completed in accordance to the use cases, source code is commented appropriately and documentation is provided.
+5. Testing is throughly completed in the following sub-steps.
+  i) Basic Functionality Testing, where individual functions and methods are tested.
+  ii) Unit Testing, such as edge cases, extreme cases and missing normal cases are tested.
+  iii) Integration Testing, where methods are tested in union with other methods
