@@ -15,7 +15,7 @@ Goal: Definiton of done is relevant to the project and applies to all stories [m
   iii) Integration Testing, where methods are tested in union with other methods.  
   iv) Systems Testing, where the application is tested as one peice of software and a complete application. 
   
-6. Debugging has been performed on all key scenarios and on any failing test cases. The following sub-steps have been taken to ensure no failures exist within the application before deployement.
+6. Debugging has been performed on all key scenarios and on any failing test cases. The following sub-steps have been taken to ensure no failures exist within the application before deployement.  
   i) Identify any existing bugs.  
   ii) Isolating and fixing them.  
   iii) Implementing a solution for the bug.  
