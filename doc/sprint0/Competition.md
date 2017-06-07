@@ -1,20 +1,23 @@
 ## Competition
  
 ##### TripAdvisor
+www.tripadvisor.ca
 - Compare lowest hotel prices from 200+ booking sites
 - Browse reviews and photos, create your own
 - Find and reserve restaurants
 - Discover destinations, landmarks, review them, etc.
  
 ##### KAYAK
+www.ca.kayak.com
 - Private deals discounts offered
-- Books flights, hotels, rental cars (flights have a price forecast)
+- Books flights, hotels, rental cars, trains, etc (flights have a price forecast)
 - Filter flight searches based on a variety of options, Can share search results in groups
 - Navigate airports
 - Find shops, food, lounges, etc
 - Flight tracking
  
 ##### Expedia
+www.expedia.ca
 - Offers hotel deals
 - Rent cars, book flights and hotels, cruises, etc
 - Subscription provides discounts on hotels
