@@ -3,7 +3,7 @@ Goal: Definiton of done is relevant to the project and applies to all stories [m
 
 1. Identification of higher and lower priority tasks & features is noted and classified with respects to time by the team.
 
-2. Requirement analysis is regularly updated and implement. There are no remaining requirements.
+2. Requirement analysis is regularly updated and implemented. There are no remaining requirements.
 
 3. Initial components of original design is implemented completely and adjusted according to changing requirements. 
 
