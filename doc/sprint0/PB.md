@@ -2,7 +2,7 @@
 
 ## Point Scale
 
- - 1 to 10, 1 being low priority and 10 being high priority
+ - 1 to 10, 1 being 3 hours of work and 10 being 30 hours of work
 
 ## User Stories
 
@@ -14,14 +14,18 @@
 - Condition of Satisfaction
     1. When I click sign-up I should be able to add username and password that will become my credentials
     2. After entering my username and password when I press login I should be taken to my home screen
+    
+- Point = 2
 
 ### Story 2
 
-- As a traveller, I should be able to search for flights from one destination to another destination so that I can include flights as part of my travelling budget
+- As a traveller, I should be able to search for flights from one destination to another destination so that I can include flights as part of my travelling itenrary
 
 - Condition of Satisfaction
     1. When I enter a from destination and to destination with a date selected, I should get a list of all the flights
     2. Select a particular flight and it becomes part of my budget
+   
+- Point = 3
 
 ### Story 3
 
@@ -30,6 +34,8 @@
 - Condition of Satisfaction
     1. When I go to the dashboard under the budgets tab I should be able to see all the budgets I have created
     2. When I click select a budget I should be able to see all of the details about it  
+    
+- Point = 3
 
 ### Story 4
 
@@ -37,6 +43,8 @@
 
 - Condition of Satisfaction
     1. When I am creating a budget I should be able to see in the process bar how far into the budget creating process I am
+  
+ - point = 3
 
 ### Story 5
 
@@ -44,6 +52,8 @@
 
 - Condition of Satisfaction
     1. Based on the budget's origin and destination, I should be shown accommodations like hotels or Airbnb's so that I can pick the accommodations to stay at
+    
+- point = 
 
 ### Story 6
 - As a traveller, I should be able to select all the attractions of the destination countries so that I can have an enjoyable experience during my travel and save money
