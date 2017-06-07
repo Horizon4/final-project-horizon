@@ -2,7 +2,7 @@
 
 ## Point Scale
 
- - 1 to 10, 1 being 3 hours of work and 10 being 30 hours of work
+ - 1 to 10, Each point represents about 3 hours of work
 
 ## User Stories
 
@@ -14,52 +14,57 @@
 - Condition of Satisfaction
     1. When I click sign-up I should be able to add username and password that will become my credentials
     2. After entering my username and password when I press login I should be taken to my home screen
-    
+
+- Priority =
 - Point = 2
 
 ### Story 2
 
-- As a traveller, I should be able to search for flights from one destination to another destination so that I can include flights as part of my travelling itenrary
+- As a clueless traveller, I should be guided along in my itinerary creation by making me pick the essential requirements like flights, hotels etc so that I have a good travelling experience
 
 - Condition of Satisfaction
-    1. When I enter a from destination and to destination with a date selected, I should get a list of all the flights
-    2. Select a particular flight and it becomes part of my budget
-   
+    1. When I am creating an itinerary I should be able to see in the process bar how far into the budget creating process I am
+
+- Priority =  
 - Point = 3
 
 ### Story 3
+
+- As a picky traveller, I should be able to enter flight preferences like first-class, business-class etc and how much of budget should be allocated to the flight section so that I can see preferred flights as part of my travelling itenrary
+
+- Condition of Satisfaction
+    1. When I click submit I should see flights according to my criteria selected for me in each of the itinerary
+    2. If no flights exist under that budget suggest me an allocation of the budget
+
+- Priority =
+- Point =
+
+### Story 4
+
+- As a picky traveller, I should be able to enter my accommodations details like how many bedrooms, star-rating and how much of my budget should be allocated to the accommodations section so that I can see itineraries based on my accommodations preferences
+
+- Condition of Satisfaction
+    1. When I click submit I should see itineraries with both accommodations and flights at this point
+    2. If no accommodations exist under that budget suggest me an allocation of the budget to the accommodations section
+
+- Priority =
+- Point =
+
+### Story 5
+- As a traveller, I should be able to select all the attractions of the destination countries so that I can have an enjoyable experience during my travel and save money
+
+- Condition of Satisfaction
+    1. When creating a budget, on the attractions section I should be able to see all the attractions with their price points
+
+### Story 6
 
 - As a traveller, I want to be able to see my travelling budgets on the home screen so that I can navigate between different budgets easily
 
 - Condition of Satisfaction
     1. When I go to the dashboard under the budgets tab I should be able to see all the budgets I have created
     2. When I click select a budget I should be able to see all of the details about it  
-    
+
 - Point = 3
-
-### Story 4
-
-- As a clueless traveller, I should be guided along in my budget creation by making me pick the essential requirements like flights, hotels etc so that I have a good travelling experience
-
-- Condition of Satisfaction
-    1. When I am creating a budget I should be able to see in the process bar how far into the budget creating process I am
-  
- - point = 3
-
-### Story 5
-
-- As a traveller, I should be able to select accommodations based on the current budget details so that I have a place to stay when I am travelling
-
-- Condition of Satisfaction
-    1. Based on the budget's origin and destination, I should be shown accommodations like hotels or Airbnb's so that I can pick the accommodations to stay at
-    
-- point = 
-
-### Story 6
-- As a traveller, I should be able to select all the attractions of the destination countries so that I can have an enjoyable experience during my travel and save money
-
-- Condition of Satisfaction
-    1. When creating a budget, on the attractions section I should be able to see all the attractions with their price points
 
 ### Story 7
 
@@ -89,10 +94,3 @@
 
 - Condition of Satisfaction
     1. When I wish to visit more than one destination, I should be able to toggle on a field to do this option
-
-### Story 11
-
-- As a traveller on a budget, I should be able to enter a budget and see the budget decrease as I go along in the process of completing a travel itinerary
-
-- Condition of Satisfaction
-    1. As completing my travel itinerary, I should be able to see my current remaining budget around the corner of the screen
