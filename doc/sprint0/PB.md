@@ -23,10 +23,10 @@
 - As a clueless traveller, I should be guided along in my itinerary creation by making me pick the essential requirements like flights, hotels etc so that I have a good travelling experience
 
 - Condition of Satisfaction
-    1. When I am creating an itinerary I should be able to see in the process bar how far into the budget creating process I am
+    1. When I am creating an itinerary I should be able to see in the process bar how far into the itinerary creating process I am
 
 - Priority =  
-- Point = 3
+- Point =
 
 ### Story 3
 
@@ -51,46 +51,66 @@
 - Point =
 
 ### Story 5
-- As a traveller, I should be able to select all the attractions of the destination countries so that I can have an enjoyable experience during my travel and save money
+- As a picky traveller, I should be able to select my preferences of the attractions of the destination countries like food, places etc and also select how much of the budget to allocate to attractions so that I can have an enjoyable experience during my travel and save money
 
 - Condition of Satisfaction
-    1. When creating a budget, on the attractions section I should be able to see all the attractions with their price points
+    1. When I click submit I should see itineraries with flights, accommodations and attractions at this point
+
+- Priority =
+- Point =
 
 ### Story 6
 
-- As a traveller, I want to be able to see my travelling budgets on the home screen so that I can navigate between different budgets easily
+- As a clueless traveller, I want to be able to see all the completed itineraries on the dashboard so that I can navigate between different itineraries easily
 
 - Condition of Satisfaction
-    1. When I go to the dashboard under the budgets tab I should be able to see all the budgets I have created
-    2. When I click select a budget I should be able to see all of the details about it  
+    1. When I go to the dashboard under the completed itineraries tab I should be able to see all the completed itineraries I have created
+    2. When I select an itinerary I should be able to see all of the details about it  
 
-- Point = 3
+- Priority =
+- Point =
 
 ### Story 7
+
+- As a lazy traveller, I want to able to see all the incompleted itineraries on the dashboard so that I can select one and complete it
+
+- Condition of Satisfaction
+    1. When I go to the dashboard under the incompleted itineraries tab I should be able to see all the incompleted itineraries
+    2. When I select an itinerary I should be able to complete it
+
+- Priority =
+- Point =
+
+### Story 8
 
 - As a clueless traveller, I should be able to search for recommendations by giving out origin and destination so that I have an idea of what others have chosen in the past
 
 - Condition of Satisfaction
     1. When I enter origin and destination, I should see a list of all the itineraries that have been chosen from that origin and destination
 
-### Story 8
+- Priority =
+- Point =
 
-- As a lazy traveller, I should be able to save my itineraries whenever I want so that I can come back later and complete the itenrary
+### Story 9
+
+- As a lazy traveller, I should be able to save my itinerary creating process whenever I want so that I can come back later and complete the itenrary
 
 - Condition of Satisfaction
     1. There should be a button like save changes on which I can click to save the itinerary which will save the current changes so far
 
+- Priority =
+- Point =
 
-### Story 9
+### Story 10
+
+- As an picky traveller, I should be able to select more than one destination so that I can visit multiple places
+
+- Condition of Satisfaction
+    1. When I wish to visit more than one destination, I should be able to toggle on a field to do this option
+
+### Story 11
 
 - As a developer, when a user searches for an itinerary and if no data exists in the database I should create my own recommendations in the background to show the user
 
 - Condition of Satisfaction
     1. When a user searches for a recommendations, I should be able to show recommendations even if nothing exists
-
-### Story 10
-
-- As an avid traveller, I should be able to select more than 1 destination so that I can visit multiple places
-
-- Condition of Satisfaction
-    1. When I wish to visit more than one destination, I should be able to toggle on a field to do this option
