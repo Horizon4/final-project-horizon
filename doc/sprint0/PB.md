@@ -2,6 +2,10 @@
 
 ## User Stories
 
+## Point Scale
+
+ - 1 to 10, 1 being low priority and 10 being high priority
+
 ### Story 1
 
 
