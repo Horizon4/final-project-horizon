@@ -1,9 +1,9 @@
 Team Organization
-  
-  
-  
+  
+  For sprint 0, we split it up into 7 tasks so that for each member of the group has a role to do for sprint 0. 
+  
 Decision Making
-  
+  
   
   
 Prioritizing User Stories
@@ -19,6 +19,4 @@ Tools Used
 
 
 Next Phase
-  
-  
   
