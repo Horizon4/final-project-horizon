@@ -16,7 +16,8 @@ Meetings
 
 Tools Used
 
-
+ The tools we used for messaging each other were messenger and slack.
 
 Next Phase
   
+  For the next sprint, we need to improve how we go about scheduling meetings in person. Perhaps, using a scheduling system such as doodle, or each member checking off their availability. 
