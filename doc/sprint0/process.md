@@ -8,7 +8,7 @@ Decision Making
   
 Prioritizing User Stories
 
-  
+  To prioritize user stories, we all met up in person to listen to the user stories and each member decided on a scale of 1-10 how difficult each user story would be. 
   
 Meetings
 
