@@ -56,12 +56,29 @@
 
 ### Story 8
 
-- save changes as we go along
+- As a lazy traveller, I should be able to save my itineraries whenever I want so that I can come back later and complete the itenrary
+
+- Condition of Satisfaction
+    1. There should be a button like save changes on which I can click to save the itinerary which will save the current changes so far
+
 
 ### Story 9
 
-- As a developer, make recommendations if none exists
+- As a developer, when a user searches for an itinerary and if no data exists in the database I should create my own recommendations in the background to show the user
+
+- Condition of Satisfaction
+    1. When a user searches for a recommendations, I should be able to show recommendations even if nothing exists
 
 ### Story 10
 
-- Make 2 different destination point allowable
+- As an avid traveller, I should be able to select more than 1 destination so that I can visit multiple places
+
+- Condition of Satisfaction
+    1. When I wish to visit more than one destination, I should be able to toggle on a field to do this option
+
+### Story 11
+
+- As a traveller on a budget, I should be able to enter a budget and see the budget decrease as I go along in the process of completing a travel itinerary
+
+- Condition of Satisfaction
+    1. As completing my travel itinerary, I should be able to see my current remaining budget around the corner of the screen
