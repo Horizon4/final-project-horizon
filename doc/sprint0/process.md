@@ -21,13 +21,11 @@ process.md -> Colleen
   
 ## Decision Making
 
-We made decisions through a lot of discussion in person and through messaging applications???
+We made decisions through a lot of discussion in person and through messaging applications. The majority of the time, we would meet up in person so that it is easier to discuss topics.
 
 ## Prioritizing User Stories
 
-To prioritize user stories, we all met up in person to listen to the user stories and each member decided on a scale of 1-10 how much time would be spent on implementing the features that the user stories described. 
-
-This took 2 rounds?
+To prioritize user stories, we all met up in person to listen to the user stories and each member decided on a scale of 1-10 how much time would be spent on implementing the features that the user stories described. Since we were not able to complete it all, we decided to create a file that allowed us to put in the amount of points we think each user story deserves.
 
 ## Meetings
 
@@ -35,7 +33,7 @@ We have decided to collectively meet weekly in person to address any questions o
 
 ## Tools Used
 
-The tools we used for messaging each other were messenger and slack.
+The tools we used for messaging each other were messenger and slack. To design the layout of the web application, we used inkscape.
 
 ## Next Phase
 
