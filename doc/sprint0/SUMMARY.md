@@ -9,7 +9,7 @@ Michael Bordan - A fresh graduate who has just completed his bachelors in comput
 
 Peter Garret - Fourty-five-year-old father of three children. He works at the Hasbro toy company as a toy maker and likes to grab a drink with friends at the same Irish pub in the city.
 
-Leo Thompson - Eighteen-year-old Leo Thompson is one of two children in a family of four people. He is very smart and does well in school, but is shy, has no motivation to do anything, and only has a couple of friends, Donny and Raph.
+Leo Thompson - Eighteen-year-old Leo Thompson is one of two children in a family of four people. His grades are not the best because sometimes he is too lazy to go school and doesn't spend the time and effort to study or complete his work.
 
 # **Key Scenarios**:
 
