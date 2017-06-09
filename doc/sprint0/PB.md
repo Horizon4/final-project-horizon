@@ -2,7 +2,9 @@
 
 ## Point Scale
 
- - 1 to 10, Each point represents about 3 hours of work
+ - 1 to 10, Each point represents about 3 hours of work(Story points)
+
+ - 1 to 5, 1 being less time constraint and 5 being highly intensive work that depends a lot on the other
 
 ## User Stories
 
@@ -15,7 +17,7 @@
     1. When I click sign-up I should be able to add username and password that will become my credentials
     2. After entering my username and password when I press login I should be taken to my home screen
 
-- Priority =
+- Priority = 1
 - Point = 2
 
 ### Story 2
@@ -25,8 +27,8 @@
 - Condition of Satisfaction
     1. When I am creating an itinerary I should be able to see in the process bar how far into the itinerary creating process I am
 
-- Priority =  
-- Point =
+- Priority = 2
+- Point = 4
 
 ### Story 3
 
@@ -36,8 +38,8 @@
     1. When I click submit I should see flights according to my criteria selected for me in each of the itinerary
     2. If no flights exist under that budget suggest me an allocation of the budget
 
-- Priority =
-- Point =
+- Priority = 5
+- Point = 6
 
 ### Story 4
 
@@ -47,8 +49,8 @@
     1. When I click submit I should see itineraries with both accommodations and flights at this point
     2. If no accommodations exist under that budget suggest me an allocation of the budget to the accommodations section
 
-- Priority =
-- Point =
+- Priority = 5
+- Point = 8
 
 ### Story 5
 - As Peter, I should be able to select my preferences of the attractions of the destination countries like food, places etc and also select how much of the budget to allocate to attractions so that I can have an enjoyable experience during my travel and save money
@@ -56,8 +58,8 @@
 - Condition of Satisfaction
     1. When I click submit I should see itineraries with flights, accommodations and attractions at this point
 
-- Priority =
-- Point =
+- Priority = 5
+- Point = 10
 
 ### Story 6
 
@@ -67,8 +69,8 @@
     1. When I go to the dashboard under the completed itineraries tab I should be able to see all the completed itineraries I have created
     2. When I select an itinerary I should be able to see all of the details about it  
 
-- Priority =
-- Point =
+- Priority = 3
+- Point = 3
 
 ### Story 7
 
@@ -78,8 +80,8 @@
     1. When I go to the dashboard under the incompleted itineraries tab I should be able to see all the incompleted itineraries
     2. When I select an itinerary I should be able to complete it
 
-- Priority =
-- Point =
+- Priority = 3
+- Point = 4
 
 ### Story 8
 
@@ -88,8 +90,8 @@
 - Condition of Satisfaction
     1. When I enter origin and destination, I should see a list of all the itineraries that have been chosen from that origin and destination
 
-- Priority =
-- Point =
+- Priority = 4
+- Point = 5
 
 ### Story 9
 
@@ -98,8 +100,8 @@
 - Condition of Satisfaction
     1. There should be a button like save changes on which I can click to save the itinerary which will save the current changes so far
 
-- Priority =
-- Point =
+- Priority = 2
+- Point = 4
 
 ### Story 10
 
@@ -108,8 +110,8 @@
 - Condition of Satisfaction
     1. When I wish to visit more than one destination, I should be able to toggle on a field to do this option
 
-- Priority =
-- Point =
+- Priority = 3
+- Point = 6
 
 ### Story 11
 
@@ -118,5 +120,5 @@
 - Condition of Satisfaction
     1. When a user searches for a recommendations, I should be able to show recommendations even if nothing exists
 
-- Priority =
-- Point =
+- Priority = 4
+- Point = 8
