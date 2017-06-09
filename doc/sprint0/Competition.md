@@ -31,4 +31,4 @@ What will make our product different is that it will focus more on the trip buil
 
 This product will be better for the specific users that know they want to travel with a budget, but aren’t too sure about attractions and planning. The competitors seemed to focus more on providing an easy and convenient way for trips to be set up.
 
-However, our product could also be aimed towards users who know exactly what they are looking for. The search aspect of our application will be designed so it can range from asking you every detail about your trip plans to not much at all (depending on what the user prefers). That gives our app the power of both costumization and a guided user experience. 
+However, our product is also aimed towards users who know exactly what they are looking for. The search aspect of our application will be designed so it can range from asking you every detail about your trip plans to not much at all (depending on what the user prefers). That gives our app the power of both costumization and a guided user experience. 
