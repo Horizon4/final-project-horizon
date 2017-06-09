@@ -5,7 +5,7 @@ Build a piece of software that creates an itinerary for a potential traveller af
  
 # **Key Personas**: 
 
-Michael Bordan - A fresh graduate who has just completed his bachelors in computer science.He became a tech-savvy individual who can fluently develop web and mobile applications but, cannot make decisions well and always needs help to arrive at one.
+Michael Bordan - A fresh graduate who has just completed his bachelors in computer science. He became a tech-savvy individual who can fluently develop web and mobile applications but, cannot make decisions well and always needs help to arrive at one.
 
 Peter Garret - Fourty-five-year-old father of three children. He works at the Hasbro toy company as a toy maker and likes to grab a drink with friends at the same Irish pub in the city.
 
