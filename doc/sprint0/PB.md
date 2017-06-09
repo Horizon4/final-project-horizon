@@ -22,7 +22,7 @@
 
 ### Story 2
 
-- As Michael, I should be guided along in my itinerary creation by making me pick the essential requirements like flights, hotels etc so that I have a good travelling experience
+- As Michael, I should be guided along in my itinerary creation by making me pick the minimal details about flights, hotels etc and I should see a visual of the process so that I have a good travelling experience with the help of the website's guidance
 
 - Condition of Satisfaction
     1. When I am creating an itinerary I should be able to see in the process bar how far into the itinerary creating process I am
