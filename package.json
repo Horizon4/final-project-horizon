@@ -1,0 +1,27 @@
+{
+  "name": "horizon",
+  "version": "1.0.0",
+  "description": "A travel budgeting app",
+  "main": "src/backend/app.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UTSCCSCC01/final-project-horizon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UTSCCSCC01/final-project-horizon/issues"
+  },
+  "homepage": "https://github.com/UTSCCSCC01/final-project-horizon#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.28"
+  }
+}
