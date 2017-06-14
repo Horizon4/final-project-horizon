@@ -16,7 +16,7 @@ app.use(function (req, res, next){
 });
 
 var MongoClient = require('mongodb').MongoClient
-  , assert = require('assert');
+var assert = require('assert');
 
 var url = 'mongodb://localhost:27017/horizon';
 
