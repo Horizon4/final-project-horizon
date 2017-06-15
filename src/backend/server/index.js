@@ -1,10 +1,14 @@
 import express from 'express';
-import dbConfig from './config/db.js';
+import dbConfig from './config/db';
+import middlewareConfig from './config/middlewares';
 
 const app = express();
 
 // DATABASE
 dbConfig();
+
+//Middleware
+middlewareConfig(app);
 
 const PORT = process.env.PORT || 3000;
 
