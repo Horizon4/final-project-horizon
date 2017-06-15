@@ -16,6 +16,14 @@ class user {
 export const createUser = (req, res) => {
   var data = new user(req.body);
   console.log("got the data", data);
+  const { username, salt, saltedHash } = data
+  const newUser = new User({ username, salt, saltedHash });
 
-  return res.status(201);
+  newUser.save()
+  .then((user) => {
+    return res.status(201).json({ user });
+  })
+  .catch((err) => {
+    return res.status(500).json({ error: true, message: 'Error with creating a user'})
+  })
 }

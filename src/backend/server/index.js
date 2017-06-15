@@ -1,5 +1,6 @@
 import express from 'express';
 import dbConfig from './config/db';
+var Promise = require("bluebird");
 import middlewareConfig from './config/middlewares';
 import { UserRoutes } from './modules/index';
 const app = express();
