@@ -15,7 +15,6 @@ class user {
 
 export const createUser = (req, res) => {
   var data = new user(req.body);
-  console.log("got the data", data);
   const { username, salt, saltedHash } = data
   const newUser = new User({ username, salt, saltedHash });
 
