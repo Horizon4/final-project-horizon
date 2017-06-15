@@ -63,7 +63,7 @@
 
 ### Story 6
 
-- As Michael, I want to be able to see all the completed itineraries on the dashboard so that I can navigate between different itineraries easily
+- As Michael, I want to be able to see all the completed itineraries on the dashboard so that I can navigate between different itineraries easily, and also so I can easily access them throughout my trip and have a guided experience 
 
 - Condition of Satisfaction
     1. When I go to the dashboard under the completed itineraries tab I should be able to see all the completed itineraries I have created
