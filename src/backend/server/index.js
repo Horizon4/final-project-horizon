@@ -1,7 +1,7 @@
 import express from 'express';
 import dbConfig from './config/db';
 import middlewareConfig from './config/middlewares';
-
+import { UserRoutes } from './modules/index';
 const app = express();
 
 // DATABASE
@@ -9,6 +9,8 @@ dbConfig();
 
 //Middleware
 middlewareConfig(app);
+
+app.use('/api', [UserRoutes]);
 
 const PORT = process.env.PORT || 3000;
 
