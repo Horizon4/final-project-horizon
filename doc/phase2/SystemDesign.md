@@ -1,3 +1,5 @@
+## CRC
+
     Classname: User
     Parent class: NA
     Subclasses: NA
@@ -92,3 +94,6 @@
     Responsibilities:
         - cuisine
     Collaborators:
+
+
+Node.js 7, MongoDB, plus dependencies in package.json are needed.
