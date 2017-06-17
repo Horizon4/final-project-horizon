@@ -7,7 +7,7 @@ export default function reducer(state=defaultState, action) {
   switch (action.type) {
     case 'createUser':
       return Object.assign({}, state, {
-        username: action.payload.username
+        username: action.payload.user.username
       });
     case 'createUserError':
       return Object.assign({}, state, {
