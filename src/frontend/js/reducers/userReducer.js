@@ -11,7 +11,7 @@ export default function reducer(state=defaultState, action) {
       });
     case 'createUserError':
       return Object.assign({}, state, {
-        error: action.payload.error
+        error: action.payload
       })
     default:
       return state;

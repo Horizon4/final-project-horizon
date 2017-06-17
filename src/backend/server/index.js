@@ -17,10 +17,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + "/../../frontend"));
 
-app.get('/', function (req, res, next) {
-    res.redirect('/index.html');
-    return next();
-});
+// app.get('*', function (req, res, next) {
+//     res.redirect('/index.html');
+// });
 
 app.listen(PORT, err => {
   if (err) {
