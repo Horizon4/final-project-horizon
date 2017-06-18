@@ -3,26 +3,60 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Horizon</title>
+        <title>Project Horizon</title>
 
+        <link rel="stylesheet" type="text/css" href="_Shared/css/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" href="_Shared/css/style.css" />
         <link rel="stylesheet" type="text/css" href="landing/css/style.css" />
+
         <script src="_Shared/scripts/jquery-3.2.1.js"></script>
         <script src="_Shared/scripts/jquery-ui.js"></script>
-
         <script src="landing/scripts/model.js"></script>
         <script src="landing/scripts/controller.js"></script>
         <script src="landing/scripts/view.js"></script>
-            <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Horizon</h1>
-        <div class="options">
-          <a href="search/index.html">Create an Itinerary</a><br>
-        </div>
-        <div class="options">
-          <a href="history.html">View Itinerary</a>
-        </div>
+        <div id="wrapper">
 
+            <!-- div for description -->
+            <div id="description">
+                <h1>Project Horizon</h1>
+                <hr />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis dapibus dui, blandit lacinia nulla congue non. Sed laoreet dolor at lectus commodo gravida. In ut nulla ac libero volutpat facilisis. Integer sed commodo lectus, at auctor mi. Duis placerat tristique dui eu sagittis. Fusce sed pretium neque. Aliquam erat volutpat.</p>
+                <p>Ut faucibus nulla eu arcu posuere, vel euismod tellus facilisis. Nam nec erat a diam vestibulum elementum. Duis dapibus suscipit purus et luctus. Vivamus ex leo, euismod vel ex vitae, varius malesuada ex. Quisque ac arcu porta, pretium lacus quis, sollicitudin erat. Quisque varius ut nulla eu commodo. Sed non vestibulum nulla. In hac habitasse platea dictumst. Nulla lobortis, quam id porttitor feugiat, lacus libero convallis ligula, non convallis sem ex a massa. Proin ornare tempus sagittis. Mauris faucibus urna eu nibh lobortis aliquam. Mauris id mauris ac nibh porttitor dictum. Phasellus at dapibus arcu. Duis et risus nulla. Nulla accumsan euismod sapien, sed maximus leo facilisis sit amet. Mauris eu viverra nunc. </p>
+                <div class="options">
+                  <a href="search/">Create an Itinerary</a><br>
+                </div>
+                <div class="options">
+                  <a href="history.html">View Itinerary</a>
+                </div>
+            </div>
+
+            <!-- div for sign in and sign up -->
+            <div id="sign_in_up">
+                <ul>
+                    <li><a href="#sign_in">Sign In</a></li>
+                    <li><a href="#sign_up">Sign Up</a></li>
+                </ul>
+
+                <div id="sign_in">
+                    <form>
+                        Username: <input id="sign_in_user" type="text"/>
+                        Password: <input id="sign_in_pass" type="password"/>
+                        <button id="sign_in_btn" type="submit">Sign In</button>
+                    </form>
+                </div>
+
+                <div id="sign_up">
+                    <form>
+                        Username: <input id="sign_up_user" type="text"/>
+                        Password: <input id="sign_up_pass" type="password"/>
+                        Confirm Password: <input id="sign_up_conf" type="password"/>
+                        <button id="sign_up_btn" type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
     </body>
 </html>

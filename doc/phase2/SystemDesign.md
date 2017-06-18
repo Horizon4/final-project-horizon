@@ -4,8 +4,8 @@
     Parent class: NA
     Subclasses: NA
     Responsibilities: 
-        - login 
-        - sign up
+        - can login 
+        - can sign up
         - create/view/recommend itinerary
     Collaborators: 
         - Itinerary
@@ -17,13 +17,13 @@
     Subclasses: 
     Responsibilities: 
         - Knows its ID
-        - Price
+        - Know Price
         - has list of flights
         - has ratings
         - has # of recommendations
     Collaborators: 
-        - Flights
-        - Accommodations
+        - Flight
+        - Accommodation
         - Entertainment
 
 -----------------------------------------------
@@ -32,7 +32,7 @@
     Parent class: Itinerary
     Subclasses:
     Responsibilities:
-        - Itinerary
+        - has a list of Itineraries
         - Given ID get Itinerary
         - knows users
     Collaborators: 
@@ -44,9 +44,9 @@
     Subclasses:
     Responsibilities:
         - knows its Origin
-        - destination
-        - to/from dates
-        - price
+        - knows its destination
+        - knows to/from dates
+        - knows its price
     Collaborators:
 
 -----------------------------------------------
@@ -55,11 +55,11 @@
     Parent class:
     Subclasses:
     Responsibilities:
-        - address
-        - Price
-        - occupancy
-        - unit type
-        - Amenities
+        - has address
+        - has Price
+        - has occupancy number
+        - has unit type
+        - has Amenities
     Collaborators:
  
 -----------------------------------------------
@@ -68,13 +68,13 @@
     Parent class:
     Subclasses: Attraction, restaurant
     Responsibilities: 
-        - Price range
-        - address
-        - rating
-        - entertainment type
-        - reservation
-        - reviews
-        - operation hours
+        - has a Price range
+        - has address
+        - has rating
+        - has entertainment type
+        - knows whether it can be reserved
+        - has reviews
+        - has operation hours
     Collaborators:
 
 -----------------------------------------------
@@ -83,7 +83,7 @@
     Parent class: Entertainment
     Subclasses:
     Responsibilities:
-        - AdultOnly <3
+        - knows whether it is Adults Only or not
     Collaborators:
 
 -----------------------------------------------
@@ -92,7 +92,7 @@
     Parent class: Entertainment
     Subclasses:
     Responsibilities:
-        - cuisine
+        - has a cuisine type
     Collaborators:
 
 
