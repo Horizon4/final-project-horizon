@@ -6,7 +6,7 @@
 3. [Dependencies and Assumptions](#Dependencies)
 
 ## System Architecture
-![System Architecture](https://github.com/UTSCCSCC01/final-project-horizon/edit/master/doc/phase2/systemArch.pdf)
+![System Architecture](systemArch.jpg?raw=true)
 
 MongoDB will be the main database where all the data is stored (User info, travel Itineraries, etc).
 Node.js will be the controller, where it does all of the backend work and communicates between the front end and the database.
