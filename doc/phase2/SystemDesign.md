@@ -1,3 +1,13 @@
+# System Design
+
+## Table of Contents
+1. [System Architecture](#System-Architecture)
+2. [CRC Diagrams](#CRC)
+3. [Dependencies and Assumptions](#Dependencies)
+
+## System Architecture
+
+
 ## CRC
 
     Classname: User
@@ -95,5 +105,5 @@
         - has a cuisine type
     Collaborators:
 
-
+## Dependencies
 Node.js 7, MongoDB, plus dependencies in package.json are needed.
