@@ -30,8 +30,6 @@ A web based application which allows users to design their customized vacation o
 
 ## Create
 
-## Create
-
 #### description: create a new user
 - request: `PUT /api/users/`
     - body: object
