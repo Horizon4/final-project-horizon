@@ -42,6 +42,8 @@ var sign_in_up = (function() {
 
     return {
         init: function() {
+            $("#sign_in_up").tabs();
+
             $("#sign_in_btn").click(submitSignIn);
             $("#sign_up_btn").click(submitSignUp);
         }
