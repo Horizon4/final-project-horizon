@@ -13,6 +13,13 @@ class user {
   };
 }
 
+const checkPassword = (user, pass) => {
+  var hash = crypto.createHmac('sha512', user.salt);
+  hash.update(pass);
+  var value = hash.digest('base64');
+  return (user.saltedHash === value);
+}
+
 export const createUser = (req, res) => {
   var data = new user(req.body);
   const { username, salt, saltedHash } = data
@@ -23,6 +30,24 @@ export const createUser = (req, res) => {
     return res.status(201).json({ user });
   })
   .catch((err) => {
-    return res.status(500).json({ error: true, message: 'Error with creating a user'})
+    return res.status(500).json({ error: true, message: 'Username already exists'})
   })
+}
+
+export const signInUser = (req,res) => {
+  const { username, password } = req.body;
+
+  User.findOne({'username': username})
+  .then((user) => {
+    console.log('Found the user');
+
+    if (!checkPassword(user, password)) return res.status(401).json({message: 'Unauthorized'})
+
+    return res.status(201).json({ user });
+  })
+  .catch((err) => {
+    return res.status(500).json({ error: true, message: 'User does not exist'});
+  })
+
+
 }
