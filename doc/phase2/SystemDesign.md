@@ -9,7 +9,9 @@
 ![System Architecture](systemArch.jpg?raw=true)
 
 MongoDB will be the main database where all the data is stored (User info, travel Itineraries, etc).
+
 Node.js will be the controller, where it does all of the backend work and communicates between the front end and the database.
+
 HTML/CSS will be the view portion, with Jquery handling the client-side scripts.
 
 ## CRC <a name="CRC"></a>
