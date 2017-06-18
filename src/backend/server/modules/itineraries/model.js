@@ -10,6 +10,12 @@ const itinerarySchema = new Schema({
     type:[Schema.Types.ObjectId],
     required: false
   }
+  /* stopOvers: {
+    type: [String],
+  } */
+  stopoverCount: {
+    type: Number,
+  }
 });
 
 export default mongoose.model('Itinerary', itinerarySchema)
