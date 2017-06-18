@@ -20,7 +20,6 @@ input[type=text] {
     transition: 0.5s;
     outline: none;
     display: block;
-    background-color: #DFFFF9;
 }
 input[type=text]:focus {
     border: 2.5px solid #267F6E;
@@ -48,8 +47,4 @@ input[type=submit]:hover {
 .formField{
   display: block;
   padding: 10px 10px;
-}
-
-body {
-    background-color: #FAF9F8;
 }
