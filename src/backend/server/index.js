@@ -2,7 +2,7 @@ import express from 'express';
 import dbConfig from './config/db';
 var Promise = require("bluebird");
 import middlewareConfig from './config/middlewares';
-import { UserRoutes, ItineraryRoutes } from './modules/index';
+import { UserRoutes, FlightRoutes } from './modules/index';
 const app = express();
 
 // DATABASE
@@ -11,7 +11,7 @@ dbConfig();
 //Middleware
 middlewareConfig(app);
 
-app.use('/api', [UserRoutes], [ItineraryRoutes]);
+app.use('/api', [UserRoutes], [FlightRoutes]);
 
 const PORT = process.env.PORT || 3000;
 

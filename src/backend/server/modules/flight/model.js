@@ -1,11 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 
 const FlightSchema = new Schema({
-  flightID: {
-    type: String,
-    required: true,
-    unique: true
-  },
   origin: {
     type: String,
     required: true,
@@ -26,19 +21,27 @@ const FlightSchema = new Schema({
     type: String,
     required: true
   },
-  duration: {
+  price: {
     type: Number,
     required: true
   },
-  pricing: {
+  adultCount: {
     type: Number,
-    required: true
   },
-  stopoversCount: {
+  cabin: {
+    type: String,
+  },
+  carrier: {
+    type: String,
+  },
+  childCount: {
     type: Number,
   },
   stopovers: {
     type: Array,
+  },
+  stopoversCount: {
+    type: Number,
   }
 });
 
