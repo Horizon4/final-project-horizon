@@ -1,4 +1,5 @@
 import Flight from './model';
+import Itinerary from '../itinerary/model';
 
 var https = require('https');
 var querystring = require('querystring');
@@ -24,11 +25,15 @@ export const createFlight = (req, res) => {
 }
 
 export const getFlight = (req, res, next) => {
-  Flight.findById(req.params.id)
-  .then((flight) => {
-    req.data = flight;
-    next();
-  })
+  Itinerary.findById(req.params.id)
+  .then((itinerary) => {
+    req.data.stopoverCount = itinerary.stopoverCount
+    Flight.findById(itinerary.flights[0]["_id"])
+      .then((itinerary) => {
+        req.data.stopoverCount = itinerary.stopoverCount
+        next();
+      })
+    })
   .catch((err) => {
     return res.status(500).json({ error: err, message: 'Error with getting flight' })
   })
@@ -57,7 +62,7 @@ export const buildOneWayFlightRequest = (req, res, next) => {
             "origin": req.data.origin,
             "destination": req.data.destination,
             "date": req.data.departureDate, // YYYY-MM-DD
-            "maxStops": req.data.stopoversCount,
+            "maxStops": req.data.stopoverCount,
             "preferredCabin": req.data.cabin,
             "permittedCarrier": req.data.carrier
           }

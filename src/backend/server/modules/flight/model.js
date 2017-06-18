@@ -37,10 +37,7 @@ const FlightSchema = new Schema({
   childCount: {
     type: Number,
   },
-  stopovers: {
-    type: Array,
-  },
-  stopoversCount: {
+  seniorCount: {
     type: Number,
   }
 });
