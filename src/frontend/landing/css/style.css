@@ -1,21 +1,15 @@
 #wrapper {
     width: 100%;
-    max-width: 80em;
+    max-width: 60em;
+    min-width: 30em;
     margin: 7.5em auto 0 auto;
 }
 
 
-#description {
-    display: inline-block;
-    width: 59.5%;
-    min-width: 45em;
-    vertical-align: top;
-}
-
-
 #sign_in_up {
-    display: inline-block;
+    display: block;
     width: 25em;
+    margin:auto;
 }
 .form_row {
     display: block;

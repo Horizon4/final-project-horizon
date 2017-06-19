@@ -11,6 +11,7 @@ var model = (function() {
                 data: data,
                 success: function(result) {
                     console.log(result);
+                    window.location.href = "/dashboard";
                 },
                 statusCode: {
                     500: function(result) {
