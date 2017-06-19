@@ -2,11 +2,6 @@ import Itinerary from './model';
 import Flight from '../flight/model';
 
 export const createItinerary = (req, res) => {
-  /*const flight1 = {'id':1}
-  const flight2 = {'id':2}
-  const arrayFlights = [flight1, flight2]
-  const newItinerary = new Itinerary({ flights: arrayFlights}); */
-
   var { origin, destination, departureDate, returnDate, price, adultCount,
           cabin, carrier, childCount, stopovers, stopoversCount } = req.body
   const newItinerary = new Itinerary({ origin, destination, departureDate,
