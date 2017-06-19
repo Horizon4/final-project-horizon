@@ -50,7 +50,8 @@ or trip as seamlessly as possible.
       - origin: (string) the departure location
       - destination: (string) the arrival location
       - date: (date) the departure date(YYYY-MM-DD)
-      - price: (number) the price of the flights
+      - price: (number) the price of the flight
+
       *Optional:*
       - adultCount: (number) the number of adult seats
       - childCount: (number) the number of child seats
@@ -62,7 +63,8 @@ or trip as seamlessly as possible.
       - origin: (string) the departure location
       - destination: (string) the arrival location
       - date: (date) the departure date(YYYY-MM-DD)
-      - price: (number) the price of the flights
+      - price: (number) the price of the flight
+
       *Optional:*
       - adultCount: (number) the number of adult seats
       - childCount: (number) the number of child seats
@@ -79,7 +81,8 @@ or trip as seamlessly as possible.
       - destination: (string) the arrival location
       - departureDate: (date) the departure date(YYYY-MM-DD)
       - returnDate: (date) the return date(YYYY-MM-DD)
-      - price: (number) the price of the flights
+      - price: (number) the price of the itinerary
+
       *Optional:*
       - stopoverCount: (number) max number of stopovers, after creation the
                         value will be adjusted to match the number of stopovers
@@ -89,7 +92,7 @@ or trip as seamlessly as possible.
       - origin: (string) the departure location
       - destination: (string) the arrival location
       - date: (date) the departure date(YYYY-MM-DD)
-      - price: (number) the price of the flights
+      - price: (number) the price of the itinerary
       *Optional:*
       - stopoverCount: (number) max number of stopovers, after creation the
                         value will be adjusted to match the number of stopovers
@@ -107,6 +110,7 @@ or trip as seamlessly as possible.
       - destination: (string) the arrival location
       - date: (date) the departure date(YYYY-MM-DD)
       - price: (number) the price of the flights
+
       *Optional:*
       - adultCount: (number) the number of adult seats
       - childCount: (number) the number of child seats
@@ -132,7 +136,8 @@ or trip as seamlessly as possible.
       - origin: (string) the departure location
       - destination: (string) the arrival location
       - date: (date) the departure date(YYYY-MM-DD)
-      - price: (number) the price of the flights
+      - price: (number) the price of the flight
+
       *Optional:*
       - adultCount: (number) the number of adult seats
       - childCount: (number) the number of child seats
