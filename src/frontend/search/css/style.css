@@ -11,6 +11,7 @@ label {
       margin: 0 auto;
       display: block;
       color: #267F6E;
+      padding: 6px;
 }
 input[type=text] {
     -webkit-transition: 1s;
