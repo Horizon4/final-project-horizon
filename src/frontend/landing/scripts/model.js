@@ -4,39 +4,42 @@ var model = (function() {
         init: function() {
 
         },
+
+
         signin: function(data) {
-            $.ajax({
+            var result;
+            result = $.ajax({
                 url: "/api/signin",
                 type: 'POST',
                 data: data,
-                success: function(result) {
-                    console.log(result);
+                async: false,
+                success: function(data) {
+                    console.log(data);
+                    // TODO store sign in data in cookie
                     window.location.href = "/dashboard";
                 },
-                statusCode: {
-                    500: function(result) {
-                        console.log(result);
-                    },
-                    401: function(result) {
-                        console.log(result);
-                    },
-                },
             });
+
+            result = $.parseJSON(result.responseText);
+
+            return result;
         },
+
         signup: function(data) {
-            $.ajax({
+            var result;
+            result = $.ajax({
                 url: "/api/user",
                 type: 'PUT',
                 data: data,
-                success: function(result) {
-                    console.log(result);
-                },
-                statusCode: {
-                    500: function(result) {
-                        console.log(result);
-                    },
+                async: false,
+                success: function(data) {
+                    return {error: false};
                 },
             });
+
+            result = $.parseJSON(result.responseText);
+
+            return result;
         },
     }
 })();
