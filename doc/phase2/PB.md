@@ -39,7 +39,7 @@
     2. If no flights exist under that budget suggest me an allocation of the budget
 
 - Priority = 5
-- Point = 6
+- Point = 5
 
 ### Story 4
 
@@ -115,10 +115,10 @@
 
 ### Story 11
 
-- As a developer, when a user searches for an itinerary and if no data exists in the database I should create my own recommendations in the background to show the user
+- As a developer, when a user searches for an itinerary and if no data exists in the database, I display a message in the front end to let the user know that there are no available itineraries
 
 - Condition of Satisfaction
-    1. When a user searches for a recommendations, I should be able to show recommendations even if nothing exists
+    1. When a user searches for a recommendations, I should be able to show a message to let the user know that there are no available itineraries if nothing exists
 
 - Priority = 4
-- Point = 8
+- Point = 1
