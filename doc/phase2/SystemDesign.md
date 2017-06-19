@@ -15,9 +15,7 @@ Node.js and Express are the controller, where it does all of the backend work an
 HTML/CSS will be the view portion, with Jquery handling the client-side scripts.
 
 
-For example in the Log in system, the front end View is created in HTML/CSS with Jquery handling the actual log in logic.
-
-Node.js handles the backend controller, and MongoDB is the Model where user data is stored.
+For example in the Log in system, the front end View is created in HTML/CSS with Jquery handling the actual log in logic. Node.js handles the backend controller, and MongoDB is the Model where user data is stored.
 
 ## CRC <a name="CRC"></a>
 
