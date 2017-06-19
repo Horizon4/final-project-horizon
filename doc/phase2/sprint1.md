@@ -82,7 +82,7 @@
 
 ## Sprint Backlog
 
-##### Story 1
+##### Story 1 - Login System
   - As a traveller, I should be able to create an account with ease so that I can login into the website with those credentials
 
   - Condition of Satisfaction
@@ -92,7 +92,7 @@
   - Priority = 1
   - Point = 2
 
-##### Story 3
+##### Story 3 - Itineraries with Flights only
   - As Peter, I should be able to enter flight preferences like first-class, business-class etc and how much of budget should be allocated to the flight section so that I can see preferred flights as part of my travelling itenrary
 
   - Condition of Satisfaction
@@ -100,7 +100,7 @@
       2. If no flights exist under that budget suggest me an allocation of the budget
 
   - Priority = 5
-  - Point = 6
+  - Point = 5
 
 ## Tasks
 
