@@ -15,12 +15,10 @@ var model = (function() {
                 async: false,
                 success: function(data) {
                     console.log(data);
-                    // TODO store sign in data in cookie
+                    // TODO store sign in data in cookie or url
                     window.location.href = "/dashboard";
                 },
             });
-
-            result = $.parseJSON(result.responseText);
 
             return result;
         },
@@ -36,8 +34,6 @@ var model = (function() {
                     return {error: false};
                 },
             });
-
-            result = $.parseJSON(result.responseText);
 
             return result;
         },
