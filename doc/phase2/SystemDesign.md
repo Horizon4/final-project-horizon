@@ -1,9 +1,36 @@
-# System Design
+-----------------------------------------------
+<br>
+
+# Horizon
+
+<br>
+<br>
+
+
+#### A travel planning and budgetting app
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 ## Table of Contents
 1. [System Architecture](#System-Architecture)
 2. [CRC Diagrams](#CRC)
 3. [Dependencies and Assumptions](#Dependencies)
+
+<br>
+
+-----------------------------------------------
+
 
 ## System Architecture <a name="System-Architecture"></a>
 ![System Architecture](systemArch.jpg?raw=true)
