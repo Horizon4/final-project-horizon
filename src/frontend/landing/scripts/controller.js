@@ -4,13 +4,24 @@ var controller = (function() {
         init: function() {
             model.init();
         },
+
         signin: function(user, pass) {
             var data = {username: user, password: pass};
-            model.signin(data);
+            var result = model.signin(data);
+            if (result.error) {
+                return false;
+            } else {
+                return true;
+            }
         },
         signup: function(user, pass) {
             var data = {username: user, password: pass};
-            model.signup(data);
+            var result = model.signup(data);
+            if (result.error) {
+                return false;
+            } else {
+                return true;
+            }
         },
     }
 })();
