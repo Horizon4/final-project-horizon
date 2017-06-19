@@ -41,7 +41,7 @@ or trip as seamlessly as possible.
 - response: 200
     - body: string
       - username: (string) the username of the account
--response: 500
+- response: 500
     - body: message from the Database that the username already exists
 
 #### description: create a new flight
