@@ -77,7 +77,7 @@
                 -	budget
             -	make a router
         -	Ryan:
-            - project planning
+            -   project planning
             -	Crc cards
 -	Front end
     -	Make navigation (if there is time)
