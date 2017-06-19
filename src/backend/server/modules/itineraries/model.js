@@ -2,12 +2,12 @@ import mongoose, { Schema } from 'mongoose';
 
 const itinerarySchema = new Schema({
   itineraryid: {
-    type: Number,
+    type: Schema.Types.ObjectID,
     unique: true,
-    required: true
+  /*  required: true*/
   },
   flights: {
-    type:[Schema.Types.ObjectId],
+    type:[{}],
     required: false
   }
   /* stopOvers: {
