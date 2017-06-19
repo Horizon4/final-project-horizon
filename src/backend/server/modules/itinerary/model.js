@@ -1,13 +1,32 @@
 import mongoose, { Schema } from 'mongoose';
 
-const ItinerarySchema = new Schema({
-  flights: {
-    type: [Schema.Types.ObjectId],
+const itinerarySchema = new Schema({
+  origin: {
+    type: String,
     required: true
+  },
+  destination: {
+    type: String,
+    required: true
+  },
+  departureDate: {
+    type: String,
+    required: true
+  },
+  returnDate: {
+    type: String,
+  },
+  flights: {
+    type:[{}],
+    required: false
+  },
+  stopovers: {
+    type: [String],
   },
   stopoverCount: {
     type: Number,
+    default: 2
   }
-})
+});
 
-export default mongoose.model('Itinerary', ItinerarySchema);
+export default mongoose.model('Itinerary', itinerarySchema)

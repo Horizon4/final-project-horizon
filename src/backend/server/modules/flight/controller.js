@@ -9,18 +9,18 @@ var apiKey = 'AIzaSyDzCkC6l70Bep5IM2X_K3H09mQ0H1JbhOo';
 var qpx = new qpxAPI(apiKey);
 
 export const createFlight = (req, res) => {
-  const { origin, destination, departureDate, returnDate, price, adultCount,
+  const { origin, destination, date, price, adultCount,
           cabin, carrier, childCount, stopovers, stopoversCount } = req.body;
-  const newFlight = new Flight({ origin, destination, departureDate,
-    returnDate, price, adultCount, cabin, carrier, childCount, stopovers,
-    stopoversCount });
+  const newFlight = new Flight({ origin, destination, date, price,
+    adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
 
   newFlight.save()
   .then((flight) => {
     return res.status(201).json({ flight });
   })
   .catch((err) => {
-    return res.status(500).json({ error: err, message: 'Error with creating a flight' })
+    return res.status(500).json({ error: true, message:
+                                  'Missing required parameter' })
   })
 }
 
@@ -35,7 +35,9 @@ export const getFlight = (req, res, next) => {
     next();
   })
   .catch((err) => {
-    return res.status(500).json({ error: err, message: 'Error with getting flight' })
+    return res.status(500).json({ error: true, message:
+                                  'Flight with ' + req.params.id +
+                                  'does not exist.' })
   })
 }
 
@@ -49,7 +51,8 @@ export const buildFlightRequest = (req, res, next ) => {
         },
         "slice": [],
         "maxPrice": 'CAD' + req.flights[0].price,
-        "solutions": "50"
+        "solutions": "50",
+        "refundable": false,
       }
     };
 
@@ -57,8 +60,8 @@ export const buildFlightRequest = (req, res, next ) => {
     body.request.slice.push({
       "origin": req.flights[i].origin,
       "destination": req.flights[i].destination,
-      "date": req.flights[i].departureDate, // YYYY-MM-DD
-      "maxStops": req.stopoversCount,
+      "date": req.flights[i].date, // YYYY-MM-DD
+      "maxStops": req.stopoverCount,
       "preferredCabin": req.flights[i].cabin,
       "permittedCarrier": req.flights[i].carrier
     })
