@@ -1,5 +1,5 @@
 ### Date: June 17, 2017
-### Time: 1:30 PM
+### Time: 1:30 PM - 4:00 PM
 ### Location: IC 406
 
 ## Participants
