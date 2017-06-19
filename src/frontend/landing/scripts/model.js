@@ -12,6 +12,14 @@ var model = (function() {
                 success: function(result) {
                     console.log(result);
                 },
+                statusCode: {
+                    500: function(result) {
+                        console.log(result);
+                    },
+                    401: function(result) {
+                        console.log(result);
+                    },
+                },
             });
         },
         signup: function(data) {
@@ -21,6 +29,11 @@ var model = (function() {
                 data: data,
                 success: function(result) {
                     console.log(result);
+                },
+                statusCode: {
+                    500: function(result) {
+                        console.log(result);
+                    },
                 },
             });
         },

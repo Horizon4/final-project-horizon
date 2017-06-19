@@ -15,6 +15,22 @@
 
 #sign_in_up {
     display: inline-block;
-    width: 39.5%;
-    height: 12.5em;
+    width: 25em;
+}
+.form_row {
+    display: block;
+    position: relative;
+    height: 1.75em;
+}
+.form_row .label {
+    position: absolute;
+    right: 61%;
+}
+.form_row input {
+    position: absolute;
+    left: 40%;
+}
+.form_row button {
+    position: absolute;
+    left: 40%;
 }
