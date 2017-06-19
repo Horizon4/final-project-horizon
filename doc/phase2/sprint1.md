@@ -35,32 +35,32 @@
 
 ## Tasks
 
-**Ryan Abe** (backend)
+**Ryan Abe**
   - Project Planning
 
-**Zain Amir** (frontend + backend collaborator)
+**Zain Amir**
   - Story 1
       - Creating Signin endpoint
 
-**Colleen Brown** (backend)
+**Colleen Brown**
   - Story 3
       - Itineraries
 
-**Howard Chen** (frontend)
+**Howard Chen**
   - Story 1
       - Log in and sign up 2 fields each front end
       - dashboard set up with create and view itineraries
 
-**Ke Deng** (frontend)
+**Ke Deng**
   - Story 1, 3
       - beautify CSS
   - SystemDesign.md
 
-**Varun Sharma** (frontend)
+**Varun Sharma**
   - Story 3
       - Flight searching Front end
 
-**Jason Shum** (backend)
+**Jason Shum**
   - Story 3
       - Flights
 
