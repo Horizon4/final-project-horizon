@@ -1,18 +1,33 @@
 ## Participants
 
 **Ryan Abe** (backend)
+  - Sprint1.md
 
 **Zain Amir** (frontend + backend collaborator)
+  - Story 1
+      - Creating Signin endpoint
 
 **Colleen Brown** (backend)
+  - Story 3
+      - Itineraries
 
 **Howard Chen** (frontend)
+  - Story 1
+      - Log in Front end
 
 **Ke Deng** (frontend)
+  - Story 1, 3
+      - final ui edits
+  - SystemDesign.md
 
 **Varun Sharma** (frontend)
+  - Story 3
+      - Flight searching Front end
+
 
 **Jason Shum** (backend)
+  - Story 3
+      - Flights
 
 ## Meeting Minutes
 
