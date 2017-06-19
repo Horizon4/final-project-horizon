@@ -17,7 +17,7 @@
 -	need to get link for pivotaltracker
 -	create a file called sprint1.md to keep track of the meeting minutes
 -	need to break down tickets
--	project planning (1st section done by Ryan)
+-	project planning
     -	changing project backlog?
 -	4 tickets (split into 2 tabs, front and back end)
     -	setup backend
@@ -66,19 +66,15 @@
         -	500
             -	bad, problems
     -	back end
-        -	Jason
-            -	getting google APIs for flight information
-        -	Colleen
-            -	post request after they hit submit
-                -	origin
-                -	destination
-                -	to date
-                -	from date
-                -	budget
-            -	make a router
-        -	Ryan:
-            -   project planning
-            -	Crc cards
+        -	getting google APIs for flight information
+        -	post request after they hit submit
+            -	origin
+            -	destination
+            -	to date
+            -	from date
+            -	budget
+        -	make a router
+    -	Crc cards
 -	Front end
     -	Make navigation (if there is time)
 
