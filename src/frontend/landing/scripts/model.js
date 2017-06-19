@@ -6,8 +6,8 @@ var model = (function() {
         },
         signin: function(data) {
             $.ajax({
-                url: "/api/user",
-                type: 'put',
+                url: "/api/signin",
+                type: 'POST',
                 data: data,
                 success: function(result) {
                     console.log(result);
@@ -17,7 +17,7 @@ var model = (function() {
         signup: function(data) {
             $.ajax({
                 url: "/api/user",
-                type: 'put',
+                type: 'PUT',
                 data: data,
                 success: function(result) {
                     console.log(result);
