@@ -43,3 +43,58 @@ A web based application which allows users to design their customized vacation o
       - username: (string) the username of the account
 -response: 500
       - body: message from the Database that the username already exists
+
+#### description: create a new flight
+- request: `PUT /api/flight/`
+    - body: object
+      - origin: (string) the departure location
+      - destination: (string) the arrival location
+      - departureDate: (date) the departure date
+      - returnDate: (date) the return date
+      - price: (number) the price of the flights
+      *Optional:*
+      - adultCount: (number) the number of adult seats
+      - childCount: (number) the number of child seats
+      - seniorCount: (number) the number of senior seats
+      - cabin: (string) the type of cabin the seat is in (i.e. economy, first class, etc)
+      - carrier: (string) the airline of the flight
+- response: 200
+    - body: string
+      - origin: (string) the departure location
+      - destination: (string) the arrival location
+      - departureDate: (date) the departure date
+      - returnDate: (date) the return date
+      - price: (number) the price of the flights
+      *Optional:*
+      - adultCount: (number) the number of adult seats
+      - childCount: (number) the number of child seats
+      - seniorCount: (number) the number of senior seats
+      - cabin: (string) the type of cabin the seat is in (i.e. economy, first class, etc)
+      - carrier: (string) the airline of the flight
+-response: 500
+      - body: message from the Database that a component was missing when creating the flight
+
+#### description: get a flight
+- request: `GET /api/flight/:id`
+- response: 200
+    - body: string
+      - origin: (string) the departure location
+      - destination: (string) the arrival location
+      - departureDate: (date) the departure date
+      - returnDate: (date) the return date
+      - price: (number) the price of the flights
+      *Optional:*
+      - adultCount: (number) the number of adult seats
+      - childCount: (number) the number of child seats
+      - seniorCount: (number) the number of senior seats
+      - cabin: (string) the type of cabin the seat is in (i.e. economy, first class, etc)
+      - carrier: (string) the airline of the flight
+-response: 500
+      - body: message from the Database that flight does not exist
+
+#### description: get a flight
+- request: `GET /api/findFlights/:id`
+- response: 200
+    - body: string
+-response: 500
+      - body: message from the Database that flight does not exist

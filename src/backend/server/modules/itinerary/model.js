@@ -2,10 +2,12 @@ import mongoose, { Schema } from 'mongoose';
 
 const ItinerarySchema = new Schema({
   flights: {
-    type: Array,
+    type: [Schema.Types.ObjectId],
     required: true
   },
   stopoverCount: {
     type: Number,
   }
 })
+
+export default mongoose.model('Itinerary', ItinerarySchema);

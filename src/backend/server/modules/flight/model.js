@@ -14,11 +14,11 @@ const FlightSchema = new Schema({
     maxLength: [3, 'Flight origins and destinations must be 3-character city/airport codes, e.g., NYC or LGA.']
   },
   departureDate: {
-    type: String,
+    type: Date,
     required: true
   },
   returnDate: {
-    type: String,
+    type: Date,
     required: true
   },
   price: {

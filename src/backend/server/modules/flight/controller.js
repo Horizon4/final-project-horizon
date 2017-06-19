@@ -28,101 +28,18 @@ export const getFlight = (req, res, next) => {
   Itinerary.findById(req.params.id)
   .then((itinerary) => {
     req.stopoverCount = itinerary.stopoverCount
-    if (itinerary.flights.length == 1) {
-      Flight.findById(itinerary.flights[0]["_id"])
-        .then((flight) => {
-          req.data = flight
-          next();
-        })
-    } else {
-      for (var i = 0; i < itinerary.flights.length; i++) {
-        req.flights = []
-        Flight.findById(itinerary.flights[i]["_id"])
-        .then((flight) => {
-          req.flights.push(flight)
-        })
-      }
-      next();
+    req.flights = []
+    for (var i = 0; i < itinerary.flights.length; i++) {
+      req.flights.push(itinerary.flights[i])
     }
+    next();
   })
   .catch((err) => {
     return res.status(500).json({ error: err, message: 'Error with getting flight' })
   })
 }
 
-export const getAllFlights = (req, res) => {
-  Flight.find()
-  .then((flights) => {
-    return res.status(200).json({ flights });
-  })
-  .catch((err) => {
-    return res.status(500).json({ error: err, message: 'Error with getting all flights' })
-  })
-}
-
-export const buildOneWayFlightRequest = (req, res, next) => {
-  var body = {
-    "request": {
-        "passengers": {
-          "adultCount": req.flight.adultCount,
-          "childCount": req.flight.childCount,
-          "seniorCount": req.flight.seniorCount
-        },
-        "slice": [
-          {
-            "origin": req.flight.origin,
-            "destination": req.flight.destination,
-            "date": req.flight.departureDate, // YYYY-MM-DD
-            "maxStops": req.stopoverCount,
-            "preferredCabin": req.flight.cabin,
-            "permittedCarrier": req.flight.carrier
-          }
-        ],
-        "maxPrice": 'CAD' + req.flight.price,
-        "solutions": "50"
-      }
-    };
-
-  req.body = body;
-  next();
-}
-
-export const buildRoundTripFlightRequests = (req, res, next ) => {
-  var body = {
-    "request": {
-        "passengers": {
-          "adultCount": req.flights.adultCount,
-          "childCount": req.flight.childCount,
-          "seniorCount": req.flight.seniorCount
-        },
-        "slice": [
-          {
-            "origin": req.flight.origin,
-            "destination": req.flight.destination,
-            "date": req.flight.departureDate, // YYYY-MM-DD
-            "maxStops": req.stopoversCount,
-            "preferredCabin": req.flight.cabin,
-            "permittedCarrier": req.flight.carrier
-          },
-          {
-            "origin": req.flight.destination,
-            "destination": req.flight.origin,
-            "date": req.flight.returnDate, // YYYY-MM-DD
-            "maxStops": req.stopoversCount,
-            "preferredCabin": req.flight.cabin,
-            "permittedCarrier": req.flight.carrier
-          }
-        ],
-        "maxPrice": 'CAD' + req.flight.price,
-        "solutions": "50"
-      }
-    };
-
-  req.body = body;
-  next();
-}
-
-export const buildMultiCityFlightRequests = (req, res, next ) => {
+export const buildFlightRequest = (req, res, next ) => {
   var body = {
     "request": {
         "passengers": {
@@ -146,6 +63,8 @@ export const buildMultiCityFlightRequests = (req, res, next ) => {
       "permittedCarrier": req.flights[i].carrier
     })
   }
+  req.body = body;
+  next();
 }
 
 export const findFlights = (req, res) => {
