@@ -10,7 +10,7 @@
 
 MongoDB will be the main database where all the data is stored (User info, travel Itineraries, etc).
 
-Node.js will be the controller, where it does all of the backend work and communicates between the front end and the database.
+Node.js and Express are the controller, where it does all of the backend work and controls the flow of the application.
 
 HTML/CSS will be the view portion, with Jquery handling the client-side scripts.
 
