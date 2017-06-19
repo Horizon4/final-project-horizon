@@ -1,8 +1,7 @@
 import Itinerary from './model';
 
 export const createItinerary = (req, res) => {
-  const { itineraryid } = req.body;
-  const newItinerary = new Itinerary({ itineraryid })
+  const newItinerary = new Itinerary()
 
   newItinerary.save()
   .then((itinerary) => {
