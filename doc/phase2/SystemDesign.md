@@ -82,7 +82,7 @@ HTML/CSS will be the view portion, with Jquery handling the client-side scripts.
 
     Classname: Entertainment <<Abstract>>
     Parent class:
-    Subclasses: Attraction, restaurant
+    Subclasses: Attraction, Restaurant
     Responsibilities: 
         - has a Price range
         - has address
@@ -112,4 +112,4 @@ HTML/CSS will be the view portion, with Jquery handling the client-side scripts.
     Collaborators:
 
 ## Dependencies <a name="Dependencies"></a>
-Node.js 7, MongoDB, plus dependencies in package.json are needed.
+Node.js 7+, MongoDB, plus dependencies in package.json are needed.
