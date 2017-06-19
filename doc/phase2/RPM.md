@@ -1,3 +1,7 @@
+### Date: June 14, 2017
+### Time: 1:00 PM
+### Location: IC 406
+
 ## Participants
 
 - Ryan Abe
@@ -8,9 +12,79 @@
 - Varun Sharma
 - Jason Shum
 
-## Sprint Backlog
+## Meeting Minutes
 
-#### Story 1
+  -	need to get link for pivotaltracker
+  -	create a file called sprint1.md to keep track of the meeting minutes
+  -	need to break down tickets
+  -	project planning (1st section done by Ryan)
+      -	changing project backlog?
+  -	4 tickets (split into 2 tabs, front and back end)
+      -	setup backend
+      -	setup front end
+      -	finish back end for login
+      -	finish front end for login
+  -	completing story 1 then 3 then 2 (if there's time)
+  -	front end
+      -	create itinerary button
+      -	redirect pages
+          -	main page
+              -	origin
+              -	destination
+              -	budget
+                  -	of the flight
+                  -	whole budget for later
+              -	to and from date
+              -	submit button
+              -	user must fill in all 4 fields
+          -	signup
+              -	username
+              -	password
+              -	password confirmation
+          •	login
+              -	username
+              -	password
+      -	after submitting, display the flight information
+          -	get all flights within the budget
+  -	back end
+      -	everything in nod.js starts from app.js
+          -	add database lines
+          -	brings the code from the database (db..js) to app.js
+          -	start with routers (which are like controllers) then it goes to the model which calls the database to do some stuff
+      -	install node 7
+      -	POST - create
+      -	PUT - update
+      -	GET – fetches data
+      -	DELETE – delete data
+      -	Status codes
+          -	200
+              -	good, no problems
+          -	300
+              -	might not be needed
+          -	400
+              -	might not be needed
+          -	500
+              -	bad, problems
+      -	back end
+          -	Jason
+              -	getting google APIs for flight information
+          -	Colleen
+              -	post request after they hit submit
+                  -	origin
+                  -	destination
+                  -	to date
+                  -	from date
+                  -	budget
+              -	make a router
+          -	Ryan:
+              - project planning
+              -	Crc cards
+  -	Front end
+      -	Make navigation (if there is time)
+
+## Sprint 1 Backlog
+
+#### Story 1 - Login System
 
 - As a traveller, I should be able to create an account with ease so that I can login into the website with those credentials
 
@@ -20,27 +94,8 @@
 
 - Priority = 1
 - Point = 2
-  
-- Zain Amir (frontend + backend collaborator)
-    - creating signin endpoint
 
-- Howard Chen (frontend)
-    - login
-
-- Ke Deng (frontend)
-    - final ui edits
-      
-#### Story 2
-
-- As Michael, I should be guided along in my itinerary creation by making me pick the minimal details about flights, hotels etc and I should see a visual of the process so that I have a good travelling experience with the help of the website's guidance
-
-- Condition of Satisfaction
-    1. When I am creating an itinerary I should be able to see in the process bar how far into the itinerary creating process I am
-
-- Priority = 2
-- Point = 4
-
-#### Story 3
+#### Story 3 - Itinerary with Flights only
 
 - As Peter, I should be able to enter flight preferences like first-class, business-class etc and how much of budget should be allocated to the flight section so that I can see preferred flights as part of my travelling itenrary
 
@@ -49,100 +104,4 @@
     2. If no flights exist under that budget suggest me an allocation of the budget
 
 - Priority = 5
-- Point = 6
-  
-- Colleen Brown (backend)
-    - itineraries
-
-- Ke Deng (frontend)
-    - final ui edits
-
-- Varun Sharma (frontend)
-    - flight searching front end
-
- - Jason (backend)
-    - flights
-  
-#### Story 4
-
-- As Peter, I should be able to enter my accommodations details like how many bedrooms, star-rating and how much of my budget should be allocated to the accommodations section so that I can see itineraries based on my accommodations preferences
-
-- Condition of Satisfaction
-    1. When I click submit I should see itineraries with both accommodations and flights at this point
-    2. If no accommodations exist under that budget suggest me an allocation of the budget to the accommodations section
-
-- Priority = 5
-- Point = 8
-
-#### Story 5
-
-- As Peter, I should be able to select my preferences of the attractions of the destination countries like food, places etc and also select how much of the budget to allocate to attractions so that I can have an enjoyable experience during my travel and save money
-
-- Condition of Satisfaction
-    1. When I click submit I should see itineraries with flights, accommodations and attractions at this point
-
-- Priority = 5
-- Point = 10
-
-#### Story 6
-
-- As Michael, I want to be able to see all the completed itineraries on the dashboard so that I can navigate between different itineraries easily, and also so I can easily access them throughout my trip and have a guided experience 
-
-- Condition of Satisfaction
-    1. When I go to the dashboard under the completed itineraries tab I should be able to see all the completed itineraries I have created
-    2. When I select an itinerary I should be able to see all of the details about it  
-
-- Priority = 3
-- Point = 3
-
-#### Story 7
-
-- As Leo, I want to able to see all the incompleted itineraries on the dashboard so that I can select one and complete it
-
-- Condition of Satisfaction
-    1. When I go to the dashboard under the incompleted itineraries tab I should be able to see all the incompleted itineraries
-    2. When I select an itinerary I should be able to complete it
-
-- Priority = 3
-- Point = 4
-
-#### Story 8
-
-- As Michael, I should be able to search for recommendations by giving out origin and destination so that I have an idea of what others have chosen in the past
-
-- Condition of Satisfaction
-    1. When I enter origin and destination, I should see a list of all the itineraries that have been chosen from that origin and destination
-
-- Priority = 4
 - Point = 5
-
-#### Story 9
-
-- As Leo, I should be able to save my itinerary creating process whenever I want so that I can come back later and complete the itenrary
-
-- Condition of Satisfaction
-    1. There should be a button like save changes on which I can click to save the itinerary which will save the current changes so far
-
-- Priority = 2
-- Point = 4
-
-#### Story 10
-
-- As Peter, I should be able to select more than one destination so that I can visit multiple places
-
-- Condition of Satisfaction
-    1. When I wish to visit more than one destination, I should be able to toggle on a field to do this option
-
-- Priority = 3
-- Point = 6
-
-#### Story 11
-
-- As a developer, when a user searches for an itinerary and if no data exists in the database I should create my own recommendations in the background to show the user
-
-- Condition of Satisfaction
-    1. When a user searches for a recommendations, I should be able to show recommendations even if nothing exists
-
-- Priority = 4
-- Point = 8
-
