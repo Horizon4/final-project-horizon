@@ -6,12 +6,20 @@ var controller = (function() {
         },
 
         send: function(origin, destination, price, departureDate, returnDate) {
-          var data = {"passenger": {'origin':origin, 'destination': destination, 'price': price,
-           'departureDate': departureDate, 'returnDate': returnDate});
+            var data = {
+                'origin':origin,
+                'destination': destination,
+                'price': price,
+                'departureDate': departureDate,
+                'returnDate': returnDate
+            };
+            console.log(data); //DEBUG
             var result = model.send(data);
-            if (result.status == 201) {
+            if (result.status == 200) {
                 return true;
             } else {
                 return false;
             }
         },
+    }
+})();

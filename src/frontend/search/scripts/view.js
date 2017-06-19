@@ -27,15 +27,14 @@ var searchButtonCheck = (function() {
         var departureDate = $("#fromLocation").val();
         var returnDate = $("#toLocation").val();
 
-
+        console.log(origin, destination, price, departureDate, returnDate); //DEBUG
         var success = controller.send(origin, destination, price, departureDate, returnDate);
 
-        if (!success){
+        /*if (!success){
             msg.text("Error sending fields").addClass("error");
             msg.show();
-        }
+        }*/
     }
-}
 
     return {
         init: function() {
