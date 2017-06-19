@@ -146,3 +146,4 @@ or trip as seamlessly as possible.
       - carrier: (string) the airline of the flight
 - response: 500
     - body: Error message from database
+ 
