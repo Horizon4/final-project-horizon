@@ -11,6 +11,21 @@
 - Varun Sharma
 - Jason Shum
 
+## Meeting Minutes
+
+-	this sprint is login and password, flights and itineraries
+-	going to break down the user stories down further
+    o	next meeting will involve breaking down stories and tickets in pivottracker
+-	add parts to RPM.md about what we are completing for each sprint
+-	need to add to software architecture diagram about how the model, controller and view interact with each other in the system
+    o	create example
+-	update points in PB.md to points from pivottracker
+-	frontend and backend need to communicate about how things should work
+    o	mainly Varun, Jason and Howard
+-	make the frontend look good
+-	do peer evaluations
+-	backend people need to learn and practice more node.js
+
 ## Sprint Backlog
 
 ##### Story 1 - Login System
