@@ -10,29 +10,22 @@ const itinerarySchema = new Schema({
     required: true
   },
   departureDate: {
-    type: Date,
+    type: String,
     required: true
   },
   returnDate: {
-    type: Date,
-    required: true
-  },
-  adultCount: {
-    type: Number
-  },
-  childCount: {
-    type: Number
+    type: String,
   },
   flights: {
     type:[{}],
     required: false
   },
-  stopOvers: {
+  stopovers: {
     type: [String],
-  }
+  },
   stopoverCount: {
     type: Number,
-    default: 0
+    default: 2
   }
 });
 

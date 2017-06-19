@@ -1,2 +1,3 @@
 export * from './users/index';
-export * from './itineraries/index'
+export * from './flight/index';
+export * from './itinerary/index';
