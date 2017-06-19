@@ -1,4 +1,20 @@
-## CRC
+# System Design
+
+## Table of Contents
+1. [System Architecture](#System-Architecture)
+2. [CRC Diagrams](#CRC)
+3. [Dependencies and Assumptions](#Dependencies)
+
+## System Architecture <a name="System-Architecture"></a>
+![System Architecture](systemArch.jpg?raw=true)
+
+MongoDB will be the main database where all the data is stored (User info, travel Itineraries, etc).
+
+Node.js will be the controller, where it does all of the backend work and communicates between the front end and the database.
+
+HTML/CSS will be the view portion, with Jquery handling the client-side scripts.
+
+## CRC <a name="CRC"></a>
 
     Classname: User
     Parent class: NA
@@ -95,5 +111,5 @@
         - has a cuisine type
     Collaborators:
 
-
+## Dependencies <a name="Dependencies"></a>
 Node.js 7, MongoDB, plus dependencies in package.json are needed.
