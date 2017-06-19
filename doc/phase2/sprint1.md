@@ -13,11 +13,12 @@
 
 **Howard Chen** (frontend)
   - Story 1
-      - Log in Front end
+      - Log in and sign up 2 fields each front end
+      - dashboard set up with create and view itineraries
 
 **Ke Deng** (frontend)
   - Story 1, 3
-      - final ui edits
+      - beautify CSS
   - SystemDesign.md
 
 **Varun Sharma** (frontend)
