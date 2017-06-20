@@ -4,6 +4,7 @@
 -input fields
 -labels
 -form
+-box
 */
 
 label {
@@ -49,4 +50,19 @@ input[type=submit]:hover {
 .formField{
   display: block;
   padding: 10px 10px;
+}
+
+#outline {
+    width: 100%;
+    max-width: 90em;
+    min-width: 30em;
+    margin: 7.5em auto 0 auto;
+}
+
+
+#searchTitle {
+    text-align: center;
+    vertical-align: middle;
+    color: #267F6E;
+    font: sans-serif;
 }
