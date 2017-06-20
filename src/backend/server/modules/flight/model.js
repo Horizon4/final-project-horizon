@@ -27,7 +27,7 @@ const FlightSchema = new Schema({
   },
   adultCount: {
     type: Number,
-    default: 0
+    default: 1
   },
   cabin: {
     type: String,
