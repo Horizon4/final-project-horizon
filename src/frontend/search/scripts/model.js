@@ -2,14 +2,31 @@ var model = (function() {
 
     return {
         init: function() {
-            $.ajax({
-                url: "/api/user",
-                type: 'put',
-                data: {username: 'a', password: 'a'},
-                success: function(result) {
-                    console.log(result);
+
+        },
+
+
+        send: function(data) {
+            var result;
+            Cookies.set('itinerary', data);
+            result = $.ajax({
+                url: "/api/itinerary/",
+                type: 'PUT',
+                data: data,
+                async: false,
+                success: function(data) {
+                    //console.log(data.itinerary._id);//DEBUG
+                    var itinerary = Cookies.getJSON('itinerary');
+                    itinerary.id = data.itinerary._id;
+                    Cookies.set('itinerary', itinerary);
+                    //TODO save itinerary id into cookie or url
+                    window.location.href = "/result";
+                    //console.log("successful");//DEBUG
                 },
             });
-        },
+            console.log(result);//DEBUG
+
+            return result;
+        }
     }
 })();

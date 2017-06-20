@@ -5,18 +5,19 @@
         <meta charset="utf-8"/>
         <title>Horizon</title>
 
-        <link rel="stylesheet" type="text/css" href="_Shared/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="search/css/style.css" />
-        <script src="_Shared/scripts/jquery-3.2.1.js"></script>
-        <script src="_Shared/scripts/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="../_Shared/css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="../_Shared/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-        <script src="search/scripts/model.js"></script>
-        <script src="search/scripts/controller.js"></script>
-        <script src="search/scripts/view.js"></script>
-            <link href="css/style.css" rel="stylesheet">
+        <script src="../_Shared/scripts/jquery-3.2.1.js"></script>
+        <script src="../_Shared/scripts/jquery-ui.js"></script>
+        <script src="../_Shared/scripts/js.cookie.js"></script>
+        <script src="scripts/model.js"></script>
+        <script src="scripts/controller.js"></script>
+        <script src="scripts/view.js"></script>
     </head>
     <body>
-      
+
       <form>
         <div class="formField">
         <label for="origin">Origin</label>
@@ -26,10 +27,10 @@
         <label for="budget">Budget</label>
         <input type="text" id="budget" placeholder="How much do you plan to spend?">
         <label for="fromLocation">From</label>
-        <input type="text" id="fromLocation" placeholder="When do you plan to travel?">
+        <input type="date" id="fromLocation" placeholder="When do you plan to travel?">
         <label for="toLocation">To</label>
-        <input type="text" id="toLocation" placeholder="When do you plan to return?">
-        <input type="submit" id="submitButton" value="Submit">
+        <input type="date" id="toLocation" placeholder="When do you plan to return?">
+        <input type="submit" button id="submitButton" value="Submit">
         </div>
       </form>
 
