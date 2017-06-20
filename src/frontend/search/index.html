@@ -17,22 +17,24 @@
         <script src="scripts/view.js"></script>
     </head>
     <body>
-
-      <form>
-        <div class="formField">
-        <label for="origin">Origin</label>
-        <input type="text" id="origin" placeholder="Current Location?">
-        <label for="destination">Destination</label>
-        <input type="text" id="destination" placeholder="Where do you plan to travel?">
-        <label for="budget">Budget</label>
-        <input type="text" id="budget" placeholder="How much do you plan to spend?">
-        <label for="fromLocation">From</label>
-        <input type="date" id="fromLocation" placeholder="When do you plan to travel?">
-        <label for="toLocation">To</label>
-        <input type="date" id="toLocation" placeholder="When do you plan to return?">
-        <input type="submit" button id="submitButton" value="Submit">
-        </div>
-      </form>
+      <div id="outline">
+      <h1 id="searchTitle">Search for Flights</h1>
+        <form>
+          <div class="formField">
+          <label for="origin">Origin</label>
+          <input type="text" id="origin" placeholder="Current Location?">
+          <label for="destination">Destination</label>
+          <input type="text" id="destination" placeholder="Where do you plan to travel?">
+          <label for="budget">Budget</label>
+          <input type="text" id="budget" placeholder="How much do you plan to spend?">
+          <label for="fromLocation">From</label>
+          <input type="text" id="fromLocation" placeholder="When do you plan to travel?">
+          <label for="toLocation">To</label>
+          <input type="text" id="toLocation" placeholder="When do you plan to return?">
+          <input type="submit" id="submitButton" value="Submit">
+          </div>
+        </form>
+      </div>
 
     </body>
 </html>

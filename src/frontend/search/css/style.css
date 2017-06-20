@@ -4,6 +4,7 @@
 -input fields
 -labels
 -form
+-box
 */
 
 label {
@@ -15,17 +16,18 @@ label {
 }
 input[type=text] {
     -webkit-transition: 1s;
-    transition: 0.4s;
+    transition: 0.2s;
     outline: none;
     display: block;
     width: 30%;
     padding: 13px 19px;
     margin: 0 auto;
+    border-radius: 4px;
     box-sizing: border-box;
-    border: 3px solid #CCCCCC;
+    border: 2px solid #CCCCCC;
 }
 input[type=text]:focus {
-    border: 2.5px solid #267F6E;
+    border: 2px solid #267F6E;
 }
 
 input[type=date] {
@@ -63,4 +65,19 @@ input[type=submit]:hover {
 .formField{
   display: block;
   padding: 10px 10px;
+}
+
+#outline {
+    width: 100%;
+    max-width: 90em;
+    min-width: 30em;
+    margin: 7.5em auto 0 auto;
+}
+
+
+#searchTitle {
+    text-align: center;
+    vertical-align: middle;
+    color: #267F6E;
+    font: sans-serif;
 }

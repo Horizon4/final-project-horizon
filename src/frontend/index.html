@@ -15,15 +15,14 @@
         <script src="landing/scripts/model.js"></script>
         <script src="landing/scripts/controller.js"></script>
         <script src="landing/scripts/view.js"></script>
+   
     </head>
-    <body>
+    <body style="background-color: #FFFFF9">
         <div id="wrapper">
-
-            <h1>Project Horizon</h1>
-            <hr />
 
             <!-- div for sign in and sign up -->
             <div id="sign_in_up">
+                <h1 id="horizonTitle">Horizon</h1>
                 <ul>
                     <li><a href="#sign_in">Sign In</a></li>
                     <li><a href="#sign_up">Sign Up</a></li>
@@ -31,38 +30,31 @@
 
                 <div id="sign_in">
                     <form>
-                        <span class="form_row">
-                            <span class="label">Username: </span>
-                            <input id="sign_in_user" type="text"/>
-                        </span>
-                        <span class="form_row">
-                            <span class="label">Password: </span>
-                            <input id="sign_in_pass" type="password"/>
-                        </span>
-                        <span class="form_row">
-                            <button id="sign_in_btn" type="submit">Sign In</button>
-                        </span>
+                        <label for="sign_in_user">First Name:</label><br>
+                        <input id="sign_in_user" type="text" placeholder="Your username"/><br>
+                        <label for="sign_in_pass">Password:</label><br>
+                        <input id="sign_in_pass" type="password" placeholder="Your password"/>
+ 
+                        <button id="sign_in_btn" type="submit">Sign In</button>
+
                     </form>
                     <span class="msg" id="sign_in_msg"></span>
                 </div>
 
                 <div id="sign_up">
                     <form>
-                        <span class="form_row">
-                            <span class="label">Username: </span>
-                            <input id="sign_up_user" type="text"/>
-                        </span>
-                        <span class="form_row">
-                            <span class="label">Password: </span>
-                            <input id="sign_up_pass" type="password"/>
-                        </span>
-                        <span class="form_row">
-                            <span class="label">Confirm Password: </span>
-                            <input id="sign_up_conf" type="password"/>
-                        </span>
-                        <span class="form_row">
-                            <button id="sign_up_btn" type="submit">Sign Up</button>
-                        </span>
+                        <label for="sign_up_user">First Name:</label><br>
+                        <input id="sign_up_user" type="text" placeholder="Your username"/>
+
+                        <label for="sign_up_pass">Password:</label><br>
+                        <input id="sign_up_pass" type="password" placeholder="Your password"/>
+                        
+                        <label for="sign_up_conf">Confirm Password:</label><br>
+                        <input id="sign_up_conf" type="password" placeholder="Confirm your password"/>
+
+
+                        <button id="sign_up_btn" type="submit">Sign Up</button>
+
                     </form>
                     <span class="msg" id="sign_up_msg"></span>
                 </div>
