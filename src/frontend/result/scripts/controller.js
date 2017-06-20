@@ -6,9 +6,10 @@ var controller = (function() {
         },
         findFlights: function() {
             var itinerary = Cookies.getJSON('itinerary');
-            
-            model.findFlights(itinerary.id);
-            var result;
+
+            var result = model.findFlights(itinerary.id);
+            result = result.responseText;
+            return result;
         },
     }
 })();

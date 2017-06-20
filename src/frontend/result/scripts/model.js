@@ -7,11 +7,12 @@ var model = (function() {
 
         findFlights: function(itinerary_id) {
             var result = $.ajax({
-                url: "/api/findFlights/:"+itinerary_id,
+                url: "/api/findFlights/"+itinerary_id,
                 type: 'GET',
                 async: false,
             });
-            console.log(result);
+            //console.log(result);//DEBUG
+            return result;
         },
     }
 })();
