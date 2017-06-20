@@ -1,3 +1,6 @@
+/* 007F66 DFFFF9 00FFCC 267F6E 00CCA3 */
+/*shared/jquery-ui.css lines 923(inactive) 977(active) for navigation bar*/
+
 #wrapper {
     width: 100%;
     max-width: 60em;
@@ -6,11 +9,66 @@
 }
 
 
+#horizonTitle {
+    text-align: center;
+    vertical-align: middle;
+    color: #267F6E;
+}
+
 #sign_in_up {
+    /*background-color: #DFFFF9;*/
     display: block;
     width: 25em;
-    margin:auto;
+    margin: auto;
 }
+
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #267F6E;
+	background: #267F6E;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 10px 16px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 10px 16px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
 .form_row {
     display: block;
     position: relative;
@@ -26,6 +84,7 @@
 }
 .form_row button {
     position: absolute;
+    
     left: 40%;
 }
 
