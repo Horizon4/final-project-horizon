@@ -13,7 +13,7 @@ var controller = (function() {
                 'departureDate': departureDate,
                 'returnDate': returnDate
             };
-            console.log(data); //DEBUG
+            //console.log(data); //DEBUG
             var result = model.send(data);
             if (result.status == 200) {
                 return true;

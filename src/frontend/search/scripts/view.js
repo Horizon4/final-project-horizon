@@ -27,7 +27,7 @@ var searchButtonCheck = (function() {
         var departureDate = $("#fromLocation").val();
         var returnDate = $("#toLocation").val();
 
-        console.log(origin, destination, price, departureDate, returnDate); //DEBUG
+        //console.log(origin, destination, price, departureDate, returnDate); //DEBUG
         var success = controller.send(origin, destination, price, departureDate, returnDate);
 
         /*if (!success){
