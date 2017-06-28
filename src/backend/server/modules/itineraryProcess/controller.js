@@ -22,22 +22,38 @@ export const createItinerary = (req, res) => {
 
 export const addFlight = (req, res) => {
 
+  const ItineraryProcess;
   const { price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount } = req.body
 
   ItineraryProcess.findById(req.params.id)
   .then((itinerary) => {
+    ItineraryProcess = itinerary
     var date = itinerary.departureDate;
     var origin = itinerary.origin;
     var destination = itinerary.destination;
     var ItineraryProcessID = req.params.id;
 
-    const departureFlight = new Flight({ ItineraryProcessID, origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
+    const departureFlight = new Flight({ itineraryProcessID, origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
 
-    itinerary.flightsInfo.push(departureFlight);
-    return departureFlight.save()
+    ItineraryProcess.flightsInfo.push(departureFlight);
+    departureFlight.save();
   })
   .then((flight) => {
-    return res.status(200).json(flight);
+    if ( typeof ItineraryProcess.returnDate !== 'undefined' && ItineraryProcess.returnDate) {
+      var date = ItineraryProcess.returnDate;
+      var origin = ItineraryProcess.destination;
+      var destination = ItineraryProcess.origin;
+      var ItineraryProcessID = req.params.id;
+
+      const returnFlight = new Flight({ itineraryProcessID, origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
+
+      ItineraryProcess.flightsInfo.push(returnFlight);
+    }
+    return returnFlight.save();
+  })
+  .then((flight) => {
+    // do the findFlights steps here
+    res.status(200).json(flight);
   })
   .catch((err) => {
     return res.status(500);
