@@ -75,7 +75,7 @@ or trip as seamlessly as possible.
     - body: Error from database
 
 #### description: create a new itinerary
-- request: `PUT /api/itinerary/`
+- request: `POST /api/itinerary/`
     - body: object
       - origin: (string) the departure location
       - destination: (string) the arrival location
@@ -146,4 +146,3 @@ or trip as seamlessly as possible.
       - carrier: (string) the airline of the flight
 - response: 500
     - body: Error message from database
- 

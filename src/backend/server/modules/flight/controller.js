@@ -1,5 +1,5 @@
 import Flight from './model';
-import Itinerary from '../itinerary/model';
+import ItineraryProcess from '../itineraryProcess/model';
 
 var https = require('https');
 var querystring = require('querystring');
@@ -11,6 +11,7 @@ var qpx = new qpxAPI(apiKey);
 export const createFlight = (req, res) => {
   const { origin, destination, date, price, adultCount,
           cabin, carrier, childCount, stopovers, stopoversCount } = req.body;
+
   const newFlight = new Flight({ origin, destination, date, price,
     adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
 
@@ -19,13 +20,12 @@ export const createFlight = (req, res) => {
     return res.status(201).json({ flight });
   })
   .catch((err) => {
-    return res.status(500).json({ error: true, message:
-                                  'Missing required parameter' })
+    return res.status(500).json({ error: true, message: 'Missing required parameter' })
   })
 }
 
 export const getFlight = (req, res, next) => {
-  Itinerary.findById(req.params.id)
+  ItineraryProcess.findById(req.params.id)
   .then((itinerary) => {
     req.stopoverCount = itinerary.stopoverCount
     req.flights = []
