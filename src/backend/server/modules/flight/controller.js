@@ -9,15 +9,13 @@ var apiKey = 'AIzaSyDzCkC6l70Bep5IM2X_K3H09mQ0H1JbhOo';
 var qpx = new qpxAPI(apiKey);
 
 export const createFlight = (req, res) => {
-  const { origin, destination, date, price, adultCount,
-          cabin, carrier, childCount, stopovers, stopoversCount } = req.body;
+  const { itineraryProcessID, origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount } = req.body;
 
-  const newFlight = new Flight({ origin, destination, date, price,
-    adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
+  const newFlight = new Flight({ itineraryProcessID, origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
 
   newFlight.save()
   .then((flight) => {
-    return res.status(201).json({ flight });
+    return res.status(200).json({ flight });
   })
   .catch((err) => {
     return res.status(500).json({ error: true, message: 'Missing required parameter' })

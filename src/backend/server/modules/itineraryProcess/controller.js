@@ -22,35 +22,19 @@ export const createItinerary = (req, res) => {
 
 export const addFlight = (req, res) => {
 
-  // var date = departureDate;
-  //
-  // const departureFlight = new Flight({ origin, destination, date, price,
-  //   adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
-  //
-  // newItinerary.flights.push(departureFlight);
-  //
-  // if ( typeof returnDate !== 'undefined' && returnDate) {
-  //   date = returnDate;
-  //   var tmp = origin;
-  //   origin = destination;
-  //   destination = tmp;
-  //
-  //   const returnFlight = new Flight({ origin, destination, date, price,
-  //     adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
-  //
-  //   newItinerary.flights.push(returnFlight);
-  // }
-
-  const { origin, destination, departureDate, price, adultCount,
-          cabin, carrier, childCount, stopovers, stopoversCount } = req.body
-
-  const newFlight = new Flight({ origin, destination, departureDate, price,
-    adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
+  const { price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount } = req.body
 
   ItineraryProcess.findById(req.params.id)
   .then((itinerary) => {
-    itinerary.flights.push(newFlight);
-    newFlight.save()
+    var date = itinerary.departureDate;
+    var origin = itinerary.origin;
+    var destination = itinerary.destination;
+    var ItineraryProcessID = req.params.id;
+
+    const departureFlight = new Flight({ ItineraryProcessID, origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
+
+    itinerary.flightsInfo.push(departureFlight);
+    return departureFlight.save()
   })
   .then((flight) => {
     return res.status(200).json(flight);
