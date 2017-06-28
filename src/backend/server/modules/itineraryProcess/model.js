@@ -1,7 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 
 const itinerarySchema = new Schema({
-  user: {
+  username: {
     type: String,
     required: true
   },
@@ -19,6 +19,14 @@ const itinerarySchema = new Schema({
   },
   returnDate: {
     type: String,
+  },
+  price: {
+    type: Number,
+    required: true
+  },
+  flightsInfo: {
+    type: [{}],
+    required: false
   },
   flights: {
     type:[{}],
