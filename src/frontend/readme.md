@@ -12,6 +12,7 @@ Note: This follows a MVC setup.
 **IMPORTANT: Server MUST be running for components to work!**
 
 Components are elements that need to exist in multiple pages such as the navbar. They are loaded dynamically when the page loads using AJAX calls so the server must be running. Components share the same file structure as a page.
+
 ## Creating new components
 * When creating new components be sure to create targets in the pages that it is being used (`<div id="nav_bar"></div>`)
 * In _Shared/scripts/utils.js create a new function that loads the component and call it in `$(document).ready(function() {...})`
