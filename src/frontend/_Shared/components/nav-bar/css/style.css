@@ -21,6 +21,7 @@ nav a:hover {
 
 .far-right {
     float: right;
+    right: 30px;
 }
 
 nav ul { 
