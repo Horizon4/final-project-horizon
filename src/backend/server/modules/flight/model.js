@@ -1,10 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 
 const FlightSchema = new Schema({
-  itineraryProcessID: {
-    type: Number,
-    required: true
-  },
   origin: {
     type: String,
     required: true,

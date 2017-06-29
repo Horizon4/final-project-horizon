@@ -21,39 +21,47 @@ export const createItinerary = (req, res) => {
 }
 
 export const addFlight = (req, res) => {
-
-  const ItineraryProcess;
+  var Itinerary;
   const { price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount } = req.body
 
+  console.log(req.params.id);
   ItineraryProcess.findById(req.params.id)
   .then((itinerary) => {
-    ItineraryProcess = itinerary
+    Itinerary = itinerary
     var date = itinerary.departureDate;
     var origin = itinerary.origin;
     var destination = itinerary.destination;
     var ItineraryProcessID = req.params.id;
 
-    const departureFlight = new Flight({ itineraryProcessID, origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
+    const departureFlight = new Flight({ origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
 
-    ItineraryProcess.flightsInfo.push(departureFlight);
-    departureFlight.save();
+    Itinerary.flightsInfo.push(departureFlight);
+    console.log('Itinerary departureFlight', Itinerary);
+    return departureFlight.save();
   })
   .then((flight) => {
-    if ( typeof ItineraryProcess.returnDate !== 'undefined' && ItineraryProcess.returnDate) {
-      var date = ItineraryProcess.returnDate;
-      var origin = ItineraryProcess.destination;
-      var destination = ItineraryProcess.origin;
+    console.log('HERE!');
+    if ( typeof Itinerary.returnDate !== 'undefined' && Itinerary.returnDate) {
+      var date = Itinerary.returnDate;
+      var origin = Itinerary.destination;
+      var destination = Itinerary.origin;
       var ItineraryProcessID = req.params.id;
 
-      const returnFlight = new Flight({ itineraryProcessID, origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
+      const returnFlight = new Flight({ origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
 
-      ItineraryProcess.flightsInfo.push(returnFlight);
+      Itinerary.flightsInfo.push(returnFlight);
+      return returnFlight.save();
+    } else {
+      return Itinerary.update();
     }
-    return returnFlight.save();
+    console.log('Work please', Itinerary);
   })
   .then((flight) => {
     // do the findFlights steps here
-    res.status(200).json(flight);
+    return ItineraryProcess.update({'_id': req.params.id}, Itinerary)
+  })
+  .then((itinerary) => {
+    res.status(200).json(itinerary)
   })
   .catch((err) => {
     return res.status(500);

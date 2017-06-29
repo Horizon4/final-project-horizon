@@ -33,9 +33,7 @@ export const getFlight = (req, res, next) => {
     next();
   })
   .catch((err) => {
-    return res.status(500).json({ error: true, message:
-                                  'Flight with ' + req.params.id +
-                                  'does not exist.' })
+    return res.status(500).json({ error: true, message: 'Flight with ' + req.params.id + 'does not exist.' })
   })
 }
 
