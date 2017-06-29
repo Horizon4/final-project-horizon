@@ -1,0 +1,16 @@
+nav {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    width: 10em;
+    background-color: #ccc;
+    padding: 0.25em;
+}
+
+nav a {
+    display: block;
+}
+nav a:hover {
+    background-color: #ffffff;
+    padding: 0;
+}
