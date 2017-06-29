@@ -67,12 +67,12 @@ export const buildFlightRequest = (req, res, next ) => {
 }
 
 export const findFlights = (req, res) => {
-  console.log(req.body);
   qpx.getInfo(req.body, (err, flights) => {
     if (err) {
       console.log(err)
     } else {
-      return res.status(200).json(flights);
+      var trips = flights.trips.tripOption.slice(0,5)
+      return res.status(200).json(trips);
     }
   })
 }
