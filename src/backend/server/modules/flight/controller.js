@@ -27,8 +27,8 @@ export const getFlight = (req, res, next) => {
   .then((itinerary) => {
     req.stopoverCount = itinerary.stopoverCount
     req.flights = []
-    for (var i = 0; i < itinerary.flights.length; i++) {
-      req.flights.push(itinerary.flights[i])
+    for (var i = 0; i < itinerary.flightsInfo.length; i++) {
+      req.flights.push(itinerary.flightsInfo[i])
     }
     next();
   })
@@ -67,6 +67,7 @@ export const buildFlightRequest = (req, res, next ) => {
 }
 
 export const findFlights = (req, res) => {
+  console.log(req.body);
   qpx.getInfo(req.body, (err, flights) => {
     if (err) {
       console.log(err)
