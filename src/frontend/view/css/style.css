@@ -1,0 +1,45 @@
+#main_wrapper {
+    display: block;
+    width: 40em;
+    margin: auto;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #267F6E;
+	background: #267F6E;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+#title {
+    text-align: center;
+    vertical-align: middle;
+    color: #267F6E;
+}
+
+.form_row {
+    display: block;
+    position: relative;
+    height: 1.75em;
+}
+.form_row .label {
+    position: absolute;
+    right: 61%;
+}
+.form_row input {
+    position: absolute;
+    left: 40%;
+}
+.form_row button {
+    position: absolute;
+    left: 40%;
+}
+
+.msg {
+    display: none;
+}

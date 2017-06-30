@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>title</title>
+        <title>View Itineraries</title>
 
         <link rel="stylesheet" type="text/css" href="/_Shared/css/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" href="/_Shared/css/style.css" />
@@ -13,6 +13,7 @@
         <script src="/_Shared/scripts/jquery-ui.js"></script>
         <script src="/_Shared/scripts/js.cookie.js"></script>
         <script src="/_Shared/scripts/utils.js"></script>
+
         <script src="scripts/model.js"></script>
         <script src="scripts/controller.js"></script>
         <script src="scripts/view.js"></script>
@@ -21,7 +22,21 @@
     <body>
         <div id="nav_bar"></div>
         <div id="main_wrapper">
-            <!-- Your code here -->
+            <h1 id="title">Itineraries</h1>
+            <ul>
+                <li><a href="#complete">Completed</a></li>
+                <li><a href="#incomplete">Incomplete</a></li>
+            </ul>
+
+            <div id="complete">
+            <!-- Completed itineraries -->
+            </div>
+
+            <div id="incomplete">
+            <!-- Completed itineraries -->
+            </div>
+
+
         </div>
     </body>
 </html>

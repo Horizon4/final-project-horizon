@@ -1,0 +1,36 @@
+nav {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #00CCA3;
+}
+
+nav a {
+    display: block;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #267F6E;
+    padding: 15px 15px;
+}
+
+.far-right {
+    float: right;
+    right: 30px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+nav ul li {
+    float: left;
+}
