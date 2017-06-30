@@ -22,15 +22,15 @@ Front end
 -	How the dashboard should look like
   Has completed itineraries when “View” is selected with a “+” somewhere (for next sprint)
 -	When “create” is chosen, then there is a progress bar at the bottom with:
-  - Getting started
+  - Getting Started
   - Flights
-  - Accommodations
-  - Confirm 
+  - Accomodations
+  - Confirm
   and then also has a “Continue” and “Save” button (next sprint)
   - Continue button becomes Confirm button when we’re at the last stage (reviewing)
 -	To do:
-  - NavBar
-  - Process bar
+  - Navigation Bar
+  - Process Bar
 -	Side note: Colour scheme is lit *fire emoji*
 
 Back end
@@ -45,11 +45,11 @@ Back end
 -	Change itineraries to itinerary process so that the users can save it
 -	Make a different thing call itinerary (JASON’S IDEA)
 -	Itinerary -> ItineraryProcess
--	ItineraryProcess has 
+-	ItineraryProcess has:
   - Users (ID?)
   - Flights
   - Accommodations
-  - Etc (whatever was there before in Itinerary)
+  - Previous items in itinerary
 -	Also making object Itinerary for completed itineraries (ItineraryProcess is for uncompleted ones)
 -	ItineraryProcess stores user input and collects data from that
 -	Upon hitting continue, flights gets populated 
