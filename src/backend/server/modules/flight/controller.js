@@ -1,5 +1,5 @@
 import Flight from './model';
-import Itinerary from '../itinerary/model';
+import ItineraryProcess from '../itineraryProcess/model';
 
 var https = require('https');
 var querystring = require('querystring');
@@ -9,35 +9,31 @@ var apiKey = 'AIzaSyDzCkC6l70Bep5IM2X_K3H09mQ0H1JbhOo';
 var qpx = new qpxAPI(apiKey);
 
 export const createFlight = (req, res) => {
-  const { origin, destination, date, price, adultCount,
-          cabin, carrier, childCount, stopovers, stopoversCount } = req.body;
-  const newFlight = new Flight({ origin, destination, date, price,
-    adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
+  const { itineraryProcessID, origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount } = req.body;
+
+  const newFlight = new Flight({ itineraryProcessID, origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
 
   newFlight.save()
   .then((flight) => {
-    return res.status(201).json({ flight });
+    return res.status(200).json({ flight });
   })
   .catch((err) => {
-    return res.status(500).json({ error: true, message:
-                                  'Missing required parameter' })
+    return res.status(500).json({ error: true, message: 'Missing required parameter' })
   })
 }
 
 export const getFlight = (req, res, next) => {
-  Itinerary.findById(req.params.id)
+  ItineraryProcess.findById(req.params.id)
   .then((itinerary) => {
     req.stopoverCount = itinerary.stopoverCount
     req.flights = []
-    for (var i = 0; i < itinerary.flights.length; i++) {
-      req.flights.push(itinerary.flights[i])
+    for (var i = 0; i < itinerary.flightsInfo.length; i++) {
+      req.flights.push(itinerary.flightsInfo[i])
     }
     next();
   })
   .catch((err) => {
-    return res.status(500).json({ error: true, message:
-                                  'Flight with ' + req.params.id +
-                                  'does not exist.' })
+    return res.status(500).json({ error: true, message: 'Flight with ' + req.params.id + 'does not exist.' })
   })
 }
 
@@ -71,11 +67,27 @@ export const buildFlightRequest = (req, res, next ) => {
 }
 
 export const findFlights = (req, res) => {
+  var Itinerary;
   qpx.getInfo(req.body, (err, flights) => {
     if (err) {
-      console.log(err)
+        return res.status(500).json({ error: true, message: 'qpx error'});
     } else {
-      return res.status(200).json(flights);
+      var trips = flights.trips.tripOption.slice(0,5)
+
+      // insert into the itineraryProcess
+      ItineraryProcess.findById(req.params.id)
+      .then((itinerary) => {
+        itinerary.flights = trips;
+
+        Itinerary = itinerary;
+        return ItineraryProcess.update({'_id': req.params.id}, itinerary)
+      })
+      .then((itineraryUpdated) => {
+        return res.status(200).json(Itinerary);
+      })
+      .catch((err) => {
+        return res.status(500).json({ error: true, message: 'Itinerary with ' + req.params.id + 'had error finding' })
+      })
     }
   })
 }

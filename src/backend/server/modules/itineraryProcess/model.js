@@ -1,6 +1,10 @@
 import mongoose, { Schema } from 'mongoose';
 
 const itinerarySchema = new Schema({
+  username: {
+    type: String,
+    required: true
+  },
   origin: {
     type: String,
     required: true
@@ -15,6 +19,14 @@ const itinerarySchema = new Schema({
   },
   returnDate: {
     type: String,
+  },
+  price: {
+    type: Number,
+    required: true
+  },
+  flightsInfo: {
+    type: [{}],
+    required: false
   },
   flights: {
     type:[{}],
@@ -36,4 +48,4 @@ const itinerarySchema = new Schema({
   }
 });
 
-export default mongoose.model('Itinerary', itinerarySchema)
+export default mongoose.model('ItineraryProcess', itinerarySchema)
