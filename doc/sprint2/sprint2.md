@@ -32,7 +32,6 @@ Front end
   o	NavBar
   o	Process bar
 -	Side note: Colour scheme is lit *fire emoji*
--	Another side note: Front end except Howard left
 
 Back end
 -	Itinerary with Accommodations included
@@ -116,12 +115,15 @@ Back end
 - endpoints
 
 **Zain Amir**
+- design change, replace Itinerary with Itinerary Process and create a separate itinerary object
 
 **Colleen Brown**
 
 **Howard Chen**
+- navigation bar with “View”, “Create”, “Recommendations” and “Logout” 
 
 **Ke Deng**
+- navigation bar
 
 **Varun Sharma**
 
