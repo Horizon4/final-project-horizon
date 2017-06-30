@@ -1,12 +1,65 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Horizon</title>
-</head>
-<body>
-    <div id="app"></div>
-    <script src="./bundle.js" type="text/javascript"></script>
-</body>
 
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Project Horizon</title>
+
+        <link rel="stylesheet" type="text/css" href="_Shared/css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="_Shared/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="landing/css/style.css" />
+
+        <script src="_Shared/scripts/jquery-3.2.1.js"></script>
+        <script src="_Shared/scripts/jquery-ui.js"></script>
+        <script src="_Shared/scripts/js.cookie.js"></script>
+        <script src="landing/scripts/model.js"></script>
+        <script src="landing/scripts/controller.js"></script>
+        <script src="landing/scripts/view.js"></script>
+
+    </head>
+    <body style="background-color: #FFFFF9">
+        <div id="wrapper">
+
+            <!-- div for sign in and sign up -->
+            <div id="sign_in_up">
+                <h1 id="horizonTitle">Horizon</h1>
+                <ul>
+                    <li><a href="#sign_in">Login</a></li>
+                    <li><a href="#sign_up">Sign Up</a></li>
+                </ul>
+
+                <div id="sign_in">
+                    <form>
+                        <label for="sign_in_user">Username:</label><br>
+                        <input id="sign_in_user" type="text" placeholder="Your username"/><br>
+                        <label for="sign_in_pass">Password:</label><br>
+                        <input id="sign_in_pass" type="password" placeholder="Your password"/>
+
+                        <button id="sign_in_btn" type="submit">Login</button>
+
+                    </form>
+                    <span class="msg" id="sign_in_msg"></span>
+                </div>
+
+                <div id="sign_up">
+                    <form>
+                        <label for="sign_up_user">Username:</label><br>
+                        <input id="sign_up_user" type="text" placeholder="Your username"/>
+
+                        <label for="sign_up_pass">Password:</label><br>
+                        <input id="sign_up_pass" type="password" placeholder="Your password"/>
+
+                        <label for="sign_up_conf">Confirm Password:</label><br>
+                        <input id="sign_up_conf" type="password" placeholder="Confirm your password"/>
+
+
+                        <button id="sign_up_btn" type="submit">Sign Up</button>
+
+                    </form>
+                    <span class="msg" id="sign_up_msg"></span>
+                </div>
+            </div>
+
+        </div>
+    </body>
 </html>
