@@ -56,7 +56,9 @@ Back end
 -	Getting rid of routes in flights? (Keeping for testing)
 -	When continue is clicked, then we addFlights and pass in the proper parameters for it
 -	To do:
+
   o	Accommodations
+
   o	Ryan is doing the completed endpoints (getting completed itineraries by specific user)
 -	Side note: PUT != Create, POST == Create, PUT == Update
 
