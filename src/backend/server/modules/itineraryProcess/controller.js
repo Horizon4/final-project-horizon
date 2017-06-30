@@ -24,7 +24,6 @@ export const addFlight = (req, res) => {
   var Itinerary;
   const { price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount } = req.body
 
-  console.log(req.params.id);
   ItineraryProcess.findById(req.params.id)
   .then((itinerary) => {
     Itinerary = itinerary
@@ -36,11 +35,9 @@ export const addFlight = (req, res) => {
     const departureFlight = new Flight({ origin, destination, date, price, adultCount, cabin, carrier, childCount, stopovers, stopoversCount });
 
     Itinerary.flightsInfo.push(departureFlight);
-    console.log('Itinerary departureFlight', Itinerary);
     return departureFlight.save();
   })
   .then((flight) => {
-    console.log('HERE!');
     if ( typeof Itinerary.returnDate !== 'undefined' && Itinerary.returnDate) {
       var date = Itinerary.returnDate;
       var origin = Itinerary.destination;
@@ -54,7 +51,6 @@ export const addFlight = (req, res) => {
     } else {
       return Itinerary.update();
     }
-    console.log('Work please', Itinerary);
   })
   .then((flight) => {
     // do the findFlights steps here

@@ -67,12 +67,27 @@ export const buildFlightRequest = (req, res, next ) => {
 }
 
 export const findFlights = (req, res) => {
+  var Itinerary;
   qpx.getInfo(req.body, (err, flights) => {
     if (err) {
-      console.log(err)
+        return res.status(500).json({ error: true, message: 'qpx error'});
     } else {
       var trips = flights.trips.tripOption.slice(0,5)
-      return res.status(200).json(trips);
+
+      // insert into the itineraryProcess
+      ItineraryProcess.findById(req.params.id)
+      .then((itinerary) => {
+        itinerary.flights = trips;
+
+        Itinerary = itinerary;
+        return ItineraryProcess.update({'_id': req.params.id}, itinerary)
+      })
+      .then((itineraryUpdated) => {
+        return res.status(200).json(Itinerary);
+      })
+      .catch((err) => {
+        return res.status(500).json({ error: true, message: 'Itinerary with ' + req.params.id + 'had error finding' })
+      })
     }
   })
 }
