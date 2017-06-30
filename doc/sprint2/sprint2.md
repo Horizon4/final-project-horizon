@@ -22,15 +22,15 @@ Front end
 -	How the dashboard should look like
   Has completed itineraries when “View” is selected with a “+” somewhere (for next sprint)
 -	When “create” is chosen, then there is a progress bar at the bottom with:
-  - Getting Started
-  - Flights
-  - Accomodations
-  - Confirm
+    - Getting Started
+    - Flights
+    - Accomodations
+    - Confirm
   and then also has a “Continue” and “Save” button (next sprint)
   - Continue button becomes Confirm button when we’re at the last stage (reviewing)
 -	To do:
-  - Navigation Bar
-  - Process Bar
+    - Navigation Bar
+    - Process Bar
 -	Side note: Colour scheme is lit *fire emoji*
 
 Back end
@@ -46,18 +46,18 @@ Back end
 -	Make a different thing call itinerary (JASON’S IDEA)
 -	Itinerary -> ItineraryProcess
 -	ItineraryProcess has:
-  - Users (ID?)
-  - Flights
-  - Accommodations
-  - Previous items in itinerary
+    - Users (ID?)
+    - Flights
+    - Accommodations
+    - Previous items in itinerary
 -	Also making object Itinerary for completed itineraries (ItineraryProcess is for uncompleted ones)
 -	ItineraryProcess stores user input and collects data from that
 -	Upon hitting continue, flights gets populated 
 -	Getting rid of routes in flights? (Keeping for testing)
 -	When continue is clicked, then we addFlights and pass in the proper parameters for it
 -	To do:
-  - Accommodations
-  - Ryan is doing the completed endpoints (getting completed itineraries by specific user)
+    - Accommodations
+    - Ryan is doing the completed endpoints (getting completed itineraries by specific user)
 -	Side note: PUT != Create, POST == Create, PUT == Update
 
 ## Sprint Backlog
