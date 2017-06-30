@@ -16,7 +16,7 @@ var model = (function() {
                 success: function(data) {
                     console.log(data);
                     // TODO store sign in data in cookie or url
-                    window.location.href = "/dashboard";
+                    window.location.href = "/view";
                 },
             });
 
