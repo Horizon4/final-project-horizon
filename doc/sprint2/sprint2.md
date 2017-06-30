@@ -63,11 +63,6 @@ Back end
 
 ## Sprint Backlog
 
-### Design Change, Replace Itinerary with Itinerary Process and create a separate itinerary object  
-
-### Navigation Bar
-- As a traveller, I should be able to see a nav bar on the dashboard with create, view complete itinerary, view incomplete itinerary and   logout
-
 ### Story 2 - Progress Bar
 
 - As Michael, I should be guided along in my itinerary creation by making me pick the minimal details about flights, hotels etc and I should see a visual of the process so that I have a good travelling experience with the help of the website's guidance
@@ -77,8 +72,6 @@ Back end
 
 - Priority = 2
 - Point = 4
-
-### Show itinerary list with flights and hotels
 
 ### Story 4 - Itinerary with Accomodations
 
