@@ -52,7 +52,7 @@ Back end
     - Previous items in itinerary
 -	Also making object Itinerary for completed itineraries (ItineraryProcess is for uncompleted ones)
 -	ItineraryProcess stores user input and collects data from that
--	Upon hitting continue, flights gets populated 
+-	Upon hitting continue, flights gets populated
 -	Getting rid of routes in flights? (Keeping for testing)
 -	When continue is clicked, then we addFlights and pass in the proper parameters for it
 -	To do:
@@ -85,7 +85,7 @@ Back end
 
 ### Story 6 - View all completed itinerary
 
-- As Michael, I want to be able to see all the completed itineraries on the dashboard so that I can navigate between different itineraries easily, and also so I can easily access them throughout my trip and have a guided experience 
+- As Michael, I want to be able to see all the completed itineraries on the dashboard so that I can navigate between different itineraries easily, and also so I can easily access them throughout my trip and have a guided experience
 
 - Condition of Satisfaction
     1. When I go to the dashboard under the completed itineraries tab I should be able to see all the completed itineraries I have created
@@ -120,7 +120,7 @@ Back end
 **Colleen Brown**
 
 **Howard Chen**
-- navigation bar with “View”, “Create”, “Recommendations” and “Logout” 
+- navigation bar with “View”, “Create”, “Recommendations” and “Logout”
 
 **Ke Deng**
 - navigation bar linking to pages
@@ -129,4 +129,5 @@ Back end
 **Varun Sharma**
 
 **Jason Shum**
-
+- find an api to look for accommodations
+- develop routes to find accommodations using api and return usable data for the itinerary
