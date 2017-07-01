@@ -1,3 +1,3 @@
-import ItineraryRoutes from './routes';
+import ItineraryProcessRoutes from './routes';
 
-export { ItineraryRoutes };
+export { ItineraryProcessRoutes };

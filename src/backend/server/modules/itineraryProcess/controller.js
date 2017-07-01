@@ -49,7 +49,7 @@ export const addFlight = (req, res) => {
       Itinerary.flightsInfo.push(returnFlight);
       return returnFlight.save();
     } else {
-      return Itinerary.update();
+      return ItineraryProcess.update({'_id': req.params.id}, Itinerary);
     }
   })
   .then((flight) => {

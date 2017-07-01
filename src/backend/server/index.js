@@ -2,7 +2,7 @@ import express from 'express';
 import dbConfig from './config/db';
 var Promise = require("bluebird");
 import middlewareConfig from './config/middlewares';
-import { UserRoutes, FlightRoutes, ItineraryRoutes } from './modules/index';
+import { UserRoutes, FlightRoutes, ItineraryProcessRoutes } from './modules/index';
 const app = express();
 
 // DATABASE
@@ -11,15 +11,12 @@ dbConfig();
 //Middleware
 middlewareConfig(app);
 
-app.use('/api', [UserRoutes, FlightRoutes, ItineraryRoutes]);
+app.use('/api', [UserRoutes, FlightRoutes, ItineraryProcessRoutes]);
 
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + "/../../frontend"));
 
-// app.get('*', function (req, res, next) {
-//     res.redirect('/index.html');
-// });
 
 app.listen(PORT, err => {
   if (err) {
