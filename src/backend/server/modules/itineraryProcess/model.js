@@ -28,8 +28,16 @@ const itineraryProcessSchema = new Schema({
     type: [{}],
     required: false
   },
+  accommodationsInfo: {
+    type: [{}],
+    required: false
+  },
   flights: {
     type:[{}],
+    required: false
+  },
+  accommodations: {
+    type: [{}];
     required: false
   },
   stopovers: {
