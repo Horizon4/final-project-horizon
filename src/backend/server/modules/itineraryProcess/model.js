@@ -37,7 +37,7 @@ const itineraryProcessSchema = new Schema({
     required: false
   },
   accommodations: {
-    type: [{}];
+    type: [{}],
     required: false
   },
   stopovers: {

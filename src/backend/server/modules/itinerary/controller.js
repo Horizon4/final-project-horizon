@@ -9,13 +9,17 @@ export const createItinerary = (req, res) => {
 
   ItineraryProcess.findById(itineraryProcessId)
   .then((itinerary) => {
-    console.log('got the itinerary object');
 
     var flights = itinerary.flights;
     var accommodations = itinerary.accommodations;
+    var result = [];
 
-    console.log(flights, " Flights is ");
-    console.log(accommodations, " accommodations is ");
+    for (var i=0; i <flights.length; i++){
+      var object = {}
+      object.flight = flights[i];
+      result.push(object)
+    }
+    return res.status(200).json({ result })
   })
   .catch((err) => {
     return res.status(500).json({error: true, message: 'The itinerary Object does not exist'})

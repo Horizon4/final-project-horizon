@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import * from ItineraryController from './controller'
+import * as ItineraryController from './controller'
 
 const routes = new Router();
 
