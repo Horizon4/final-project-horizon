@@ -123,7 +123,8 @@ Back end
 - navigation bar with “View”, “Create”, “Recommendations” and “Logout” 
 
 **Ke Deng**
-- navigation bar
+- navigation bar linking to pages
+- view page set up
 
 **Varun Sharma**
 
