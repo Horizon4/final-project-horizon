@@ -34,7 +34,7 @@ or trip as seamlessly as possible.
 ## Create
 
 #### description: create a new user
-- request: `PUT /api/users/`
+- request: `PUT /api/user`
     - body: object
       - username: (string) the username of the account
       - password: (string) the password of the account

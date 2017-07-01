@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import * as ItineraryController from './controller';
+import * as ItineraryProcessController from './controller';
 
 const routes = new Router();
 
-routes.post('/itineraryProcess', ItineraryController.createItinerary);
-routes.put('/addFlight/:id', ItineraryController.addFlight);
+routes.post('/itineraryProcess', ItineraryProcessController.createItinerary);
+routes.put('/addFlight/:id', ItineraryProcessController.addFlight);
 
 export default routes;
