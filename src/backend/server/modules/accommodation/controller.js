@@ -11,7 +11,11 @@ var textSearch = new TextSearch(apiKey, outputFormat);
 var placeDetailsRequest = new PlaceDetailsRequest(apiKey, outputFormat);
 
 export const createAccommodation = (req, res) => {
+  var date = new Date();
   const { address, priceRating, checkin, checkout, hotelName, hotelRating } = req.body;
+  if (!(checkin > date && checkout > checkin)) {
+    return res.status(501).json({ error: true, message: 'Invalid date'});
+  }
   const newAccommodation = new Accommodation({ address, priceRating, checkin, checkout, hotelName, hotelRating });
 
   newAccommodation.save()
@@ -23,7 +27,7 @@ export const createAccommodation = (req, res) => {
   })
 }
 
-export const getAccommodation = (req, res) => {
+export const findAccommodation = (req, res) => {
   ItineraryProcess.findById(req.params.id)
   .then((itinerary) => {
     performSearch(itinerary.destination, (err, result) => {
