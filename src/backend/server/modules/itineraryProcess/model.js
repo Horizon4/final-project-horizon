@@ -31,10 +31,6 @@ const itinerarySchema = new Schema({
   flights: {
     type:[{}],
   },
-  price: {
-    type: Number,
-    required: true
-  },
   stopovers: {
     type: [String],
   },

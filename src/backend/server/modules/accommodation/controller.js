@@ -10,23 +10,6 @@ var outputFormat = 'json';
 var textSearch = new TextSearch(apiKey, outputFormat);
 var placeDetailsRequest = new PlaceDetailsRequest(apiKey, outputFormat);
 
-export const createAccommodation = (req, res) => {
-  var date = new Date();
-  const { address, priceRating, checkin, checkout, hotelName, hotelRating } = req.body;
-  if (!(checkin > date && checkout > checkin)) {
-    return res.status(501).json({ error: true, message: 'Invalid date'});
-  }
-  const newAccommodation = new Accommodation({ address, priceRating, checkin, checkout, hotelName, hotelRating });
-
-  newAccommodation.save()
-  .then((accommodation) => {
-    return res.status(200).json({ accommodation });
-  })
-  .catch((err) => {
-    return res.status(500).json({ error: true, message: 'Missing required parameter' })
-  })
-}
-
 export const findAccommodation = (req, res) => {
   ItineraryProcess.findById(req.params.id)
   .then((itinerary) => {
