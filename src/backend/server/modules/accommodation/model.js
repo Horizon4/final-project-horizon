@@ -5,11 +5,7 @@ const AccommodationSchema = new Schema({
     type: String,
     required: true,
   },
-  price: {
-    type: Number,
-    required: true,
-  },
-  beds: {
+  priceRating: {
     type: Number,
     required: true,
   },
@@ -21,15 +17,13 @@ const AccommodationSchema = new Schema({
     type: Date,
     required: true,
   },
-  hotelname: {
+  hotelName: {
     type: String,
     required: true,
   },
-  roomtype: {
-    type: String,
-    required: true,
-  },
-  amenities: {
-    type: [],
+  hotelRating: {
+    type: Number,
   }
-})
+});
+
+export default mongoose.model('Accommodation', AccommodationSchema);
