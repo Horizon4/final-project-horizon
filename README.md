@@ -123,6 +123,7 @@ or trip as seamlessly as possible.
 - response: 500
     - body: Invalid request
 
+
 #### description: find accommodations
 - request: `PUT /api/selected`
     - body: string
