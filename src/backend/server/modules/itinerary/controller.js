@@ -20,9 +20,12 @@ export const createItinerary = (req, res) => {
         object.flight = flights[i];
         object.accommodation = accommodations[j]
         result.push(object)
+
+        if (result.length == 8 ){
+          return res.status(200).json({ result });
+        }
       }
     }
-    return res.status(200).json({ result })
   })
   .catch((err) => {
     return res.status(500).json({error: true, message: 'The itinerary Object does not exist'})
