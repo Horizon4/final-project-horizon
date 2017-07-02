@@ -115,12 +115,12 @@ input[type=submit]:hover {
 }
 
 .container{
-    width:30%;
+    width:34%;
     padding:0.4em 1px;
     transition: width 500ms;
 }
 
 /*.container:hover{
-    width: 16%;
+    width: 34%;
     padding:0.4em 1px;
 }*/
