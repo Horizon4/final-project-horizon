@@ -30,7 +30,6 @@ const itinerarySchema = new Schema({
   },
   flights: {
     type:[{}],
-    required: false
   },
   stopovers: {
     type: [String],
