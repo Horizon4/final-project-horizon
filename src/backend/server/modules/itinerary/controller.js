@@ -15,13 +15,42 @@ export const createItinerary = (req, res) => {
     var result = [];
 
     for (var i=0; i <flights.length; i++){
-      var object = {}
-      object.flight = flights[i];
-      result.push(object)
+      for (var j=0; j < accommodations.length; j++) {
+        var object = {}
+        object.flight = flights[i];
+        object.accommodation = accommodations[j]
+        result.push(object)
+      }
     }
     return res.status(200).json({ result })
   })
   .catch((err) => {
     return res.status(500).json({error: true, message: 'The itinerary Object does not exist'})
+  })
+}
+
+export const selectedItinerary = (req, res) => {
+  var { selectedItinerary, username } = req.body;
+
+  const selectedItinerary = new Itinerary({username, selectedItinerary })
+
+  selectedItinerary.save()
+  .then((itinerary) => {
+    return res.status(200).json(itinerary);
+  })
+  .catch((err) => {
+    return res.status(500).json({error: true, message: 'Could not save the itinerary'});
+  })
+}
+
+export const completedItinerary = (req, res) => {
+  var { username } = req.body;
+
+  Itinerary.find({'username': username})
+  .then((itineraries) => {
+    return res.status(200).json(itineraries);
+  })
+  .catch((err) => {
+    return res.status(500).json({error: true, message: 'No such user exists'})
   })
 }
