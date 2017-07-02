@@ -101,14 +101,45 @@ or trip as seamlessly as possible.
 - response: 500
     - body: Error from database or the username doesn't exist
 
+#### description: create a new accommodation
+- request: `POST /api/accommodation`
+    - body: string
+      - address: (string) the username that is logged in
+      - checkin: (date) the checkin date(YYYY-MM-DD)
+      - checkout: (date) the checkout date(YYYY-MM-DD)
+      - priceRating: (number) the price of the hotel
+      - hotelRating: (number) the rating of the hotel
+      - hotelName: (string) the name of the hotel
+
+- response: 200
+    - body: string
+      - address: (string) the username that is logged in
+      - checkin: (date) the checkin date(YYYY-MM-DD)
+      - checkout: (date) the checkout date(YYYY-MM-DD)
+      - priceRating: (number) the price of the hotel
+      - hotelRating: (number) the rating of the hotel
+      - hotelName: (string) the name of the hotel
+
+- response: 500
+    - body: Missing required parameter
+- response: 501
+    - body: Invalid date
+
 ## Read
 
-#### description: find flights
+#### description: find flight
 - request: `GET /api/findFlights/:id`
 - response: 200
     - body: JSON String of list of solutions found using QPX-Express
 - response: 500
     - body: Error message from QPX-Express
+
+#### description: find accommodation
+- request: `GET /api/findAccommodation/:id`
+- response: 200
+    - body: JSON String of list of solutions found using Google Places api
+- response: 500
+    - body: Invalid request
 
 ## Update
 

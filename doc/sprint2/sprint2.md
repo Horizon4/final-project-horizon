@@ -32,6 +32,33 @@ Front end
     - Navigation Bar
     - Process Bar
 -	Side note: Colour scheme is lit *fire emoji*
+-make progress bar a component
+-remove important! tags
+- Get Started
+    - origin: (string) the departure location
+    - destination: (string) the arrival location
+    - departureDate: (date) the departure date(YYYY-MM-DD)
+    - returnDate: (date) the return date(YYYY-MM-DD)
+    - price: (number) the price of the itinerary
+- Flight
+    - price: (number) the price of the flight
+    - Optional:
+    - adultCount: (number) the number of adult seats
+    - childCount: (number) the number of child seats
+    - seniorCount: (number) the number of senior seats
+    - cabin: (string) the type of cabin the seat is in (i.e. economy, first class, etc)
+    - carrier: (string) the airline of the flight
+- 1. GET api/addFlight/:id
+- 2. GET api/findFlights/:id
+- Accommodation
+    - In terms of price:1 ($) or 2 ($$) or 3 ($$) or 4 ($$)
+- 1. GET /api/findAccommodation/:id
+- Confirm
+    - itineraryProcessId:
+    - 1. POST api/createItinerary
+- Don't hit until 3PM
+- flights[0][slice][0][segment][leg][0] YYZ to LAX
+- flights[0][slice][1][segment][leg][1] LAX to YYZ
 
 Back end
 -	Itinerary with Accommodations included
@@ -52,7 +79,7 @@ Back end
     - Previous items in itinerary
 -	Also making object Itinerary for completed itineraries (ItineraryProcess is for uncompleted ones)
 -	ItineraryProcess stores user input and collects data from that
--	Upon hitting continue, flights gets populated 
+-	Upon hitting continue, flights gets populated
 -	Getting rid of routes in flights? (Keeping for testing)
 -	When continue is clicked, then we addFlights and pass in the proper parameters for it
 -	To do:
@@ -85,7 +112,7 @@ Back end
 
 ### Story 6 - View all completed itinerary
 
-- As Michael, I want to be able to see all the completed itineraries on the dashboard so that I can navigate between different itineraries easily, and also so I can easily access them throughout my trip and have a guided experience 
+- As Michael, I want to be able to see all the completed itineraries on the dashboard so that I can navigate between different itineraries easily, and also so I can easily access them throughout my trip and have a guided experience
 
 - Condition of Satisfaction
     1. When I go to the dashboard under the completed itineraries tab I should be able to see all the completed itineraries I have created
@@ -120,7 +147,7 @@ Back end
 **Colleen Brown**
 
 **Howard Chen**
-- navigation bar with “View”, “Create”, “Recommendations” and “Logout” 
+- navigation bar with “View”, “Create”, “Recommendations” and “Logout”
 
 **Ke Deng**
 - navigation bar linking to pages
@@ -129,4 +156,5 @@ Back end
 **Varun Sharma**
 
 **Jason Shum**
-
+- find an api to look for accommodations
+- develop routes to find accommodations using api and return usable data for the itinerary

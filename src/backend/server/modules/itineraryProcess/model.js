@@ -34,7 +34,6 @@ const itineraryProcessSchema = new Schema({
   },
   flights: {
     type:[{}],
-    required: false
   },
   accommodations: {
     type: [{}],
