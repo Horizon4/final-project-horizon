@@ -12,11 +12,8 @@ dbConfig();
 //Middleware
 middlewareConfig(app);
 
-<<<<<<< HEAD
-app.use('/api', [UserRoutes, FlightRoutes, ItineraryProcessRoutes, ItineraryRoutes]);
-=======
-app.use('/api', [UserRoutes, FlightRoutes, ItineraryRoutes, AccommodationRoutes]);
->>>>>>> master
+app.use('/api', [UserRoutes, FlightRoutes, ItineraryProcessRoutes, ItineraryRoutes, AccommodationRoutes]);
+
 
 const PORT = process.env.PORT || 3000;
 

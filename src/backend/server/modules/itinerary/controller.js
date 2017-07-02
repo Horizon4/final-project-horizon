@@ -29,12 +29,12 @@ export const createItinerary = (req, res) => {
   })
 }
 
-export const selectedItinerary = (req, res) => {
+export const selected = (req, res) => {
   var { selectedItinerary, username } = req.body;
 
-  const selectedItinerary = new Itinerary({username, selectedItinerary })
+  const select = new Itinerary({username, selectedItinerary })
 
-  selectedItinerary.save()
+  select.save()
   .then((itinerary) => {
     return res.status(200).json(itinerary);
   })
