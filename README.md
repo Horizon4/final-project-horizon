@@ -107,6 +107,7 @@ or trip as seamlessly as possible.
 - response: 500
     - body: Error message from database
 
+
 #### description: find accommodations
 - request: `PUT /api/findAccommodation/:id`
     - body: string
