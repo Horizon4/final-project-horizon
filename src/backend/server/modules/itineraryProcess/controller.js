@@ -2,7 +2,7 @@ import ItineraryProcess from './model';
 import Flight from '../flight/model';
 import User from '../users/model';
 
-export const createItinerary = (req, res) => {
+export const createItineraryProcess = (req, res) => {
   var { username, origin, destination, departureDate, returnDate, price } = req.body
 
   const newItinerary = new ItineraryProcess({ username, origin, destination, departureDate, returnDate, price });
@@ -49,7 +49,7 @@ export const addFlight = (req, res) => {
       Itinerary.flightsInfo.push(returnFlight);
       return returnFlight.save();
     } else {
-      return Itinerary.update();
+      return ItineraryProcess.update({'_id': req.params.id}, Itinerary);
     }
   })
   .then((flight) => {

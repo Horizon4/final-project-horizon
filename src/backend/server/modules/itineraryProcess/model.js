@@ -1,6 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 
-const itinerarySchema = new Schema({
+const itineraryProcessSchema = new Schema({
   username: {
     type: String,
     required: true
@@ -28,8 +28,16 @@ const itinerarySchema = new Schema({
     type: [{}],
     required: false
   },
+  accommodationsInfo: {
+    type: [{}],
+    required: false
+  },
   flights: {
     type:[{}],
+  },
+  accommodations: {
+    type: [{}],
+    required: false
   },
   stopovers: {
     type: [String],
@@ -40,4 +48,4 @@ const itinerarySchema = new Schema({
   }
 });
 
-export default mongoose.model('ItineraryProcess', itinerarySchema)
+export default mongoose.model('ItineraryProcess', itineraryProcessSchema)

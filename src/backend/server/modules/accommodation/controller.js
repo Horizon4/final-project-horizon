@@ -13,8 +13,12 @@ var placeDetailsRequest = new PlaceDetailsRequest(apiKey, outputFormat);
 export const findAccommodation = (req, res) => {
   ItineraryProcess.findById(req.params.id)
   .then((itinerary) => {
-    performSearch(itinerary.destination, (err, result) => {
-      return res.status(200).json(result);
+    performSearch(req.body.destination, (err, result) => {
+      itinerary.accommodations = result;
+
+      updateProcess (req.params.id, itinerary, (err, result) => {
+        return res.status(200).json(result)
+      })
     })
   })
   .catch((err) => {
@@ -22,9 +26,21 @@ export const findAccommodation = (req, res) => {
   })
 }
 
+function updateProcess(id, itineraryProcess, callback) {
+
+   ItineraryProcess.update({'_id': id}, itineraryProcess)
+   .then((itinerary) => {
+     callback(null, itinerary)
+   })
+   .catch((err) => {
+     throw err;
+   })
+
+
+}
 function performSearch(dest, callback) {
   var parameter = {
-    query: "lodging in tokyo"
+    query: "lodging in " + dest
   }
 
   var accommodations = [];
@@ -34,7 +50,7 @@ function performSearch(dest, callback) {
       placeDetailsRequest({reference: accommodation.results[i].reference}, (err, details) => {
         if(err) throw err;
         accommodations.push(details);
-        if (accommodations.length == 10) {
+        if (accommodations.length == 5) {
           callback(null, accommodations);
         }
       })
