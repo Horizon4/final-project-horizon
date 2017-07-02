@@ -44,37 +44,7 @@ or trip as seamlessly as possible.
 - response: 500
     - body: message from the Database that the username already exists
 
-#### description: create a new flight
-- request: `PUT /api/flight/`
-    - body: object
-      - origin: (string) the departure location
-      - destination: (string) the arrival location
-      - date: (date) the departure date(YYYY-MM-DD)
-      - price: (number) the price of the flight
-
-      *Optional:*
-      - adultCount: (number) the number of adult seats
-      - childCount: (number) the number of child seats
-      - seniorCount: (number) the number of senior seats
-      - cabin: (string) the type of cabin the seat is in (i.e. economy, first class, etc)
-      - carrier: (string) the airline of the flight
-- response: 200
-    - body: string
-      - origin: (string) the departure location
-      - destination: (string) the arrival location
-      - date: (date) the departure date(YYYY-MM-DD)
-      - price: (number) the price of the flight
-
-      *Optional:*
-      - adultCount: (number) the number of adult seats
-      - childCount: (number) the number of child seats
-      - seniorCount: (number) the number of senior seats
-      - cabin: (string) the type of cabin the seat is in (i.e. economy, first class, etc)
-      - carrier: (string) the airline of the flight
-- response: 500
-    - body: Error from database
-
-#### description: create a new itinerary
+#### description: create a new itinerary Process
 - request: `POST /api/itineraryProcess`
     - body: object
       - username: (string) the username that is logged in
@@ -101,29 +71,16 @@ or trip as seamlessly as possible.
 - response: 500
     - body: Error from database or the username doesn't exist
 
-#### description: create a new accommodation
-- request: `POST /api/accommodation`
+#### description: create a new itinerary
+- request: `POST /api/createItinerary`
     - body: string
-      - address: (string) the username that is logged in
-      - checkin: (date) the checkin date(YYYY-MM-DD)
-      - checkout: (date) the checkout date(YYYY-MM-DD)
-      - priceRating: (number) the price of the hotel
-      - hotelRating: (number) the rating of the hotel
-      - hotelName: (string) the name of the hotel
+      - itineraryProcessId : 5959393e3e9e4c2a915e579a
 
 - response: 200
     - body: string
-      - address: (string) the username that is logged in
-      - checkin: (date) the checkin date(YYYY-MM-DD)
-      - checkout: (date) the checkout date(YYYY-MM-DD)
-      - priceRating: (number) the price of the hotel
-      - hotelRating: (number) the rating of the hotel
-      - hotelName: (string) the name of the hotel
-
+      - result: (array) of all the combinations
 - response: 500
     - body: Missing required parameter
-- response: 501
-    - body: Invalid date
 
 ## Read
 
@@ -134,22 +91,11 @@ or trip as seamlessly as possible.
 - response: 500
     - body: Error message from QPX-Express
 
-#### description: find accommodation
-- request: `GET /api/findAccommodation/:id`
-- response: 200
-    - body: JSON String of list of solutions found using Google Places api
-- response: 500
-    - body: Invalid request
-
 ## Update
 
 #### description: add a flight to itinerary
 - request: `PUT /api/addFlight/:id`
-- response: 200
     - body: string
-      - origin: (string) the departure location
-      - destination: (string) the arrival location
-      - date: (date) the departure date(YYYY-MM-DD)
       - price: (number) the price of the flight
 
       *Optional:*
@@ -160,3 +106,11 @@ or trip as seamlessly as possible.
       - carrier: (string) the airline of the flight
 - response: 500
     - body: Error message from database
+
+#### description: find accommodations
+- request: `PUT /api/findAccommodation/:id`
+    - body: string
+      - destination: Los Angelos
+- response: 200
+- response: 500
+    - body: Invalid request
