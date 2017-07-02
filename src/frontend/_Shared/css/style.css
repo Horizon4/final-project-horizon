@@ -1,2 +1,6 @@
 /* Shared styles across all pages */
 /* 007F66 DFFFF9 00FFCC 267F6E 00CCA3 */
+
+body {
+    background-image: url("d3.png");
+}
