@@ -1,2 +1,10 @@
 /* Shared styles across all pages */
 /* 007F66 DFFFF9 00FFCC 267F6E 00CCA3 */
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+body {
+    background-image: url("d3.png");
+}
