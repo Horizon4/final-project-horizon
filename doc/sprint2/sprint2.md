@@ -32,6 +32,33 @@ Front end
     - Navigation Bar
     - Process Bar
 -	Side note: Colour scheme is lit *fire emoji*
+-make progress bar a component
+-remove important! tags
+- Get Started
+    - origin: (string) the departure location
+    - destination: (string) the arrival location
+    - departureDate: (date) the departure date(YYYY-MM-DD)
+    - returnDate: (date) the return date(YYYY-MM-DD)
+    - price: (number) the price of the itinerary
+- Flight
+    - price: (number) the price of the flight
+    - Optional:
+    - adultCount: (number) the number of adult seats
+    - childCount: (number) the number of child seats
+    - seniorCount: (number) the number of senior seats
+    - cabin: (string) the type of cabin the seat is in (i.e. economy, first class, etc)
+    - carrier: (string) the airline of the flight
+- 1. GET api/addFlight/:id
+- 2. GET api/findFlights/:id
+- Accommodation
+    - In terms of price:1 ($) or 2 ($$) or 3 ($$) or 4 ($$)
+- 1. GET /api/findAccommodation/:id
+- Confirm
+    - itineraryProcessId:
+    - 1. POST api/createItinerary
+- Don't hit until 3PM
+- flights[0][slice][0][segment][leg][0] YYZ to LAX
+- flights[0][slice][1][segment][leg][1] LAX to YYZ
 
 Back end
 -	Itinerary with Accommodations included
