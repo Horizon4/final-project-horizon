@@ -3,7 +3,6 @@ $(document).ready(function() {
     view.init();
 });
 
-
 var view = (function() {
 
     return {

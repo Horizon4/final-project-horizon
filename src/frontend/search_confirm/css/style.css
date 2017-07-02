@@ -71,7 +71,7 @@ input[type=submit]:hover {
     width: 100%;
     max-width: 90em;
     min-width: 30em;
-    margin: 7.5em auto 0 auto;
+    margin: 3.5em auto 0 auto;
 }
 
 
@@ -81,4 +81,47 @@ input[type=submit]:hover {
     line-height: 0px;
     color: #267F6E;
     font-family: 'Roboto Slab', serif;
+
 }
+
+.progressBarHeader {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 0px;
+    color: #267F6E;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+  }
+.green{
+  color:#FFFFFF!important;
+  font-family: 'Roboto Slab', serif;
+  font-size: 15px;
+  background-color:#00CCA3!important;
+  word-spacing: 3px; 
+}
+.light-grey{
+  color:#000!important;
+  background-color:#f1f1f1!important;
+  margin:.5em auto;
+
+}
+.round{
+  border-radius:4px;
+  display: block;
+  text-align: center;
+  width:35%;
+
+
+
+}
+
+.container{
+    width:95%;
+    padding:0.4em 1px;
+    transition: width 500ms;
+}
+
+/*.container:hover{
+    width: 90%;
+    padding:0.4em 1px;
+}*/

@@ -84,20 +84,13 @@ input[type=submit]:hover {
 
 }
 
-.progressBarHeader {
-    text-align: center;
-    vertical-align: middle;
-    line-height: 0px;
-    color: #267F6E;
-    font-family: 'Roboto Slab', serif;
-    font-size: 12px;
-  }
 .green{
   color:#FFFFFF!important;
   font-family: 'Roboto Slab', serif;
   font-size: 15px;
   background-color:#00CCA3!important;
 }
+
 .light-grey{
   color:#000!important;
   background-color:#f1f1f1!important;
@@ -109,18 +102,15 @@ input[type=submit]:hover {
   display: block;
   text-align: center;
   width:35%;
-
-
-
 }
 
 .container{
-    width:30%;
+    width:76%;
     padding:0.4em 1px;
     transition: width 500ms;
 }
 
 /*.container:hover{
-    width: 16%;
+    width: 76%;
     padding:0.4em 1px;
 }*/
