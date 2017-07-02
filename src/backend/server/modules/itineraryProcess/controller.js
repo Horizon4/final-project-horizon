@@ -63,3 +63,15 @@ export const addFlight = (req, res) => {
     return res.status(500);
   })
 }
+
+export const uncompletedProcess = (req, res) => {
+  var username = req.params.username;
+
+  ItineraryProcess.find({'username': username})
+  .then((ItineraryProcesses) => {
+    return res.status(200).json(ItineraryProcesses);
+  })
+  .catch((err) => {
+    return res.status(500).json({error: true, message: 'No such user exists'})
+  })
+}
