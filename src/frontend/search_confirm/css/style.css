@@ -97,7 +97,7 @@ input[type=submit]:hover {
   font-family: 'Roboto Slab', serif;
   font-size: 15px;
   background-color:#00CCA3!important;
-  word-spacing: 3px; 
+  word-spacing: 3px;
 }
 .light-grey{
   color:#000!important;
@@ -121,6 +121,41 @@ input[type=submit]:hover {
     transition: width 500ms;
 }
 
+
+
+.arrow {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 50%;
+}
+
+.arrow:hover{
+      background-color: #ddd;
+      color: black;
+}
+
+
+.scrollmenu {
+    background-color: #267F6E;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 200px;
+    padding-top: 310px;
+    text-decoration: none;
+}
+
+.scrollmenu a:hover {
+    background-color: #00CCA3;
+}
 /*.container:hover{
     width: 90%;
     padding:0.4em 1px;
