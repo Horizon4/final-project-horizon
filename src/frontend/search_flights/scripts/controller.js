@@ -5,13 +5,10 @@ var controller = (function() {
             model.init();
         },
 
-        send: function(origin, destination, price, departureDate, returnDate) {
+
+        send: function(price) {
             var data = {
-                'origin':origin,
-                'destination': destination,
-                'price': price,
-                'departureDate': departureDate,
-                'returnDate': returnDate
+                'price': price
             };
             //console.log(data); //DEBUG
             var result = model.send(data);

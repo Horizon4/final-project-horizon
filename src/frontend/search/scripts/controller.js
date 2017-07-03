@@ -5,7 +5,7 @@ var controller = (function() {
             model.init();
         },
 
-        send: function(origin, destination, price, departureDate, returnDate) {
+        send: function(origin, destination, departureDate, returnDate, budget) {
             var data = {
                 'origin':origin,
                 'destination': destination,

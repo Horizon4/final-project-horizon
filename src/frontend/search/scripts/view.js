@@ -22,12 +22,12 @@ var searchButtonCheck = (function() {
 
         var origin = $("#origin").val();
         var destination = $("#destination").val();
-        var price = $("#budget").val();
-        var departureDate = $("#fromLocation").val();
-        var returnDate = $("#toLocation").val();
+        var departureDate = $("#date").val();
+        var returnDate = $("#return").val();
+        var budget = $("#budget").val();
 
         //console.log(origin, destination, price, departureDate, returnDate); //DEBUG
-        var success = controller.send(origin, destination, price, departureDate, returnDate);
+        var success = controller.send(origin, destination, departureDate, returnDate, budget);
 
         /*if (!success){
             msg.text("Error sending fields").addClass("error");
