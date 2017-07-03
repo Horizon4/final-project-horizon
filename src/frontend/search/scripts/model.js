@@ -21,7 +21,7 @@ var model = (function() {
                 },
             });
 
-            return result;
+            return (result.status == 200);
         }
     }
 })();

@@ -19,7 +19,7 @@ var controller = (function() {
             // Attempt to create new itinerary
             var result = model.send(data);
             // Return true if successful
-            return (result.status == 200);
+            return result;
         },
     }
 })();

@@ -21,7 +21,7 @@ var model = (function() {
                 },
             });
 
-            return result;
+            return (result.status == 201);
         },
 
         signup: function(data) {
@@ -33,7 +33,7 @@ var model = (function() {
                 async: false,
             });
 
-            return result;
+            return (result.status == 201);
         },
     }
 })();

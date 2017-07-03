@@ -11,7 +11,7 @@ var controller = (function() {
             // Attempt to login
             var result = model.signin(data);
             // return true if success
-            return (result.status == 201);
+            return result;
         },
         signup: function(user, pass) {
             // Package data
@@ -19,7 +19,7 @@ var controller = (function() {
             // Attempt to create new user
             var result = model.signup(data);
             // return true if success
-            return (result.status == 201);
+            return result;
         },
     }
 })();
