@@ -18,21 +18,19 @@ var searchButtonCheck = (function() {
     function searchSubmit(e) {
         e.preventDefault();
 
-        $(".msg").hide().removeClass("error success");
-
+        // Get data
         var origin = $("#origin").val();
         var destination = $("#destination").val();
-        var departureDate = $("#date").val();
-        var returnDate = $("#return").val();
+        var departureDate = $("#departureDate").val();
+        var returnDate = $("#returnDate").val();
         var budget = $("#budget").val();
 
-        //console.log(origin, destination, price, departureDate, returnDate); //DEBUG
+        // Attempt to create new itinerary
         var success = controller.send(origin, destination, departureDate, returnDate, budget);
 
-        /*if (!success){
-            msg.text("Error sending fields").addClass("error");
-            msg.show();
-        }*/
+        if (!success){
+            alert("Oops, something broke!");
+        }
     }
 
     return {
