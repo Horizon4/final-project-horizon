@@ -18,7 +18,7 @@ Front end
 -	Progress bar
 -	Navigation bar
 -	Showing flights and hotels in itineraries
--	Navbar should have “View” “Create” “Recommendations” and “Logout” (Howard is taking care of this ☺)
+-	Navbar should have “View” “Create” “Recommendations” and “Logout” 
 -	How the dashboard should look like
   Has completed itineraries when “View” is selected with a “+” somewhere (for next sprint)
 -	When “create” is chosen, then there is a progress bar at the bottom with:
@@ -31,7 +31,6 @@ Front end
 -	To do:
     - Navigation Bar
     - Process Bar
--	Side note: Colour scheme is lit *fire emoji*
 -make progress bar a component
 -remove important! tags
 - Get Started
@@ -70,7 +69,7 @@ Back end
 -	Have multiple destinations
 -	Merging hotels and flights
 -	Change itineraries to itinerary process so that the users can save it
--	Make a different thing call itinerary (JASON’S IDEA)
+-	Make a different thing call itinerary 
 -	Itinerary -> ItineraryProcess
 -	ItineraryProcess has:
     - Users (ID?)
@@ -80,11 +79,11 @@ Back end
 -	Also making object Itinerary for completed itineraries (ItineraryProcess is for uncompleted ones)
 -	ItineraryProcess stores user input and collects data from that
 -	Upon hitting continue, flights gets populated
--	Getting rid of routes in flights? (Keeping for testing)
+-	Getting rid of routes in flights
 -	When continue is clicked, then we addFlights and pass in the proper parameters for it
 -	To do:
     - Accommodations
-    - Ryan is doing the completed endpoints (getting completed itineraries by specific user)
+    - Completing endpoints (getting completed itineraries by specific user)
 -	Side note: PUT != Create, POST == Create, PUT == Update
 
 ## Sprint Backlog
@@ -147,6 +146,8 @@ Back end
 - View uncompleted itineraries(backend)
 
 **Colleen Brown**
+- create a design as to how the accomodations endpoint should be created and how to interact properly with the api
+- took notes during the meetings for the meeting minutes section
 
 **Howard Chen**
 - navigation bar with “View”, “Create”, “Recommendations” and “Logout”
