@@ -91,6 +91,13 @@ or trip as seamlessly as possible.
 - response: 500
     - body: Error message from QPX-Express
 
+#### description: find uncompleted Processes
+- request: `GET /api/uncompleted/:username`
+- response: 200
+    - body: JSON String of list of all the uncompleted itineraries Processes
+- response: 500
+    - body: Error message from QPX-Express
+
 ### description: get all completed itineraries
 - request: `GET /api/completed/:username`
 - response: 200

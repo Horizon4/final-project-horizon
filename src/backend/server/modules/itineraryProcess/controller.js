@@ -67,7 +67,7 @@ export const addFlight = (req, res) => {
 export const uncompletedProcess = (req, res) => {
   var username = req.params.username;
 
-  ItineraryProcess.find({'username': username})
+  ItineraryProcess.find({'username': username, 'completed': false})
   .then((ItineraryProcesses) => {
     return res.status(200).json(ItineraryProcesses);
   })
