@@ -169,9 +169,10 @@ Back end
 - modify create Itinerary workflow to match backend
 
 **Varun Sharma**
-- Navigation Bar Modifications
-- Progress Bar
-- Itinerary Objects Display on Confirm Page
+- navigation bar modifications
+- progress bar
+- itinerary objects display on confirm page
+- show itinerary list with flights and hotels
 
 **Jason Shum**
 - find an api to look for accommodations
