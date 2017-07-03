@@ -61,13 +61,32 @@ For example in the Log in system, the front end View is created in HTML/CSS with
     Classname: Itinerary
     Parent class: UserItineraries
     Subclasses: 
-    Responsibilities: 
+    Responsibilities:
         - Knows its ID
         - Know Price
         - has list of flights
         - has ratings
         - has # of recommendations
+        - object for completed itineraries
     Collaborators: 
+        - Flight
+        - Accommodation
+        - Entertainment
+        
+-----------------------------------------------
+
+    Classname: ItineraryProcess
+    Parent class: UserItineraries
+    Subclasses:
+    Responsibilities:
+        - Knows its ID
+        - Know Price
+        - has list of flights
+        - has ratings
+        - has # of recommendations
+        - object for incompleted itineraries
+        - stores user input then collects data
+    Collaborators:
         - Flight
         - Accommodation
         - Entertainment
@@ -75,7 +94,7 @@ For example in the Log in system, the front end View is created in HTML/CSS with
 -----------------------------------------------
  
     Classname: UserItineraries
-    Parent class: Itinerary
+    Parent class: Itinerary, ItineraryProcess
     Subclasses:
     Responsibilities:
         - has a list of Itineraries
