@@ -9,13 +9,14 @@ var model = (function() {
         send: function(data) {
             itineraryID = Cookies.getJSON("itineraryID");
 
+            // Add flight preference information
             var addFlightAPI = $.ajax({
                 url: "/api/addFlight/" + itineraryID,
                 type: 'PUT',
                 data: data,
                 async: false,
                 success: function(data) {
-                    console.log(data);
+
                 },
                 error: function(data) {
                     console.log(data);
@@ -25,18 +26,20 @@ var model = (function() {
                 return false;
             }
 
-            var findFlightAPI = $.ajax({
+            // Get possible flights
+            var findFlightsAPI = $.ajax({
                 url: "/api/findFlights/" + itineraryID,
                 type: 'GET',
                 async: false,
                 success: function(data) {
-                    console.log(data);
+                    // Redirect to next step
+                    window.location.href = "/search_accommodation";
                 },
                 error: function(data) {
                     console.log(data);
                 },
             });
-            if (findFlightAPI.status != 200) {
+            if (findFlightsAPI.status != 200) {
                 return false;
             }
 
