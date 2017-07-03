@@ -18,17 +18,18 @@ var searchButtonCheck = (function() {
     function searchSubmit(e) {
         e.preventDefault();
 
-        $(".msg").hide().removeClass("error success");
-\
         var price = $("#price").val();
+        var adult = $("#adultCount").val();
+        var child = $("#childCount").val();
+        var senior = $("#seniorCount").val();
+        var cabin = $("#cabin").val();
+        var carrier = $("#carrier").val();
 
-        //console.log(origin, destination, price, departureDate, returnDate); //DEBUG
-        var success = controller.send(price);
+        var success = controller.send(price, adult, child, senior, cabin, carrier);
 
-        /*if (!success){
-            msg.text("Error sending fields").addClass("error");
-            msg.show();
-        }*/
+        if (!success){
+            alert("Oops, something broke!")
+        }
     }
 
     return {

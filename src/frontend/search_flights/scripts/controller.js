@@ -6,17 +6,20 @@ var controller = (function() {
         },
 
 
-        send: function(price) {
+        send: function(price, adult, child, senior, cabin, carrier) {
+            // Package data
             var data = {
-                'price': price
+                'price': price,
+                'adult': adult || null,
+                'child': child || null,
+                'senior': senior || null,
+                'cabin': cabin || null,
+                'carrier': carrier || null,
             };
-            //console.log(data); //DEBUG
+
+            // Search for flights
             var result = model.send(data);
-            if (result.status == 200) {
-                return true;
-            } else {
-                return false;
-            }
+            return result;
         },
     }
 })();
