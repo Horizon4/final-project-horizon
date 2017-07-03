@@ -47,7 +47,7 @@ export const selected = (req, res) => {
 }
 
 export const completedItinerary = (req, res) => {
-  var { username } = req.body;
+  var username  = req.params.username;
 
   Itinerary.find({'username': username})
   .then((itineraries) => {

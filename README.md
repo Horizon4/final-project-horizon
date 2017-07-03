@@ -91,13 +91,19 @@ or trip as seamlessly as possible.
 - response: 500
     - body: Error message from QPX-Express
 
-
 #### description: find uncompleted Processes
 - request: `GET /api/uncompleted/:username`
 - response: 200
     - body: JSON String of list of all the uncompleted itineraries Processes
 - response: 500
     - body: Error message from QPX-Express
+
+### description: get all completed itineraries
+- request: `GET /api/completed/:username`
+- response: 200
+    - body: List of objects selected from the itinerary choices(algorithm)
+- response: 500
+    - body: username doesn't exist
 
 ## Update
 
@@ -120,6 +126,16 @@ or trip as seamlessly as possible.
 - request: `PUT /api/findAccommodation/:id`
     - body: string
       - destination: Los Angelos
+- response: 200
+- response: 500
+    - body: Invalid request
+
+
+#### description: find accommodations
+- request: `PUT /api/selected`
+    - body: string
+      - username: zain
+      - selectedItinerary : {...} the object selected from the algorithm
 - response: 200
 - response: 500
     - body: Invalid request
