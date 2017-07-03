@@ -20,5 +20,6 @@ var components = (function() {
 function checkLoggedIn() {
     if ((window.location.href !== "http://localhost:3000/") && ($.isEmptyObject(Cookies.getJSON("username")))) {
         alert("You need to be logged in for this page to work.");
+        window.location.href = "/";
     }
 }
