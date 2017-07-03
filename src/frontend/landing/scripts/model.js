@@ -7,15 +7,16 @@ var model = (function() {
 
 
         signin: function(data) {
-            var result;
-            result = $.ajax({
+            // Call backend
+            var result = $.ajax({
                 url: "/api/signin",
                 type: 'POST',
                 data: data,
                 async: false,
                 success: function(data) {
-                    console.log(data);
-                    // TODO store sign in data in cookie or url
+                    // Store username in cookie
+                    Cookies.set('username', data.user.username);
+                    // Redirect to view
                     window.location.href = "/view";
                 },
             });
@@ -24,15 +25,12 @@ var model = (function() {
         },
 
         signup: function(data) {
-            var result;
-            result = $.ajax({
+            // Call backend
+            var result = $.ajax({
                 url: "/api/user",
                 type: 'PUT',
                 data: data,
                 async: false,
-                success: function(data) {
-                    return {error: false};
-                },
             });
 
             return result;
