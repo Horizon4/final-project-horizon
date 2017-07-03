@@ -169,8 +169,9 @@ Back end
 - modify create Itinerary workflow to match backend
 
 **Varun Sharma**
-- navigation bar
-- progress bar
+- Navigation Bar Modifications
+- Progress Bar
+- Itinerary Objects Display on Confirm Page
 
 **Jason Shum**
 - find an api to look for accommodations
