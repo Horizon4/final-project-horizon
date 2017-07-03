@@ -10,7 +10,6 @@
 
 ### Story 1
 
-
 - As a traveller, I should be able to create an account with ease so that I can login into the website with those credentials
 
 - Condition of Satisfaction
@@ -28,7 +27,7 @@
     1. When I am creating an itinerary I should be able to see in the process bar how far into the itinerary creating process I am
 
 - Priority = 2
-- Point = 4
+- Point = 3
 
 ### Story 3
 
@@ -70,7 +69,7 @@
     2. When I select an itinerary I should be able to see all of the details about it  
 
 - Priority = 3
-- Point = 3
+- Point = 2
 
 ### Story 7
 
@@ -81,7 +80,7 @@
     2. When I select an itinerary I should be able to complete it
 
 - Priority = 3
-- Point = 4
+- Point = 2
 
 ### Story 8
 
@@ -115,10 +114,10 @@
 
 ### Story 11
 
-- As a developer, when a user searches for an itinerary and if no data exists in the database, I display a message in the front end to let the user know that there are no available itineraries
+- As a user, I want to be able to be able to easily create an itinerary in an intuitive manner so that I don't have to spend too much time figuring out the website.
 
 - Condition of Satisfaction
-    1. When a user searches for a recommendations, I should be able to show a message to let the user know that there are no available itineraries if nothing exists
-
-- Priority = 4
-- Point = 1
+    1. When I click the Create button I want to be guided along the booking process
+    
+- Priority = 2
+- Points = 2
