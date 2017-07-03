@@ -143,6 +143,8 @@ Back end
 
 **Zain Amir**
 - design change, replace Itinerary with Itinerary Process and create a separate itinerary object
+- View completed itineraries(backend)
+- View uncompleted itineraries(backend)
 
 **Colleen Brown**
 
