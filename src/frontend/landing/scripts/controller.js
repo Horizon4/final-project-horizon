@@ -6,22 +6,20 @@ var controller = (function() {
         },
 
         signin: function(user, pass) {
+            // Package data
             var data = {username: user, password: pass};
+            // Attempt to login
             var result = model.signin(data);
-            if (result.status == 201) {
-                return true;
-            } else {
-                return false;
-            }
+            // return true if success
+            return result;
         },
         signup: function(user, pass) {
+            // Package data
             var data = {username: user, password: pass};
+            // Attempt to create new user
             var result = model.signup(data);
-            if (result.status == 201) {
-                return true;
-            } else {
-                return false;
-            }
+            // return true if success
+            return result;
         },
     }
 })();

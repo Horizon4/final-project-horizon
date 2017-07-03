@@ -10,8 +10,8 @@ var model = (function() {
             var result;
             Cookies.set('itinerary', data);
             result = $.ajax({
-                url: "/api/itinerary/",
-                type: 'PUT',
+                url: "/api/createItinerary/",
+                type: 'POST',
                 data: data,
                 async: false,
                 success: function(data) {

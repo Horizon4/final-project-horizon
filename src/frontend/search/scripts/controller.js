@@ -5,21 +5,21 @@ var controller = (function() {
             model.init();
         },
 
-        send: function(origin, destination, price, departureDate, returnDate) {
+        send: function(origin, destination, departureDate, returnDate, budget) {
+            // Package data
             var data = {
-                'origin':origin,
+                'username': Cookies.getJSON('username'),
+                'origin': origin,
                 'destination': destination,
-                'price': price,
                 'departureDate': departureDate,
-                'returnDate': returnDate
+                'returnDate': returnDate,
+                'price': budget,
             };
-            //console.log(data); //DEBUG
+
+            // Attempt to create new itinerary
             var result = model.send(data);
-            if (result.status == 200) {
-                return true;
-            } else {
-                return false;
-            }
+            // Return true if successful
+            return result;
         },
     }
 })();

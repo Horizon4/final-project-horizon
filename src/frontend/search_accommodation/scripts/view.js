@@ -18,21 +18,15 @@ var searchButtonCheck = (function() {
     function searchSubmit(e) {
         e.preventDefault();
 
-        $(".msg").hide().removeClass("error success");
+        // Get data
+        var city = $("#destinationCity").val();
 
-        var origin = $("#origin").val();
-        var destination = $("#destination").val();
-        var price = $("#budget").val();
-        var departureDate = $("#fromLocation").val();
-        var returnDate = $("#toLocation").val();
+        // Attempt to find accommodations
+        var success = controller.send(city);
 
-        //console.log(origin, destination, price, departureDate, returnDate); //DEBUG
-        var success = controller.send(origin, destination, price, departureDate, returnDate);
-
-        /*if (!success){
-            msg.text("Error sending fields").addClass("error");
-            msg.show();
-        }*/
+        if (!success){
+            alert("Oops, something broke!");
+        }
     }
 
     return {

@@ -7,26 +7,43 @@ var model = (function() {
 
 
         send: function(data) {
-            var result;
-            Cookies.set('itinerary', data);
-            result = $.ajax({
-                url: "/api/itinerary/",
+            var itineraryID = Cookies.getJSON("itineraryID");
+
+            // Add flight preference information
+            var addFlightAPI = $.ajax({
+                url: "/api/addFlight/" + itineraryID,
                 type: 'PUT',
                 data: data,
                 async: false,
                 success: function(data) {
-                    //console.log(data.itinerary._id);//DEBUG
-                    var itinerary = Cookies.getJSON('itinerary');
-                    itinerary.id = data.itinerary._id;
-                    Cookies.set('itinerary', itinerary);
-                    //TODO save itinerary id into cookie or url
-                    window.location.href = "/result";
-                    //console.log("successful");//DEBUG
+
+                },
+                error: function(data) {
+                    console.log(data);
                 },
             });
-            console.log(result);//DEBUG
+            if (addFlightAPI.status != 200) {
+                return false;
+            }
 
-            return result;
+            // Get possible flights
+            var findFlightsAPI = $.ajax({
+                url: "/api/findFlights/" + itineraryID,
+                type: 'GET',
+                async: false,
+                success: function(data) {
+                    // Redirect to next step
+                    window.location.href = "/search_accommodation";
+                },
+                error: function(data) {
+                    console.log(data);
+                },
+            });
+            if (findFlightsAPI.status != 200) {
+                return false;
+            }
+
+            return true;
         }
     }
 })();

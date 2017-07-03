@@ -5,21 +5,15 @@ var controller = (function() {
             model.init();
         },
 
-        send: function(origin, destination, price, departureDate, returnDate) {
+        send: function(city) {
+            // Package data
             var data = {
-                'origin':origin,
-                'destination': destination,
-                'price': price,
-                'departureDate': departureDate,
-                'returnDate': returnDate
+                'destination': city,
             };
-            //console.log(data); //DEBUG
+
+            // Search for accomodations
             var result = model.send(data);
-            if (result.status == 200) {
-                return true;
-            } else {
-                return false;
-            }
+            return result;
         },
     }
 })();

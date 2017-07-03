@@ -7,26 +7,23 @@ var model = (function() {
 
 
         send: function(data) {
-            var result;
-            Cookies.set('itinerary', data);
-            result = $.ajax({
-                url: "/api/itinerary/",
+            var itineraryID = Cookies.getJSON("itineraryID");
+
+            var result = $.ajax({
+                url: "/api/findAccommodation/" + itineraryID,
                 type: 'PUT',
                 data: data,
                 async: false,
                 success: function(data) {
-                    //console.log(data.itinerary._id);//DEBUG
-                    var itinerary = Cookies.getJSON('itinerary');
-                    itinerary.id = data.itinerary._id;
-                    Cookies.set('itinerary', itinerary);
-                    //TODO save itinerary id into cookie or url
-                    window.location.href = "/result";
-                    //console.log("successful");//DEBUG
+                    // Redirect to next step
+                    window.location.href = "/search_confirm";
                 },
+                error: function(data) {
+                    console.log(data);
+                }
             });
-            console.log(result);//DEBUG
 
-            return result;
+            return (result.status == 200);
         }
     }
 })();

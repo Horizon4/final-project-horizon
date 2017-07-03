@@ -18,21 +18,20 @@ var searchButtonCheck = (function() {
     function searchSubmit(e) {
         e.preventDefault();
 
-        $(".msg").hide().removeClass("error success");
+        // Get data
+        var price = $("#price").val();
+        var adult = $("#adultCount").val();
+        var child = $("#childCount").val();
+        var senior = $("#seniorCount").val();
+        var cabin = $("#cabin").val();
+        var carrier = $("#carrier").val();
 
-        var origin = $("#origin").val();
-        var destination = $("#destination").val();
-        var price = $("#budget").val();
-        var departureDate = $("#fromLocation").val();
-        var returnDate = $("#toLocation").val();
+        // Attempt to search for flights
+        var success = controller.send(price, adult, child, senior, cabin, carrier);
 
-        //console.log(origin, destination, price, departureDate, returnDate); //DEBUG
-        var success = controller.send(origin, destination, price, departureDate, returnDate);
-
-        /*if (!success){
-            msg.text("Error sending fields").addClass("error");
-            msg.show();
-        }*/
+        if (!success){
+            alert("Oops, something broke!");
+        }
     }
 
     return {
