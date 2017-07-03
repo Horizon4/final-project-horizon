@@ -131,6 +131,17 @@ Back end
 - Priority = 3
 - Point = 4
 
+### Story 11 - Modify create Itinerary workflow to match backend
+
+- As a user, I want to be able to be able to easily create an itinerary in an intuitive manner so that I don't have to spend too much time figuring out the website.
+
+- Condition of Satisfaction:
+ 
+    1. When I click the Create button I want to be guided along the booking process
+
+- Priority = 2
+- Point = 2
+
 ## Tasks
 
 **Ryan Abe**
@@ -138,12 +149,11 @@ Back end
 - sprint retrospective
 - sprint planning meeting
 - system design
-- endpoints
 
 **Zain Amir**
 - design change, replace Itinerary with Itinerary Process and create a separate itinerary object
-- View completed itineraries(backend)
-- View uncompleted itineraries(backend)
+- view all completed itinerary
+- view all uncompleted itineraries Process
 
 **Colleen Brown**
 - create a design as to how the accomodations endpoint should be created and how to interact properly with the api
@@ -151,12 +161,16 @@ Back end
 
 **Howard Chen**
 - navigation bar with “View”, “Create”, “Recommendations” and “Logout”
+- show itinerary list with flights and hotels
 
 **Ke Deng**
 - navigation bar linking to pages
 - view page set up
+- modify create Itinerary workflow to match backend
 
 **Varun Sharma**
+- navigation bar
+- progress bar
 
 **Jason Shum**
 - find an api to look for accommodations
