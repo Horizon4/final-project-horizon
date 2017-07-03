@@ -111,13 +111,3 @@
 
 - Priority = 3
 - Point = 6
-
-### Story 11
-
-- As a user, I want to be able to be able to easily create an itinerary in an intuitive manner so that I don't have to spend too much time figuring out the website.
-
-- Condition of Satisfaction
-    1. When I click the Create button I want to be guided along the booking process
-    
-- Priority = 2
-- Points = 2
