@@ -7,7 +7,7 @@ var model = (function() {
 
 
         send: function(data) {
-            itineraryID = Cookies.getJSON("itineraryID");
+            var itineraryID = Cookies.getJSON("itineraryID");
 
             // Add flight preference information
             var addFlightAPI = $.ajax({
