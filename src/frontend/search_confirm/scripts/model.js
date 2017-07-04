@@ -98,7 +98,6 @@ var model = (function() {
         },
 
         selectItinerary: function(idx) {
-            console.log(itineraryList[idx]);
             // Select itinerary
             var result = $.ajax({
                 url: "/api/selected",
