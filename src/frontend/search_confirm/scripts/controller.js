@@ -15,5 +15,9 @@ var controller = (function() {
             return model.getAccommodations(idx);
         },
 
+        selectItinerary: function(idx) {
+            return model.selectItinerary(idx);
+        }
+
     }
 })();

@@ -5,12 +5,19 @@ $(document).ready(function() {
 
 var view = (function() {
 
+    function selectItinerary() {
+        var success = controller.selectItinerary($(this).data("idx"));
+        if (!success) {
+            alert("Oops, something broke!");
+        }
+    }
+
     function loadItineraries() {
         var itineraryList = $("#itinerary_list");
         itineraryList.html("");
 
         for (var i = 0; i < controller.getNumItineries(); i++) {
-            var itinerary = $("<div></div>").addClass("itinerary");
+            var itinerary = $("<div></div>").addClass("itinerary").data("idx", i).click(selectItinerary);
 
             // Flights
             itinerary.append(createFlight(controller.getFlights(i)));

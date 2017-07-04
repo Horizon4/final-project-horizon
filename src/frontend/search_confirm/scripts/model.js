@@ -98,7 +98,26 @@ var model = (function() {
         },
 
         selectItinerary: function(idx) {
-            console.log(idx + " has been selected:", itineraryList[idx]);
+            console.log(itineraryList[idx]);
+            // Select itinerary
+            var result = $.ajax({
+                url: "/api/selected/",
+                type: 'PUT',
+                data: {"username": Cookies.getJSON("username"),
+                    "selectedItinerary": itineraryList[idx],
+                },
+                async: false,
+                success: function(data) {
+                    alert("Itinerary Saved!");
+                    // Redirect to view
+                    window.location.href = "/view";
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+
+            return (result.status == 200);
         }
     }
 })();
