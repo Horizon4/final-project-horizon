@@ -101,10 +101,10 @@ var model = (function() {
             console.log(itineraryList[idx]);
             // Select itinerary
             var result = $.ajax({
-                url: "/api/selected/",
+                url: "/api/selected",
                 type: 'PUT',
                 data: {"username": Cookies.getJSON("username"),
-                    "selectedItinerary": itineraryList[idx],
+                    "selectedItinerary": JSON.stringify(itineraryList[idx]),
                 },
                 async: false,
                 success: function(data) {
