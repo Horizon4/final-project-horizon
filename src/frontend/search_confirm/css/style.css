@@ -52,15 +52,15 @@
     white-space: nowrap;
 }
 
-.scrollmenu a {
+.scrollmenu .itinerary {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 200px;
-    padding-top: 310px;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.scrollmenu a:hover {
+.scrollmenu .itinerary:hover {
     background-color: #00CCA3;
 }
