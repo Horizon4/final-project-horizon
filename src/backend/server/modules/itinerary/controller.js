@@ -36,6 +36,10 @@ export const selected = (req, res) => {
   var { selectedItinerary, username } = req.body;
 
   const select = new Itinerary({username, selectedItinerary })
+  ItineraryProcess.update(selectedItinerary, {$set: {completed : true}}, {upsert: true})
+  .catch((err) => {
+    return res.status(500);
+  })
 
   select.save()
   .then((itinerary) => {
