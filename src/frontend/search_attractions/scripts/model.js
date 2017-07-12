@@ -33,7 +33,7 @@ var model = (function() {
                 async: false,
                 success: function(data) {
                     // Redirect to next step
-                    window.location.href = "/search_confirm;
+                    window.location.href = "/search_confirm";
                 },
                 error: function(data) {
                     console.log(data);
