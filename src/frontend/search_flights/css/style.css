@@ -56,7 +56,7 @@ input[type=submit] {
 }
 input[type=submit]:hover {
     border: none;
-    background-color: #00CCA3;
+    background-color: #1c423b;
     color: white;
     padding: 13px 19px;
 
@@ -92,34 +92,81 @@ input[type=submit]:hover {
     font-family: 'Roboto Slab', serif;
     font-size: 12px;
   }
-.green{
-  color:#FFFFFF!important;
-  font-family: 'Roboto Slab', serif;
-  font-size: 15px;
-  background-color:#00CCA3!important;
+  .green{
+    color:#e3ede3!important;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    background-color:#1c423b!important;
+  }
+  .light-grey{
+    color:#000!important;
+    background-color:#267f6e!important;
+    margin:.5em auto;
+
+  }
+  .round{
+    border-radius:4px;
+    display: block;
+    text-align: center;
+    width:35%;
+  }
+
+  .container{
+      width:34%;
+      padding:0.4em 1px;
+      transition: width 500ms;
+  }
+
+input[type=text_1] {
+    -webkit-transition: 1s;
+    transition: 0.2s;
+    width: 14.8%;
+    outline: none;
+    display: inline;
+    padding: 13px 1px;
+    margin:0 auto;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid #CCCCCC;
 }
-.light-grey{
-  color:#000!important;
-  background-color:#f1f1f1!important;
-  margin:.5em auto;
 
-}
-.round{
-  border-radius:4px;
-  display: block;
-  text-align: center;
-  width:35%;
-
-
-
+input[type=text_1]:focus {
+    border: 2px solid #267F6E;
 }
 
-.container{
-    width:34%;
-    padding:0.4em 1px;
-    transition: width 500ms;
+input[type=text_2] {
+    -webkit-transition: 1s;
+    transition: 0.2s;
+    width: 14.8%;
+    outline: none;
+    display: inline;
+    padding: 13px 1px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid #CCCCCC;
 }
 
+input[type=text_2]:focus {
+    border: 2px solid #267F6E;
+}
+
+label1 {
+      display: inline;
+      color: #267F6E;
+      padding-left: 38.5%;
+      position:relative;
+      bottom: -7px;
+}
+
+label2 {
+      display: inline;
+      color: #267F6E;
+      padding-left: 4.5%;
+      position: relative;
+      bottom: -1px;
+
+}
 /*.container:hover{
     width: 34%;
     padding:0.4em 1px;

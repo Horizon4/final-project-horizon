@@ -17,15 +17,14 @@
 
 
 .green{
-  color:#FFFFFF!important;
+  color:#e3ede3!important;
   font-family: 'Roboto Slab', serif;
   font-size: 15px;
-  background-color:#00CCA3!important;
-  word-spacing: 3px;
+  background-color:#1c423b!important;
 }
 .light-grey{
   color:#000!important;
-  background-color:#f1f1f1!important;
+  background-color:#267f6e!important;
   margin:.5em auto;
 
 }
@@ -34,9 +33,6 @@
   display: block;
   text-align: center;
   width:35%;
-
-
-
 }
 
 .container{
@@ -44,7 +40,6 @@
     padding:0.4em 1px;
     transition: width 500ms;
 }
-
 
 .scrollmenu {
     background-color: #267F6E;
