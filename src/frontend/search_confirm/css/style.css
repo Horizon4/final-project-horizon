@@ -22,14 +22,30 @@
 }
 
 .break{
-    margin-top: 1em;
     margin-bottom: 1em;
     border: 0; 
     height: 1px;
     background: #00FFCC;
 }
 
+.departure {
+    margin-bottom: 1em;
+    float: left;
+    margin-right: 2em;
+    display: inline-block;
+}
 
+.return {
+    margin-bottom: 1em;
+    float: left;
+    margin-left: 2em;
+    display: inline-block;
+}
+
+.accommodation {
+    margin: 0 auto;
+    clear: left;
+}
 
 .row {
     margin: 0.6em;
@@ -72,7 +88,7 @@
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 120px;
+    padding: 14px 110px;
     text-decoration: none;
     cursor: pointer;
     vertical-align: top;

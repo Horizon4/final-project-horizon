@@ -24,12 +24,17 @@ var view = (function() {
 
             // Accommodations
             var accommodation = $("<div></div>")
-                .addClass("accommodation")
-                .append("<div class='row title'>Accommodation</div>");
+                .addClass("accommodation");
             var accommodationData = controller.getAccommodations(i);
-            for (key in accommodationData) {
-                accommodation.append("<div class='row'>" + key + ": " + accommodationData[key] + "</div>");
-            }
+            //for (key in accommodationData) {
+            //    accommodation.append("<div class='row'>" + key + ": " + accommodationData[key] + "</div>");
+            //}
+            
+            accommodation.append("<hr class='break'>");
+            accommodation.append("<div id='bigInfo'>" + accommodationData["name"] + "</div>");
+            accommodation.append("<div class='row'>" + accommodationData["address"] + "</div>");
+            accommodation.append("<div>" + accommodationData["phone"] + "</div>")
+
             itinerary.append(accommodation);
 
             itineraryList.append(itinerary);
@@ -55,17 +60,25 @@ var view = (function() {
 
             for (var j = 0; j < segment.leg.length; j++) {
                 var leg = segment.leg[j];
-                portion.append("<div id='bigInfo'>" + leg.origin + " Terminal " + leg.originTerminal + "</div>");
+
+                if (leg.originTerminal) { // some terminals are undefined?? I guess some airports call terminals by another name
+                    portion.append("<div id='bigInfo'>" + leg.origin + " Terminal " + leg.originTerminal + "</div>");
+                } else {
+                    portion.append("<div id='bigInfo'>" + leg.origin + "</div>");
+                }
+
                 portion.append("<div id='bigInfo'>" + leg.departureTime.substring(11) + " on " + leg.departureTime.substring(0, 10) + "</div>");
                 portion.append("<div class='row'>Total Flight Time: " + flightData.totalFlightTime + " minutes</div>");
-                portion.append("<div id='bigInfo'>Arriving at " + leg.destination + ", Terminal " + leg.destinationTerminal + "</div>");
+
+                if (leg.destinationTerminal) {
+                    portion.append("<div id='bigInfo'>Arriving at " + leg.destination + " Terminal " + leg.destinationTerminal + "</div>");
+                } else {
+                    portion.append("<div id='bigInfo'>Arriving at " + leg.destination + "</div>");
+                }
                 portion.append("<div id='bigInfo'>" + leg.arrivalTime.substring(11) + " on " + leg.arrivalTime.substring(0, 10) + "</div>");
 
             }
         }
-
-
-        portion.append("<hr class='break'>");
         return portion;
     }
 
