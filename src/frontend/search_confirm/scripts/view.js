@@ -43,25 +43,29 @@ var view = (function() {
 
         return flight;
     }
+
     function createFlightPortion(flightData, portionName) {
         var portion = $("<div></div>").addClass(portionName.toLowerCase());
-        portion.append("<div class='row title'>" + portionName + " Flight</div>");
-
+        //portion.append("<div class='row title'>" + portionName + " Flight</div>");
+        //portion.append("<div class='row title'>Depart From</div>");
+ 
         for (var i = 0; i < flightData.segment.length; i++) {
             var segment = flightData.segment[i];
-            portion.append("<div class='row'>Flight Number: " + segment.flightNo + "</div>");
+            portion.append("<div class='row'>" + portionName + " Flight " + segment.flightNo + " From:" + "</div>");
 
             for (var j = 0; j < segment.leg.length; j++) {
                 var leg = segment.leg[j];
-                portion.append("<div class='row'>From " + leg.origin + ", Terminal " + leg.originTerminal + "</div>");
-                portion.append("<div class='row'>Departing " + leg.departureTime + "</div>");
-                portion.append("<div class='row'>To " + leg.destination + ", Terminal " + leg.destinationTerminal + "</div>");
-                portion.append("<div class='row'>Arriving " + leg.arrivalTime + "</div>");
+                portion.append("<div id='bigInfo'>" + leg.origin + " Terminal " + leg.originTerminal + "</div>");
+                portion.append("<div id='bigInfo'>" + leg.departureTime.substring(11) + " on " + leg.departureTime.substring(0, 10) + "</div>");
+                portion.append("<div class='row'>Total Flight Time: " + flightData.totalFlightTime + " minutes</div>");
+                portion.append("<div id='bigInfo'>Arriving at " + leg.destination + ", Terminal " + leg.destinationTerminal + "</div>");
+                portion.append("<div id='bigInfo'>" + leg.arrivalTime.substring(11) + " on " + leg.arrivalTime.substring(0, 10) + "</div>");
+
             }
         }
 
-        portion.append("<div class='row'>Total Flight Time: " + flightData.totalFlightTime + " minutes</div>");
 
+        portion.append("<hr class='break'>");
         return portion;
     }
 
