@@ -13,12 +13,20 @@ var placeDetailsRequest = new PlaceDetailsRequest(apiKey, outputFormat);
 export const findAttraction = (req, res) => {
   ItineraryProcess.findById(req.params.id)
   .then((itineraryProcess) => {
-    performSearch(req.body, (err, result) => {
-      var temp = result;
-      itineraryProcess.attractions = result;
+    var attractionsPromises = [];
+    performFocusSearch(req.body, (err, result) => {
+      attractionsPromises = result;
 
-      updateProcess (req.param.id, itineraryProcess, (err, result) => {
-        return res.status(200).json(temp);
+      performSearch(req.body, 0, (err, result1) => {
+        var attractionPromises1 = attractionsPromises.concat(result1);
+
+        performSearch(req.body, 1, (err, result2) => {
+          var attractionPromises2 = attractionPromises1.concat(result2);
+          performSearch(req.body, 2, (err, result3) => {
+            var attractionPromises3 = attractionPromises2.concat(result3);
+            return res.status(200).json(attractionPromises3);
+          })
+        })
       })
     })
   })
@@ -27,41 +35,55 @@ export const findAttraction = (req, res) => {
   })
 }
 
-function updateProcess(id, itineraryProcess, callback) {
+// function updateProcess(id, itineraryProcess, callback) {
+//
+//    ItineraryProcess.update({'_id': id}, itineraryProcess)
+//    .then((itinerary) => {
+//      callback(null, itinerary)
+//    })
+//    .catch((err) => {
+//      throw err;
+//    })
+// }
 
-   ItineraryProcess.update({'_id': id}, itineraryProcess)
-   .then((itinerary) => {
-     callback(null, itinerary)
-   })
-   .catch((err) => {
-     throw err;
-   })
-}
-
-function performSearch(body, callback) {
+function performFocusSearch(body, callback) {
   var attractions = [];
-  var parameter;
-
-  if (body.attractions.length === 0){
-    parameter = {
-      query: body.destination + "point of interest",
-      language: "en"
-    }
-  } else {
-    parameter = {
-      query: body.destination,
-      language: "en",
-      type: [body.attractions[0]]
-    }
+  var parameter = {
+    query: body.destination,
+    language: "en",
+    type: [body.mainFocus]
   }
 
   textSearch(parameter, (err, attraction) => {
     if (err) throw err;
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 3; i++) {
       placeDetailsRequest({reference: attraction.results[i].reference}, (err, details) => {
         if(err) throw err;
         attractions.push(details);
-        if (attractions.length == 5) {
+        if (attractions.length == 2) {
+          callback(null, attractions);
+        }
+      })
+    }
+  })
+}
+
+function performSearch(body, number, callback) {
+  var attractions = [];
+
+  var parameter = {
+    query: body.destination,
+    language: "en",
+    type: [body.attractions[number]]
+  }
+
+  textSearch(parameter, (err, attraction) => {
+    if (err) throw err;
+    for (var i = 0; i < 2; i++) {
+      placeDetailsRequest({reference: attraction.results[i].reference}, (err, details) => {
+        if(err) throw err;
+        attractions.push(details);
+        if (attractions.length == 1) {
           callback(null, attractions);
         }
       })
