@@ -125,17 +125,27 @@ or trip as seamlessly as possible.
 #### description: find accommodations
 - request: `PUT /api/findAccommodation/:id`
     - body: string
-      - destination: Los Angelos
+      - destination: Los Angeles
 - response: 200
 - response: 500
     - body: Invalid request
 
 
-#### description: find accommodations
+#### description: select an itinerary
 - request: `PUT /api/selected`
     - body: string
       - username: zain
       - selectedItinerary : {...} the object selected from the algorithm
+- response: 200
+- response: 500
+    - body: Invalid request
+
+### description: find attractions
+- request: `PUT /api/findAttraction/:id`
+    - body: string
+      - destination: Los Angeles
+      - mainFocus: park
+      - attractions: [art_gallery, amusement, restaurant]
 - response: 200
 - response: 500
     - body: Invalid request
