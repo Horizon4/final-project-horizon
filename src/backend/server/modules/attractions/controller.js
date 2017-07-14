@@ -41,8 +41,6 @@ export const findAttraction = (req, res) => {
 }
 
 function updateProcess(id, itineraryProcess, callback) {
-  console.log("here", itineraryProcess.attractions);
-
    ItineraryProcess.update({'_id': id}, itineraryProcess)
    .then((itinerary) => {
      callback(null, itinerary)
