@@ -22,9 +22,14 @@ export const findAttraction = (req, res) => {
 
         performSearch(req.body, 1, (err, result2) => {
           var attractionPromises2 = attractionPromises1.concat(result2);
+
           performSearch(req.body, 2, (err, result3) => {
             var attractionPromises3 = attractionPromises2.concat(result3);
-            return res.status(200).json(attractionPromises3);
+
+            itineraryProcess.attractions = attractionPromises3;
+            updateProcess(req.params.id, itineraryProcess, (err, result4) => {
+              return res.status(200).json(itineraryProcess.attractions);
+            })
           })
         })
       })
@@ -35,16 +40,17 @@ export const findAttraction = (req, res) => {
   })
 }
 
-// function updateProcess(id, itineraryProcess, callback) {
-//
-//    ItineraryProcess.update({'_id': id}, itineraryProcess)
-//    .then((itinerary) => {
-//      callback(null, itinerary)
-//    })
-//    .catch((err) => {
-//      throw err;
-//    })
-// }
+function updateProcess(id, itineraryProcess, callback) {
+  console.log("here", itineraryProcess.attractions);
+
+   ItineraryProcess.update({'_id': id}, itineraryProcess)
+   .then((itinerary) => {
+     callback(null, itinerary)
+   })
+   .catch((err) => {
+     throw err;
+   })
+}
 
 function performFocusSearch(body, callback) {
   var attractions = [];
@@ -60,7 +66,7 @@ function performFocusSearch(body, callback) {
       placeDetailsRequest({reference: attraction.results[i].reference}, (err, details) => {
         if(err) throw err;
         attractions.push(details);
-        if (attractions.length == 2) {
+        if (attractions.length === 2) {
           callback(null, attractions);
         }
       })
@@ -83,7 +89,7 @@ function performSearch(body, number, callback) {
       placeDetailsRequest({reference: attraction.results[i].reference}, (err, details) => {
         if(err) throw err;
         attractions.push(details);
-        if (attractions.length == 1) {
+        if (attractions.length === 1) {
           callback(null, attractions);
         }
       })
