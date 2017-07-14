@@ -1,6 +1,5 @@
 import ItineraryProcess from '../itineraryProcess/model';
 
-
 var https = require('https');
 var querystring = require('querystring');
 var TextSearch = require('googleplaces/lib/TextSearch.js');
@@ -41,9 +40,19 @@ function updateProcess(id, itineraryProcess, callback) {
 
 function performSearch(body, callback) {
   var attractions = [];
-  var parameter = {
-    query: body.destination + "point of interest",
-    language: "en"
+  var parameter;
+
+  if (body.attractions.length === 0){
+    parameter = {
+      query: body.destination + "point of interest",
+      language: "en"
+    }
+  } else {
+    parameter = {
+      query: body.destination,
+      language: "en",
+      type: [body.attractions[0]]
+    }
   }
 
   textSearch(parameter, (err, attraction) => {
