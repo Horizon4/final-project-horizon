@@ -8,7 +8,6 @@ export const createItinerary = (req, res) => {
 
   ItineraryProcess.findById(itineraryProcessId)
   .then((itinerary) => {
-    return res.status(200).json({itinerary})
     var flights = itinerary.flights;
     var accommodations = itinerary.accommodations;
     var result = [];
