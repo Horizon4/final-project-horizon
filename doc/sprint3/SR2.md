@@ -1,7 +1,7 @@
 # Sprint Retrospective 2
 
 ### Date: July 10, 2017
-### Time: 6:00 PM - 7:00 PM
+### Time: 6:30 PM - 7:00 PM
 ### Location: IC 406
 
 ## Participants
