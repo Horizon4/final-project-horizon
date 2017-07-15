@@ -1,5 +1,19 @@
-- july 8
-- 11am - 11:45am
+### Date: July 8, 2017, July 10, 2017 and July 15, 2017
+### Time: 11:00 AM - 11:45 AM, 6:00 PM - 6:30 PM and 12:00 PM - 1:00 PM
+### Location: Online (Google Hangouts), IC 406 and Online (Google Hangouts)
+
+## Participants
+
+- Ryan Abe
+- Zain Amir
+- Colleen Brown
+- Howard Chen
+- Ke Deng
+- Varun Sharma
+- Jason Shum
+
+## Meeting Minutes
+
 - breakdown meeting
 - ticket/task breakdown meeting
 - break down biggest task
@@ -32,3 +46,15 @@
 		    - try to figure out how much work will be involved to do it (by monday night)
 - update tickets and track them
 - have sprint retorspective meeting
+
+## Sprint Backlog
+
+## Tasks
+
+**Ryan Abe**
+**Zain Amir**
+**Colleen Brown**
+**Howard Chen**
+**Ke Deng**
+**Varun Sharma**
+**Jason Shum**
