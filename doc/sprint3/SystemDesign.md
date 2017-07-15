@@ -50,19 +50,20 @@ For example in the Log in system, the front end View is created in HTML/CSS with
 -----------------------------------------------
 
     Classname: User
-    Parent class: NA
-    Subclasses: NA
+    Parent class:
+    Subclasses:
     Responsibilities: 
         - can login 
         - can sign up
         - create/view/recommend itinerary
     Collaborators: 
         - Itinerary
+        - ItineraryProcess
 
 -----------------------------------------------
 
     Classname: Itinerary
-    Parent class: UserItineraries
+    Parent class:
     Subclasses: 
     Responsibilities:
         - Knows its ID
@@ -80,7 +81,7 @@ For example in the Log in system, the front end View is created in HTML/CSS with
 -----------------------------------------------
 
     Classname: ItineraryProcess
-    Parent class: UserItineraries
+    Parent class:
     Subclasses:
     Responsibilities:
         - Knows its ID
