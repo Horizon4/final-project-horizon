@@ -38,7 +38,7 @@ export const selected = (req, res) => {
   const select = new Itinerary({username, selectedItinerary })
 /**  ItineraryProcess.update({selectedItinerary.completed : false},
     {$set: {selectedItinerary.completed : true}}, {upsert: true})**/
-    ItineraryProcess.update({completed : true}, selectedItinerary)
+   ItineraryProcess.update({'completed' : true}}, selectedItinerary)
   .then((select) => {
       select.save()
   })
