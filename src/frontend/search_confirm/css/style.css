@@ -16,16 +16,51 @@
 }
 
 
+.bigInfo {
+    font-size: 22px;
+
+}
+
+.break{
+    margin-bottom: 1em;
+    border: 0; 
+    height: 1px;
+    background: #00FFCC;
+}
+
+.departure {
+    margin-bottom: 1em;
+    float: left;
+    margin-right: 2em;
+    display: inline-block;
+}
+
+.return {
+    margin-bottom: 1em;
+    float: left;
+    margin-left: 2em;
+    display: inline-block;
+}
+
+.accommodation {
+    margin: 0 auto;
+    clear: left;
+}
+
+.row {
+    margin: 0.6em;
+}
+
 .green{
-  color:#FFFFFF!important;
+  color:#e3ede3!important;
   font-family: 'Roboto Slab', serif;
   font-size: 15px;
-  background-color:#00CCA3!important;
-  word-spacing: 3px;
+  background-color:#1c423b!important;
 }
+
 .light-grey{
   color:#000!important;
-  background-color:#f1f1f1!important;
+  background-color:#267f6e!important;
   margin:.5em auto;
 
 }
@@ -34,9 +69,6 @@
   display: block;
   text-align: center;
   width:35%;
-
-
-
 }
 
 .container{
@@ -45,8 +77,8 @@
     transition: width 500ms;
 }
 
-
 .scrollmenu {
+    margin-top: 3em;
     background-color: #267F6E;
     overflow: auto;
     white-space: nowrap;
@@ -56,9 +88,10 @@
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 200px;
+    padding: 14px 110px;
     text-decoration: none;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 .scrollmenu .itinerary:hover {

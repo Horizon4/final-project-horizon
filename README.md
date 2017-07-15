@@ -149,3 +149,22 @@ or trip as seamlessly as possible.
 - response: 200
 - response: 500
     - body: Invalid request
+
+#### description: update average rating for selected itinerary
+- request: `PUT /api/updateRating`
+    - body: string
+      - rating: 5
+      - itineraryId: id of an itinerary
+- response: 200
+- response: 500
+    - body: Failed to update ratings
+
+#### description: update number of recommendations and adds the user who recommended the itinerary to an array
+- request: `PUT /api/updateRecommendations`
+    - body: string
+      - username: nootnoot
+      - itineraryId: id of an itinerary
+- response: 200
+- response: 500
+    - body: Failed to update recommendations
+
