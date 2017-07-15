@@ -47,6 +47,8 @@ For example in the Log in system, the front end View is created in HTML/CSS with
 ## CRC <a name="CRC"></a>
 - UserItineraries was removed because Itinerary and ItineraryProcess have a User associated with them
 
+-----------------------------------------------
+
     Classname: User
     Parent class: NA
     Subclasses: NA
