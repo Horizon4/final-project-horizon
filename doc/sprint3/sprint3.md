@@ -139,6 +139,7 @@
 **Colleen Brown**
 - multiple destinations
 - micromanaging
+- itinerary
 
 **Howard Chen**
 - Itinerary with Attractions
