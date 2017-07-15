@@ -36,12 +36,12 @@ export const selected = (req, res) => {
   var { selectedItinerary, username } = req.body;
 
   const select = new Itinerary({username, selectedItinerary })
-  ItineraryProcess.update(selectedItinerary, {$set: {completed : true}}, {upsert: true})
-  .catch((err) => {
-    return res.status(500);
+/**  ItineraryProcess.update({selectedItinerary.completed : false},
+    {$set: {selectedItinerary.completed : true}}, {upsert: true})**/
+    ItineraryProcess.update({completed : true}, selectedItinerary)
+  .then((select) => {
+      select.save()
   })
-
-  select.save()
   .then((itinerary) => {
     return res.status(200).json(itinerary);
   })
