@@ -131,11 +131,21 @@ or trip as seamlessly as possible.
     - body: Invalid request
 
 
-#### description: find accommodations
+#### description: select an itinerary
 - request: `PUT /api/selected`
     - body: string
       - username: zain
       - selectedItinerary : {...} the object selected from the algorithm
+- response: 200
+- response: 500
+    - body: Invalid request
+
+### description: find attractions
+- request: `PUT /api/findAttraction/:id`
+    - body: string
+      - destination: Los Angeles
+      - mainFocus: park
+      - attractions: [art_gallery, amusement, restaurant]
 - response: 200
 - response: 500
     - body: Invalid request
@@ -157,3 +167,4 @@ or trip as seamlessly as possible.
 - response: 200
 - response: 500
     - body: Failed to update recommendations
+
