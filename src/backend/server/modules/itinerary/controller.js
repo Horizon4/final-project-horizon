@@ -10,17 +10,21 @@ export const createItinerary = (req, res) => {
   .then((itinerary) => {
     var flights = itinerary.flights;
     var accommodations = itinerary.accommodations;
+    var attractions = itinerary.attractions;
     var result = [];
 
-    for (var i=0; i <flights.length; i++){
+    for (var i=0; i < flights.length; i++){
       for (var j=0; j < accommodations.length; j++) {
-        var object = {}
-        object.flight = flights[i];
-        object.accommodation = accommodations[j]
-        result.push(object)
+        for (var k=0; k < attractions.length; k++) {
+          var object = {}
+          object.flight = flights[i];
+          object.accommodation = accommodations[j]
+          object.attractions = attractions[k];
+          result.push(object)
 
-        if (result.length == 8 ){
-          return res.status(200).json({ result });
+          if (result.length == 10 ){
+            return res.status(200).json({ result });
+          }
         }
       }
     }
