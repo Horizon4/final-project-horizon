@@ -145,7 +145,7 @@ or trip as seamlessly as possible.
     - body: string
       - destination: Los Angeles
       - mainFocus: park
-      - attractions: [art_gallery, amusement, restaurant]
+      - attractions: [art_gallery, amusement, restaurant] // THIS HAS TO BE 3 elements exactly
 - response: 200
 - response: 500
     - body: Invalid request
@@ -167,4 +167,3 @@ or trip as seamlessly as possible.
 - response: 200
 - response: 500
     - body: Failed to update recommendations
-
