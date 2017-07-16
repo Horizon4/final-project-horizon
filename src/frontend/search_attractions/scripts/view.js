@@ -17,23 +17,22 @@ var searchButtonCheck = (function() {
 
     function searchSubmit(e) {
         e.preventDefault();
-        alert("Attractions isn't implemented yet. Click to continue to the confirmation page.");
-        window.location.href = "/search_confirm";
+        //alert("Attractions isn't implemented yet. Click to continue to the confirmation page.");
+        //window.location.href = "/search_confirm";
 
-        /*// Get data
-        var price = $("#price").val();
-        var adult = $("#adultCount").val();
-        var child = $("#childCount").val();
-        var senior = $("#seniorCount").val();
-        var cabin = $("#cabin").val();
-        var carrier = $("#carrier").val();
+        // Get data
+        var destination = $("#destinationCity").val();
+        var first = $("#focusAttraction").val();
+        var second = $("#attraction2").val();
+        var third = $("#attraction3").val();
+        var fourth = $("#attraction3").val();
 
-        // Attempt to search for flights
-        var success = controller.send(price, adult, child, senior, cabin, carrier);
+        // Attempt to search for attractions
+        var success = controller.send(destination, first, second, third, fourth);
 
         if (!success){
             alert("Oops, something broke!");
-        }*/
+        }
     }
 
     return {
