@@ -35,9 +35,9 @@ function updateProcess(id, itineraryProcess, callback) {
    .catch((err) => {
      throw err;
    })
-
-
 }
+
+
 function performSearch(dest, callback) {
   var parameter = {
     query: "lodging in " + dest

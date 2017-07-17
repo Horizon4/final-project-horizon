@@ -6,18 +6,15 @@ var controller = (function() {
         },
 
 
-        send: function(price, adult, child, senior, cabin, carrier) {
+        send: function(destination, first, second, third, fourth) {
             // Package data
             var data = {
-                'price': price,
-                'adult': adult || null,
-                'child': child || null,
-                'senior': senior || null,
-                'cabin': cabin || null,
-                'carrier': carrier || null,
+                'destination': destination,
+                'mainFocus': first,
+                'attractions': [second, third, fourth],
             };
 
-            // Search for flights
+            // Search for attractions
             var result = model.send(data);
             return result;
         },

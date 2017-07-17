@@ -96,6 +96,20 @@ var model = (function() {
 
             return result;
         },
+        getAttractions: function(idx) {
+            attractionData = itineraryList[idx].attractions.result;
+
+            // Repackage attraction data
+            var result = {
+                address: attractionData.formatted_address,
+                phone: attractionData.formatted_phone_number,
+                name: attractionData.name,
+                website: attractionData.website,
+                rating: attractionData.rating,
+            }
+
+            return result;
+        },
 
         selectItinerary: function(idx) {
             // Select itinerary

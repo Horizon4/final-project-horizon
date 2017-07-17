@@ -125,13 +125,13 @@ or trip as seamlessly as possible.
 #### description: find accommodations
 - request: `PUT /api/findAccommodation/:id`
     - body: string
-      - destination: Los Angelos
+      - destination: Los Angeles
 - response: 200
 - response: 500
     - body: Invalid request
 
 
-#### description: find accommodations
+#### description: select an itinerary
 - request: `PUT /api/selected`
     - body: string
       - username: zain
@@ -139,3 +139,31 @@ or trip as seamlessly as possible.
 - response: 200
 - response: 500
     - body: Invalid request
+
+### description: find attractions
+- request: `PUT /api/findAttraction/:id`
+    - body: string
+      - destination: Los Angeles
+      - mainFocus: park
+      - attractions: [art_gallery, amusement, restaurant] // THIS HAS TO BE 3 elements exactly
+- response: 200
+- response: 500
+    - body: Invalid request
+
+#### description: update average rating for selected itinerary
+- request: `PUT /api/updateRating`
+    - body: string
+      - rating: 5
+      - itineraryId: id of an itinerary
+- response: 200
+- response: 500
+    - body: Failed to update ratings
+
+#### description: update number of recommendations and adds the user who recommended the itinerary to an array
+- request: `PUT /api/updateRecommendations`
+    - body: string
+      - username: nootnoot
+      - itineraryId: id of an itinerary
+- response: 200
+- response: 500
+    - body: Failed to update recommendations
