@@ -36,12 +36,13 @@ var view = (function() {
             // Attractions
             var attraction = $("<div></div>").addClass("attraction");
             var attractionData = controller.getAttractions(i);
-            attraction.append("<hr class='break'>");
+            attraction.append("<hr class='break' width='85%'>");
 
             for (var j = 0; j < attractionData.length; j++) {
                 attraction.append("<div class='bigInfo'>" + attractionData[j]["name"] + "</div>");
                 attraction.append("<div class='row'>" + attractionData[j]["address"] + "</div>");
                 attraction.append("<div>" + attractionData[j]["phone"] + "</div>");
+                attraction.append("<hr class='break' width='75%'>");
             }
 
             itinerary.append(attraction);
