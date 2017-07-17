@@ -16,7 +16,6 @@ export const createItinerary = (req, res) => {
     for (var i=0; i < flights.length; i++){
       for (var j=0; j < accommodations.length; j++) {
         var object = {}
-        var temp = [];
 
         object.flight = flights[i];
         object.accommodation = accommodations[j]
