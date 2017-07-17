@@ -8,6 +8,7 @@ var components = (function() {
 
     function load_nav_bar() {
         $("#nav_bar").load("/_Shared/components/nav-bar/index.html");
+        $("#dataLists").load("/_Shared/components/dataLists/index.html");
     }
 
     return {
