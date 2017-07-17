@@ -20,6 +20,7 @@ export const createItinerary = (req, res) => {
         object.flight = flights[i];
         object.accommodation = accommodations[j]
         object.attractions = attractions;
+        object.destination = itinerary.destination;
         result.push(object)
 
         if (result.length == 10 ){
@@ -34,9 +35,11 @@ export const createItinerary = (req, res) => {
 }
 
 export const selected = (req, res) => {
+  var object = JSON.parse(req.body.selectedItinerary);
   var { selectedItinerary, username } = req.body;
+  var destination = object.destination;
 
-  const select = new Itinerary({ username, selectedItinerary })
+  const select = new Itinerary({ username, selectedItinerary, destination })
 
   select.save()
   .then((itinerary) => {
@@ -87,5 +90,18 @@ export const updateRecommendations = (req, res) => {
   })
   .catch((err) => {
     return res.status(500).json({error: err, message: 'Failed to update recommendations'})
+  })
+}
+
+export const getRecommendations = (req, res) => {
+  var destination  = req.params.destination
+  console.log(destination);
+
+  Itinerary.find({'destination': destination, 'numberOfRecommendations': { '$gt': 0 }})
+  .then((itineraries) => {
+    return res.status(200).json(itineraries);
+  })
+  .catch((err) => {
+    return res.status(500).json({error: true, message: 'No recommendations exist'})
   })
 }

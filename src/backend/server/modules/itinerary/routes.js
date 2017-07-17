@@ -8,5 +8,6 @@ routes.put('/selected', ItineraryController.selected);
 routes.get('/completed/:username', ItineraryController.completedItinerary);
 routes.put('/updateRating', ItineraryController.updateRating);
 routes.put('/updateRecommendations', ItineraryController.updateRecommendations);
+routes.get('/getRecommendations/:destination', ItineraryController.getRecommendations)
 
 export default routes;
