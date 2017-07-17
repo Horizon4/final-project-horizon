@@ -64,6 +64,19 @@ var view = (function() {
             }
             itinerary.append(accommodation);
 
+            // Attractions
+            var attractions = $("<div></div>")
+                .addClass("attractions")
+                .append("<div class='row title'>Attractions</div>");
+
+            for (var i = 0; i < data.attractions.length; i++){
+                var attractionsData = data.attractions[i];
+                for (key in attractionsData) {
+                    attractions.append("<div class='row'>" + key + ": " + attractionsData[key] + "</div>");
+                }
+                itinerary.append(attractions);
+            }
+
             itineraryList.append(itinerary);
 
         },
