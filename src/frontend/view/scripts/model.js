@@ -112,7 +112,9 @@ var model = (function() {
             if (type === "completed") {
                 itineraryList[type] = [];
                 for (var i = 0; i < data.length; i++) {
-                    itineraryList[type].push(JSON.parse(data[i].selectedItinerary));
+                    var itinerary = JSON.parse(data[i].selectedItinerary);
+                    itinerary.id = data[i]._id;
+                    itineraryList[type].push(itinerary);
                 }
             } else {
                 itineraryList[type] = data;
@@ -160,6 +162,23 @@ var model = (function() {
                 window.location.href = "/search_confirm";
             }
         },
+
+        recommendItinerary: function(idx) {
+            var result = $.ajax({
+                url: "/api/updateRecommendations",
+                data: {
+                    username: Cookies.get("username"),
+                    itineraryId: itineraryList.completed[idx].id,
+                },
+                type: 'PUT',
+                success: function(data) {
+                    alert("Itinerary recommended!");
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        }
 
     }
 })();
