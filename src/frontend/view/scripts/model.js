@@ -68,6 +68,21 @@ var model = (function() {
 
         return result;
     }
+    /** Repackage attraction data **/
+    /*function getAttractions(itinerary) {
+        attractionData = itinerary.attraction.result;
+
+        // Repackage attraction data
+        var result = {
+            address: attractionData.formatted_address,
+            phone: attractionData.formatted_phone_number,
+            name: attractionData.name,
+            website: attractionData.website,
+            rating: attractionData.rating,
+        };
+
+        return result;
+    }*/
 
 
     return {
@@ -95,6 +110,10 @@ var model = (function() {
             } else {
                 itineraryList[type] = data;
             }
+        },
+
+        debuggetItineraries: function() {
+            return itineraryList;
         },
 
         getCompletedItineraryLength: function() {

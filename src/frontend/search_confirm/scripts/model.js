@@ -106,7 +106,7 @@ var model = (function() {
                 name: attractionData.name,
                 website: attractionData.website,
                 rating: attractionData.rating,
-            }
+            };
 
             return result;
         },
