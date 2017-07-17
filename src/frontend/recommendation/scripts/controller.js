@@ -12,7 +12,7 @@ var controller = (function() {
                 view.noItinerariesFound();
             } else {
                 for (var i = 0; i < model.getItineraryLength(); i++) {
-                    view.showItineraries(model.getItinerary(i));
+                    view.insertItinerary(model.getItinerary(i));
                 }
             }
         },
