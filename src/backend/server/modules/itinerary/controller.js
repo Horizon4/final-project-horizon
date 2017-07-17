@@ -15,16 +15,16 @@ export const createItinerary = (req, res) => {
 
     for (var i=0; i < flights.length; i++){
       for (var j=0; j < accommodations.length; j++) {
-        for (var k=0; k < attractions.length; k++) {
-          var object = {}
-          object.flight = flights[i];
-          object.accommodation = accommodations[j]
-          object.attractions = attractions[k];
-          result.push(object)
+        var object = {}
+        var temp = [];
 
-          if (result.length == 10 ){
-            return res.status(200).json({ result });
-          }
+        object.flight = flights[i];
+        object.accommodation = accommodations[j]
+        object.attractions = attractions;
+        result.push(object)
+
+        if (result.length == 10 ){
+          return res.status(200).json({ result });
         }
       }
     }
