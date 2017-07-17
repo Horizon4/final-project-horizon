@@ -106,7 +106,7 @@ or trip as seamlessly as possible.
     - body: username doesn't exist
 
 ### description: get all recommended itineraries
-- request: `GET /api/completed/:destination` ex: `/api/completed/LAX`
+- request: `GET /api/getRecommendations/:destination` ex: `/api/getRecommendations/LAX`
 - response: 200
     - body: List of objects selected from the itinerary recommended
 - response: 500
