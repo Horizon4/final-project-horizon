@@ -23,19 +23,29 @@ var view = (function() {
             itinerary.append(createFlight(controller.getFlights(i)));
 
             // Accommodations
-            var accommodation = $("<div></div>")
-                .addClass("accommodation");
+            var accommodation = $("<div></div>").addClass("accommodation");
             var accommodationData = controller.getAccommodations(i);
-            //for (key in accommodationData) {
-            //    accommodation.append("<div class='row'>" + key + ": " + accommodationData[key] + "</div>");
-            //}
-            
+
             accommodation.append("<hr class='break'>");
             accommodation.append("<div class='bigInfo'>" + accommodationData["name"] + "</div>");
             accommodation.append("<div class='row'>" + accommodationData["address"] + "</div>");
-            accommodation.append("<div>" + accommodationData["phone"] + "</div>")
+            accommodation.append("<div>Phone: " + accommodationData["phone"] + "</div>")
 
             itinerary.append(accommodation);
+
+            // Attractions
+            var attraction = $("<div></div>").addClass("attraction");
+            var attractionData = controller.getAttractions(i);
+            attraction.append("<hr class='break' width='85%'>");
+
+            for (var j = 0; j < attractionData.length; j++) {
+                attraction.append("<div class='bigInfo'>" + attractionData[j]["name"] + "</div>");
+                attraction.append("<div class='row'>" + attractionData[j]["address"] + "</div>");
+                attraction.append("<div>Phone: " + attractionData[j]["phone"] + "</div>");
+                attraction.append("<hr class='break' width='75%'>");
+            }
+
+            itinerary.append(attraction);
 
             itineraryList.append(itinerary);
         }
@@ -53,7 +63,7 @@ var view = (function() {
         var portion = $("<div></div>").addClass(portionName.toLowerCase());
         //portion.append("<div class='row title'>" + portionName + " Flight</div>");
         //portion.append("<div class='row title'>Depart From</div>");
- 
+
         for (var i = 0; i < flightData.segment.length; i++) {
             var segment = flightData.segment[i];
             portion.append("<div class='row'>" + portionName + " Flight " + segment.flightNo + " From:" + "</div>");

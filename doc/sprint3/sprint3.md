@@ -139,7 +139,7 @@
 **Colleen Brown**
 - multiple destinations
 - micromanaging
-- itinerary
+- distinguish a completed itinerary
 
 **Howard Chen**
 - Itinerary with Attractions

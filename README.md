@@ -105,6 +105,13 @@ or trip as seamlessly as possible.
 - response: 500
     - body: username doesn't exist
 
+### description: get all recommended itineraries
+- request: `GET /api/completed/:destination` ex: `/api/completed/LAX`
+- response: 200
+    - body: List of objects selected from the itinerary recommended
+- response: 500
+    - body: destination doesn't exist doesn't exist
+
 ## Update
 
 #### description: add a flight to itinerary

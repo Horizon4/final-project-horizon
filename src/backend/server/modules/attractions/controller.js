@@ -73,12 +73,13 @@ function performFocusSearch(body, callback) {
 }
 
 function performSearch(body, number, callback) {
+  var bodyAttractions = body["attractions[]"];
   var attractions = [];
 
   var parameter = {
     query: body.destination,
     language: "en",
-    type: [body.attractions[number]]
+    type: [bodyAttractions[number]]
   }
 
   textSearch(parameter, (err, attraction) => {

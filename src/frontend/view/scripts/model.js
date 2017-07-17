@@ -68,11 +68,33 @@ var model = (function() {
 
         return result;
     }
+    /** Repackage attraction data **/
+    function getAttractions(itinerary) {
+        var result = [];
+
+        // Repackage attraction data
+        for (var i = 0; i < itinerary.attractions.length; i++) {
+            var attractionData = itinerary.attractions[i].result;
+
+            result.push({
+                address: attractionData.formatted_address,
+                phone: attractionData.formatted_phone_number,
+                name: attractionData.name,
+                website: attractionData.website,
+                rating: attractionData.rating,
+            });
+        };
+
+        return result;
+    }
 
 
     return {
         init: function() {
 
+        },
+        testAttractions (i) { //DEBUG
+            return getAttractions(i);
         },
         getItineraries: function(type) {
             var result = $.ajax({
@@ -97,6 +119,10 @@ var model = (function() {
             }
         },
 
+        debugGetItineraries: function() {
+            return itineraryList;
+        },
+
         getCompletedItineraryLength: function() {
             return itineraryList.completed.length;
         },
@@ -104,6 +130,7 @@ var model = (function() {
             return {
                 flights: getFlights(itineraryList.completed[idx]),
                 accommodation: getAccommodations(itineraryList.completed[idx]),
+                attractions: getAttractions(itineraryList.completed[idx]),
             }
         },
         getIncompleteItineraryLength: function() {
@@ -117,6 +144,22 @@ var model = (function() {
                 budget: itineraryList.incomplete[idx].price,
                 returnDate: itineraryList.incomplete[idx].returnDate,
             }
-        }
+        },
+
+        continueItinerary: function(idx) {
+            var itinerary = itineraryList.incomplete[idx];
+            Cookies.set("itineraryID", itinerary._id);
+
+            if (itinerary.flights.length === 0) {
+                window.location.href = "/search_flights";
+            } else if (itinerary.accommodations.length === 0) {
+                window.location.href = "/search_accommodation";
+            } else if (itinerary.attractions.length === 0) {
+                window.location.href = "/search_attractions";
+            } else {
+                window.location.href = "/search_confirm";
+            }
+        },
+
     }
 })();

@@ -15,11 +15,15 @@ var controller = (function() {
                 }
             } else if (type === "incomplete") {
                 for (var i = 0; i < model.getIncompleteItineraryLength(); i++) {
-                    view.insertIncompleteItinerary(model.getIncompleteItinerary(i));
+                    view.insertIncompleteItinerary(model.getIncompleteItinerary(i), i);
                 }
             } else {
                 alert("Something broke! Invalid type.")
             }
         },
+
+        continueItinerary: function(idx) {
+            return model.continueItinerary(idx);
+        }
     }
 })();

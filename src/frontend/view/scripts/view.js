@@ -21,24 +21,37 @@ var view = (function() {
     }
     function createFlightPortion(flightData, portionName) {
         var portion = $("<div></div>").addClass(portionName.toLowerCase());
-        portion.append("<div class='row title'>" + portionName + " Flight</div>");
 
         for (var i = 0; i < flightData.segment.length; i++) {
             var segment = flightData.segment[i];
-            portion.append("<div class='row'>Flight Number: " + segment.flightNo + "</div>");
+            portion.append("<div class='bigInfo'>" + portionName + " Flight " + segment.flightNo + " From:" + "</div>");
 
             for (var j = 0; j < segment.leg.length; j++) {
                 var leg = segment.leg[j];
-                portion.append("<div class='row'>From " + leg.origin + ", Terminal " + leg.originTerminal + "</div>");
-                portion.append("<div class='row'>Departing " + leg.departureTime + "</div>");
-                portion.append("<div class='row'>To " + leg.destination + ", Terminal " + leg.destinationTerminal + "</div>");
-                portion.append("<div class='row'>Arriving " + leg.arrivalTime + "</div>");
+                if ((leg.originTerminal) && (leg.destinationTerminal)){
+                    portion.append("<div class='bigInfo'>" + leg.origin + " Terminal " + leg.originTerminal + ", to " + leg.destination + " Terminal " + leg.destinationTerminal + "</div>");
+                } else if (leg.originTerminal) {
+                    portion.append("<div class='bigInfo'>" + leg.origin + " Terminal " + leg.originTerminal + ", to " + leg.destination + "</div>");
+                } else if (leg.destinationTerminal) {
+                    portion.append("<div class='bigInfo'>" + leg.origin + ", to " + leg.destination + " Terminal " + leg.destinationTerminal + "</div>");
+                } else {
+                    portion.append("<div class='bigInfo'>" + leg.origin + ", to " + leg.destination + "</div>");
+                }
+                portion.append("<div class='row'>Departing: " + leg.departureTime.substring(11) + " on " + leg.departureTime.substring(0, 10) + "</div>");
+                portion.append("<div class='row'>Arriving: " + leg.arrivalTime.substring(11) + " on " + leg.arrivalTime.substring(0, 10) + "</div>");
+
             }
         }
 
         portion.append("<div class='row'>Total Flight Time: " + flightData.totalFlightTime + " minutes</div>");
-
+        portion.append("<hr class='break' width='88%'>");
         return portion;
+    }
+
+    function continueItinerary() {
+        var idx = $(this).data("idx");
+
+        controller.continueItinerary(idx);
     }
 
     return {
@@ -49,7 +62,7 @@ var view = (function() {
         insertCompletedItinerary: function(data) {
             var itineraryList = $("#complete");
 
-            var itinerary = $("<div></div>").addClass("itinerary");
+            var itinerary = $("<div></div>").addClass("completeItinerary");
 
             // Flights
             itinerary.append(createFlight(data.flights));
@@ -57,24 +70,47 @@ var view = (function() {
             // Accommodations
             var accommodation = $("<div></div>")
                 .addClass("accommodation")
-                .append("<div class='row title'>Accommodation</div>");
+                .append("<div class='row title'>Staying at: </div>");
             var accommodationData = data.accommodation;
-            for (key in accommodationData) {
-                accommodation.append("<div class='row'>" + key + ": " + accommodationData[key] + "</div>");
-            }
+
+            accommodation.append("<div class='bigInfo'>" + accommodationData["name"] + "</div>");
+            accommodation.append("<div class='row'>" + accommodationData["address"] + "</div>");
+            accommodation.append("<div>Phone: " + accommodationData["phone"] + "</div>");
+            accommodation.append("<div class='row'>" + accommodationData["rating"] + " stars </div>");
+
+            accommodation.append("<hr class='break' width='80%'>");
             itinerary.append(accommodation);
 
+            // Attractions
+            var attractions = $("<div></div>")
+                .addClass("attractions");
+
+            for (var i = 0; i < data.attractions.length; i++){
+                var attractionsData = data.attractions[i];
+                
+                attractions.append("<div class='bigInfo'>" + attractionsData["name"] + "</div>");
+                attractions.append("<div class='row'>" + attractionsData["address"] + "</div>");
+                attractions.append("<div>Phone: " + attractionsData["phone"] + "</div>");
+                attractions.append("<hr class='break' width='73%'>");
+                itinerary.append(attractions);
+                
+            }
             itineraryList.append(itinerary);
 
         },
-        insertIncompleteItinerary: function(data) {
+        insertIncompleteItinerary: function(data, idx) {
             var itineraryList = $("#incomplete");
 
-            var itinerary = $("<div></div>").addClass("itinerary").click(); // TODO add click handler
+            var itinerary = $("<div></div>")
+                .addClass("itinerary")
+                .data("idx", idx)
+                .click(continueItinerary);
 
-            for (key in data) {
-                itinerary.append("<div class='row'>" + key + ": " + data[key] + "</div>");
-            }
+            itinerary.append("<div class='row'>From " + data["origin"] + " to " + data["destination"] + "</div>");
+            itinerary.append("<div class='row'>Leaving on: " + data["departureDate"] + "</div>");
+            itinerary.append("<div class='row'>Returning on: " + data["returnDate"] + "</div>");
+            itinerary.append("<div class='row'>$" + data["budget"] + " budget</div>");
+
 
             itineraryList.append(itinerary);
         }

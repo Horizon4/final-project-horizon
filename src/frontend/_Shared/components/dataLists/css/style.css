@@ -1,0 +1,40 @@
+nav {
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+    background-color: #267F6E;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 0px;
+    color: #267F6E;
+    font-family: 'Roboto Slab', serif;
+}
+
+nav a {
+    display: block;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #1c423b;
+    padding: 15px 15px;
+}
+
+.far-right {
+    float: right;
+    right: 30px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+nav ul li {
+    float: left;
+}
