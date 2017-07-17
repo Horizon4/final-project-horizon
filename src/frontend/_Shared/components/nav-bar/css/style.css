@@ -2,7 +2,7 @@ nav {
     display: inline-block;
     padding: 0;
     width: 100%;
-    background-color: #00CCA3;
+    background-color: #267F6E;
     text-align: center;
     vertical-align: middle;
     line-height: 0px;
@@ -19,7 +19,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #267F6E;
+    background-color: #1c423b;
     padding: 15px 15px;
 }
 

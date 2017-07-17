@@ -8,6 +8,21 @@ const itinerarySchema = new Schema({
   selectedItinerary: {
     type: {},
     required: true
+  },
+  recommendations: {
+    type: Array
+  },
+  newNumberOfRecommendations: {
+    type: Number,
+    default: 0
+  },
+  rating: {
+    type: Number,
+    default: 0
+  },
+  numberOfRatings: {
+    type: Number,
+    default: 0
   }
 });
 
