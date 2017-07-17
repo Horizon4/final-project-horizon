@@ -97,15 +97,19 @@ var model = (function() {
             return result;
         },
         getAttractions: function(idx) {
-            attractionData = itineraryList[idx].attractions.result;
+            var result = [];
 
             // Repackage attraction data
-            var result = {
-                address: attractionData.formatted_address,
-                phone: attractionData.formatted_phone_number,
-                name: attractionData.name,
-                website: attractionData.website,
-                rating: attractionData.rating,
+            for (var i = 0; i < itineraryList[idx].attractions.length; i++) {
+                var attractionData = itineraryList[idx].attractions[i].result;
+
+                result.push({
+                    address: attractionData.formatted_address,
+                    phone: attractionData.formatted_phone_number,
+                    name: attractionData.name,
+                    website: attractionData.website,
+                    rating: attractionData.rating,
+                });
             };
 
             return result;
