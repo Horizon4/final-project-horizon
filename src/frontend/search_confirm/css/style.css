@@ -23,10 +23,12 @@
 
 .break{
     margin-bottom: 1em;
+    margin-top: 1em;
     border: 0; 
     height: 1px;
     background: #00FFCC;
 }
+
 
 .departure {
     margin-bottom: 1em;
