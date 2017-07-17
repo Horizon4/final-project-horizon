@@ -132,7 +132,6 @@ var model = (function() {
             } else {
                 window.location.href = "/search_confirm";
             }
-            console.log(itinerary);
         },
 
     }
