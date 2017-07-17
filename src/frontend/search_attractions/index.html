@@ -4,7 +4,6 @@
     <head>
         <meta charset="utf-8"/>
         <title>Horizon</title>
-
         <link rel="stylesheet" type="text/css" href="/_Shared/css/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" href="/_Shared/css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -22,12 +21,19 @@
         <div id="dataLists"></div>
         <div class="main_wrapper">
             <div id="outline">
-                <h1 id="searchTitle">Search for Accommodations</h1>
+                <h1 id="searchTitle">Search for Attractions</h1>
                 <form>
                     <div class="formField">
-                        <label for="destinationCity">Destination City</label>
-                        <input type="text" id="destinationCity" list = "datalist2">
-
+                        <label for="destinationCity">City</label>
+                        <input type="text" id="destinationCity" placeholder="Which city?" list = "datalist2">
+                        <label for="focusAttraction">Main Attraction Type</label>
+                        <input type="text" id="focusAttraction" placeholder="Main type of attraction you'd like to visit?"  list = "datalist1">
+                        <label for="attraction2">Priority 2 Attraction Type</label>
+                        <input type="text" id="attraction2" placeholder="Second attraction type you'd like to visit?"  list = "datalist1">
+                        <label for="attraction3">Priority 3 Attraction Type</label>
+                        <input type="text" id="attraction3" placeholder="Third attraction type you'd like to visit?"  list = "datalist1">
+                        <label for="attraction4">Priority 4 Attraction Type</label>
+                        <input type="text" id="attraction4" placeholder="Fourth attraction type you'd like to visit??"  list = "datalist1">
 
                         <input type="submit" id="submitButton" value="Save &amp; Continue">
                     </div>
@@ -35,7 +41,8 @@
             </div>
         </div>
         <div class="light-grey round">
-          <div class="container green round">Accommodation Preferences..</div>
+          <div class="container green round">Populating your itinerary with places to visit..</div>
         </div>
+
     </body>
 </html>

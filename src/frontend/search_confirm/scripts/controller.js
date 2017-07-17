@@ -14,6 +14,9 @@ var controller = (function() {
         getAccommodations: function(idx) {
             return model.getAccommodations(idx);
         },
+        getAttractions: function(idx) {
+            return model.getAttractions(idx);
+        },
 
         selectItinerary: function(idx) {
             return model.selectItinerary(idx);

@@ -96,6 +96,24 @@ var model = (function() {
 
             return result;
         },
+        getAttractions: function(idx) {
+            var result = [];
+
+            // Repackage attraction data
+            for (var i = 0; i < itineraryList[idx].attractions.length; i++) {
+                var attractionData = itineraryList[idx].attractions[i].result;
+
+                result.push({
+                    address: attractionData.formatted_address,
+                    phone: attractionData.formatted_phone_number,
+                    name: attractionData.name,
+                    website: attractionData.website,
+                    rating: attractionData.rating,
+                });
+            };
+
+            return result;
+        },
 
         selectItinerary: function(idx) {
             // Select itinerary

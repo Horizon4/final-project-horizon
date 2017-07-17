@@ -105,6 +105,13 @@ or trip as seamlessly as possible.
 - response: 500
     - body: username doesn't exist
 
+### description: get all recommended itineraries
+- request: `GET /api/completed/:destination` ex: `/api/completed/LAX`
+- response: 200
+    - body: List of objects selected from the itinerary recommended
+- response: 500
+    - body: destination doesn't exist doesn't exist
+
 ## Update
 
 #### description: add a flight to itinerary
@@ -125,17 +132,46 @@ or trip as seamlessly as possible.
 #### description: find accommodations
 - request: `PUT /api/findAccommodation/:id`
     - body: string
-      - destination: Los Angelos
+      - destination: Los Angeles
 - response: 200
 - response: 500
     - body: Invalid request
 
 
-#### description: find accommodations
+#### description: select an itinerary
 - request: `PUT /api/selected`
     - body: string
       - username: zain
       - selectedItinerary : {...} the object selected from the algorithm
+      - itineraryProcessId : 5959393e3e9e4c2a915e579a
 - response: 200
 - response: 500
     - body: Invalid request
+
+### description: find attractions
+- request: `PUT /api/findAttraction/:id`
+    - body: string
+      - destination: Los Angeles
+      - mainFocus: park
+      - attractions: [art_gallery, amusement, restaurant] // THIS HAS TO BE 3 elements exactly
+- response: 200
+- response: 500
+    - body: Invalid request
+
+#### description: update average rating for selected itinerary
+- request: `PUT /api/updateRating`
+    - body: string
+      - rating: 5
+      - itineraryId: id of an itinerary
+- response: 200
+- response: 500
+    - body: Failed to update ratings
+
+#### description: update number of recommendations and adds the user who recommended the itinerary to an array
+- request: `PUT /api/updateRecommendations`
+    - body: string
+      - username: nootnoot
+      - itineraryId: id of an itinerary
+- response: 200
+- response: 500
+    - body: Failed to update recommendations

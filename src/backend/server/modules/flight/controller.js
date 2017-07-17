@@ -4,7 +4,8 @@ import ItineraryProcess from '../itineraryProcess/model';
 var https = require('https');
 var querystring = require('querystring');
 var qpxAPI = require('qpx-express');
-var apiKey = 'AIzaSyDzCkC6l70Bep5IM2X_K3H09mQ0H1JbhOo';
+//var apiKey = 'AIzaSyDzCkC6l70Bep5IM2X_K3H09mQ0H1JbhOo';
+var apiKey = 'AIzaSyDB4eo_-80_HKyEMRJYTHWnZXfIGurYWEY';
 var qpx = new qpxAPI(apiKey);
 
 export const createFlight = (req, res) => {
