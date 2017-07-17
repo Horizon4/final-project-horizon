@@ -144,6 +144,22 @@ var model = (function() {
                 budget: itineraryList.incomplete[idx].price,
                 returnDate: itineraryList.incomplete[idx].returnDate,
             }
-        }
+        },
+
+        continueItinerary: function(idx) {
+            var itinerary = itineraryList.incomplete[idx];
+            Cookies.set("itineraryID", itinerary._id);
+
+            if (itinerary.flights.length === 0) {
+                window.location.href = "/search_flights";
+            } else if (itinerary.accommodations.length === 0) {
+                window.location.href = "/search_accommodation";
+            } else if (itinerary.attractions.length === 0) {
+                window.location.href = "/search_attractions";
+            } else {
+                window.location.href = "/search_confirm";
+            }
+        },
+
     }
 })();

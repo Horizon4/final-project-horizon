@@ -41,6 +41,12 @@ var view = (function() {
         return portion;
     }
 
+    function continueItinerary() {
+        var idx = $(this).data("idx");
+
+        controller.continueItinerary(idx);
+    }
+
     return {
         init: function() {
             $("#main_wrapper").tabs();
@@ -80,10 +86,13 @@ var view = (function() {
             itineraryList.append(itinerary);
 
         },
-        insertIncompleteItinerary: function(data) {
+        insertIncompleteItinerary: function(data, idx) {
             var itineraryList = $("#incomplete");
 
-            var itinerary = $("<div></div>").addClass("itinerary").click(); // TODO add click handler
+            var itinerary = $("<div></div>")
+                .addClass("itinerary")
+                .data("idx", idx)
+                .click(continueItinerary);
 
             for (key in data) {
                 itinerary.append("<div class='row'>" + key + ": " + data[key] + "</div>");
