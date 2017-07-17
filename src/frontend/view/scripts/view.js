@@ -54,15 +54,23 @@ var view = (function() {
         controller.continueItinerary(idx);
     }
 
+    function recommendItinerary() {
+        var idx = $(this).parent().data("idx");
+        controller.recommendItinerary(idx);
+    }
+
     return {
         init: function() {
             $("#main_wrapper").tabs();
             loadItineraries();
         },
-        insertCompletedItinerary: function(data) {
+        insertCompletedItinerary: function(data, idx) {
             var itineraryList = $("#complete");
 
-            var itinerary = $("<div></div>").addClass("completeItinerary");
+            var itinerary = $("<div></div>").addClass("completeItinerary").data("idx", idx);
+
+            var recommendButton = $("<button type='button'>Recommend</button>").click(recommendItinerary);
+            itinerary.append(recommendButton);
 
             // Flights
             itinerary.append(createFlight(data.flights));
@@ -87,13 +95,13 @@ var view = (function() {
 
             for (var i = 0; i < data.attractions.length; i++){
                 var attractionsData = data.attractions[i];
-                
+
                 attractions.append("<div class='bigInfo'>" + attractionsData["name"] + "</div>");
                 attractions.append("<div class='row'>" + attractionsData["address"] + "</div>");
                 attractions.append("<div>Phone: " + attractionsData["phone"] + "</div>");
                 attractions.append("<hr class='break' width='73%'>");
                 itinerary.append(attractions);
-                
+
             }
             itineraryList.append(itinerary);
 

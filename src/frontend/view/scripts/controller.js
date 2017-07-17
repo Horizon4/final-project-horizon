@@ -11,7 +11,7 @@ var controller = (function() {
             var cleanedUpData;
             if (type === "completed") {
                 for (var i = 0; i < model.getCompletedItineraryLength(); i++) {
-                    view.insertCompletedItinerary(model.getCompletedItinerary(i));
+                    view.insertCompletedItinerary(model.getCompletedItinerary(i), i);
                 }
             } else if (type === "incomplete") {
                 for (var i = 0; i < model.getIncompleteItineraryLength(); i++) {
@@ -24,6 +24,10 @@ var controller = (function() {
 
         continueItinerary: function(idx) {
             return model.continueItinerary(idx);
+        },
+
+        recommendItinerary: function(idx) {
+            model.recommendItinerary(idx);
         }
     }
 })();
