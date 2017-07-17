@@ -36,12 +36,10 @@ export const createItinerary = (req, res) => {
 
 export const selected = (req, res) => {
 
-  // var object = JSON.parse(req.body.selectedItinerary);
-  // console.log(object);
+  var object = JSON.parse(req.body.selectedItinerary);
   var { selectedItinerary, username } = req.body;
-  // var destination = object.destination;
-  // console.log(destination);
-  const select = new Itinerary({ username, selectedItinerary })
+  var destination = object.destination;
+  const select = new Itinerary({ username, selectedItinerary, destination })
 
   return ItineraryProcess.findById(req.body.ItineraryProcessId)
   .then((itineraryProcess) => {
@@ -50,12 +48,10 @@ export const selected = (req, res) => {
     return ItineraryProcess.update({'_id': req.body.ItineraryProcessId}, itineraryProcess)
   })
   .then((updated) => {
-    console.log('here updated');
-    console.log(select);
+
     return select.save()
   })
   .then((itinerary) => {
-    console.log('here');
     return res.status(200).json(itinerary);
   })
   .catch((err) => {
