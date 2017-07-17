@@ -16,6 +16,22 @@ a.ui-button:active,
 	color: #ffffff;
 }
 
+.row {
+    margin: 0.2em;
+}
+
+.itinerary {
+    display: block;
+    padding: 10px 15px;
+    margin: 0.3em;
+    background-color: #267F6E;
+    color: white;
+}
+
+.itinerary:hover {
+    background-color: #00CCA3;
+}
+
 #title {
     text-align: center;
     vertical-align: middle;

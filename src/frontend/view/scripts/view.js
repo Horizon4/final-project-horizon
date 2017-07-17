@@ -75,8 +75,8 @@ var view = (function() {
                     attractions.append("<div class='row'>" + key + ": " + attractionsData[key] + "</div>");
                 }
                 itinerary.append(attractions);
+                
             }
-
             itineraryList.append(itinerary);
 
         },
@@ -85,9 +85,11 @@ var view = (function() {
 
             var itinerary = $("<div></div>").addClass("itinerary").click(); // TODO add click handler
 
-            for (key in data) {
-                itinerary.append("<div class='row'>" + key + ": " + data[key] + "</div>");
-            }
+            itinerary.append("<div class='row'>From " + data["origin"] + " to " + data["destination"] + "</div>");
+            itinerary.append("<div class='row'>Leaving on: " + data["departureDate"] + "</div>");
+            itinerary.append("<div class='row'>Returning on: " + data["returnDate"] + "</div>");
+            itinerary.append("<div class='row'>$" + data["budget"] + " budget</div>");
+
 
             itineraryList.append(itinerary);
         }
