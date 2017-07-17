@@ -35,13 +35,22 @@ export const createItinerary = (req, res) => {
 }
 
 export const selected = (req, res) => {
+
   var object = JSON.parse(req.body.selectedItinerary);
   var { selectedItinerary, username } = req.body;
   var destination = object.destination;
-
   const select = new Itinerary({ username, selectedItinerary, destination })
 
-  select.save()
+  return ItineraryProcess.findById(req.body.ItineraryProcessId)
+  .then((itineraryProcess) => {
+    itineraryProcess.completed = true;
+
+    return ItineraryProcess.update({'_id': req.body.ItineraryProcessId}, itineraryProcess)
+  })
+  .then((updated) => {
+
+    return select.save()
+  })
   .then((itinerary) => {
     return res.status(200).json(itinerary);
   })
