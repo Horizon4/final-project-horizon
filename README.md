@@ -143,6 +143,7 @@ or trip as seamlessly as possible.
     - body: string
       - username: zain
       - selectedItinerary : {...} the object selected from the algorithm
+      - itineraryProcessId : 5959393e3e9e4c2a915e579a
 - response: 200
 - response: 500
     - body: Invalid request
