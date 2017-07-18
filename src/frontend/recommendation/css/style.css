@@ -41,7 +41,7 @@ button.accordion.active, button.accordion:hover {
     margin: 0.5em;
 }
 
-.completeItinerary {
+.itinerary {
     display: block;
     /*padding: 10px 15px;*/
     padding: 0px 15px;
@@ -57,7 +57,7 @@ button.accordion.active, button.accordion:hover {
 .break{
     margin-bottom: 1em;
     margin-top: 1em;
-    border: 0; 
+    border: 0;
     height: 1px;
     background: #00FFCC;
 }
