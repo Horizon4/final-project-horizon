@@ -122,6 +122,7 @@ var model = (function() {
                 type: 'PUT',
                 data: {"username": Cookies.getJSON("username"),
                     "selectedItinerary": JSON.stringify(itineraryList[idx]),
+                    "ItineraryProcessId": Cookies.getJSON("itineraryID"),
                 },
                 async: false,
                 success: function(data) {

@@ -3,12 +3,12 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>title</title>
+        <title>Horizon</title>
 
         <link rel="stylesheet" type="text/css" href="/_Shared/css/jquery-ui.css" />
         <link rel="stylesheet" type="text/css" href="/_Shared/css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
         <script src="/_Shared/scripts/jquery-3.2.1.js"></script>
         <script src="/_Shared/scripts/jquery-ui.js"></script>
         <script src="/_Shared/scripts/js.cookie.js"></script>
@@ -20,8 +20,18 @@
     </head>
     <body>
         <div id="nav_bar"></div>
+        <div id="dataLists"></div>
         <div id="main_wrapper">
             <!-- Your code here -->
+            <form>
+                <div class="formField">
+                    <label for="origin">Destination City</label>
+                    <input type="text" id="origin" placeholder="Which city would you like to explore?" list = "datalist3">
+                    <input type="submit" id="explore" value="Explore">
+                </div>
+            </form>
+
+            <div id="itineraryList"></div>
         </div>
     </body>
 </html>

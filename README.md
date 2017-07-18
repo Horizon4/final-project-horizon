@@ -105,6 +105,13 @@ or trip as seamlessly as possible.
 - response: 500
     - body: username doesn't exist
 
+### description: get all recommended itineraries
+- request: `GET /api/getRecommendations/:destination` ex: `/api/getRecommendations/LAX`
+- response: 200
+    - body: List of objects selected from the itinerary recommended
+- response: 500
+    - body: destination doesn't exist doesn't exist
+
 ## Update
 
 #### description: add a flight to itinerary
@@ -136,6 +143,7 @@ or trip as seamlessly as possible.
     - body: string
       - username: zain
       - selectedItinerary : {...} the object selected from the algorithm
+      - ItineraryProcessId : 5959393e3e9e4c2a915e579a **NOTE: ItineraryProcessId starts with CAPS**
 - response: 200
 - response: 500
     - body: Invalid request

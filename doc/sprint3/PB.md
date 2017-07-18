@@ -112,13 +112,3 @@
 
 - Priority = 3
 - Point = 6
-
-### Story 11
-
-- As a developer, when a user searches for an itinerary and if no data exists in the database return with the message saying that no recommendations exist
-
-- Condition of Satisfaction
-    1. When a user searches for a recommendations, if nothing exists show a message saying no recommendations
-    
-- Priority = 2
-- Points = 2

@@ -5,6 +5,10 @@ const itinerarySchema = new Schema({
     type: String,
     required: true
   },
+  destination: {
+    type: String,
+    required: true
+  },
   selectedItinerary: {
     type: {},
     required: true
@@ -12,7 +16,7 @@ const itinerarySchema = new Schema({
   recommendations: {
     type: Array
   },
-  newNumberOfRecommendations: {
+  numberOfRecommendations: {
     type: Number,
     default: 0
   },
