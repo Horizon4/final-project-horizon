@@ -1,6 +1,7 @@
 $(document).ready(function(){
     controller.init();
     view.init();
+
 });
 
 var view = (function() {
@@ -10,6 +11,22 @@ var view = (function() {
         controller.getItineraries("incomplete");
     }
 
+    function accordionButtons() {
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].onclick = function() {
+            this.classList.toggle("active");
+            var itinerary = this.nextElementSibling;
+            if (itinerary.style.maxHeight){
+              itinerary.style.maxHeight = null;
+              //itinerary.style.padding = "0px 15px";
+            } else {
+              itinerary.style.maxHeight = itinerary.scrollHeight + "px";
+              //itinerary.style.padding = "10px 15px";
+            } 
+          }
+        }
+    }
 
     function createFlight(flightData) {
         var flight = $("<div></div>").addClass("flight");
@@ -24,7 +41,7 @@ var view = (function() {
 
         for (var i = 0; i < flightData.segment.length; i++) {
             var segment = flightData.segment[i];
-            portion.append("<div class='bigInfo'>" + portionName + " Flight " + segment.flightNo + " From:" + "</div>");
+            portion.append("<div class='bigInfo' style='margin-top:10px'>" + portionName + " Flight " + segment.flightNo + " From:" + "</div>");
 
             for (var j = 0; j < segment.leg.length; j++) {
                 var leg = segment.leg[j];
@@ -63,7 +80,9 @@ var view = (function() {
         init: function() {
             $("#main_wrapper").tabs();
             loadItineraries();
+            accordionButtons();
         },
+
         insertCompletedItinerary: function(data, idx) {
             var itineraryList = $("#complete");
 
@@ -103,8 +122,9 @@ var view = (function() {
                 itinerary.append(attractions);
 
             }
+            itineraryList.append("<button class='accordion'>Itinerary " + data.flights.departure.segment[0].leg[0].departureTime.substring(0, 10) + "</button>");
             itineraryList.append(itinerary);
-
+            accordionButtons();
         },
         insertIncompleteItinerary: function(data, idx) {
             var itineraryList = $("#incomplete");

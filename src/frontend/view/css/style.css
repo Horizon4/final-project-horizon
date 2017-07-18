@@ -16,8 +16,24 @@ a.ui-button:active,
 	color: #ffffff;
 }
 
+button.accordion {
+    background-color: #267F6E;
+    color: white;
+    padding: 15px;
+    border: none;
+    text-align: left;
+    outline: none;
+    width: 100%;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #00CCA3;
+}
 
 .bigInfo {
+    margin; 0.3em;
     font-size: 1.5em;
 }
 
@@ -37,12 +53,15 @@ a.ui-button:active,
 
 .completeItinerary {
     display: block;
-    padding: 10px 15px;
-    margin: 0.3em;
+    /*padding: 10px 15px;*/
+    padding: 0px 15px;
     background-color: #267F6E;
     color: white;
     text-align: center;
     text-decoration: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
 }
 
 .break{
