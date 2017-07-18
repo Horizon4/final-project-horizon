@@ -106,8 +106,8 @@ var view = (function() {
                 attractions.append("<hr class='break' width='73%'>");
                 itinerary.append(attractions);
                 
-            }  //data.flights.segment[0].leg[0].departureTime.substring(0, 10) +
-            itineraryList.append("<button class='accordion'>Itinerary" + data.flights.segment[0].leg[0].departureTime.substring(0, 10) + "</button>");
+            }
+            itineraryList.append("<button class='accordion'>Itinerary " + data.flights.departure.segment[0].leg[0].departureTime.substring(0, 10) + "</button>");
             itineraryList.append(itinerary);
             accordionButtons();
         },
