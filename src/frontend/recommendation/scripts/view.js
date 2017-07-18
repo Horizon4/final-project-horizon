@@ -11,6 +11,23 @@ var view = (function() {
         var destination = $("#origin").val();
         controller.getItineraries(destination);
     }
+    function accordionButtons() {
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].onclick = function() {
+            this.classList.toggle("active");
+            var itinerary = this.nextElementSibling;
+            if (itinerary.style.maxHeight){
+              itinerary.style.maxHeight = null;
+              //itinerary.style.padding = "0px 15px";
+            } else {
+              itinerary.style.maxHeight = itinerary.scrollHeight + "px";
+              //itinerary.style.padding = "10px 15px";
+            } 
+          }
+        }
+    }
+
 
     function createFlight(flightData) {
         var flight = $("<div></div>").addClass("flight");
@@ -96,9 +113,11 @@ var view = (function() {
                 attractions.append("<div>Phone: " + attractionsData["phone"] + "</div>");
                 attractions.append("<hr class='break' width='73%'>");
                 itinerary.append(attractions);
-
+                
             }
+            itineraryList.append("<button class='accordion'>Itinerary " + data.flights.departure.segment[0].leg[0].departureTime.substring(0, 10) + "</button>");
             itineraryList.append(itinerary);
+            accordionButtons();
         }
     }
 })();
