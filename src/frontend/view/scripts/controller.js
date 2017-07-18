@@ -28,6 +28,9 @@ var controller = (function() {
 
         recommendItinerary: function(idx) {
             model.recommendItinerary(idx);
+        },
+        voteItinerary: function(idx, vote) {
+            model.voteItinerary(idx, vote);
         }
     }
 })();

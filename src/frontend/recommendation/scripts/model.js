@@ -107,6 +107,8 @@ var model = (function() {
             itineraryList = [];
             for (var i = 0; i < data.length; i++) {
                 var itinerary = JSON.parse(data[i].selectedItinerary);
+                itinerary.rating = data[i].rating;
+                itinerary.votes = data[i].numberOfRatings;
                 itineraryList.push(itinerary);
             }
         },
@@ -119,6 +121,8 @@ var model = (function() {
                 flights: getFlights(itineraryList[idx]),
                 accommodation: getAccommodations(itineraryList[idx]),
                 attractions: getAttractions(itineraryList[idx]),
+                rating: Math.round(itineraryList[idx].rating),
+                votes: itineraryList[idx].votes,
             };
         }
     }

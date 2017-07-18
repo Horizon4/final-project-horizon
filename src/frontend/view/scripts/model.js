@@ -178,6 +178,21 @@ var model = (function() {
                     console.log(data);
                 }
             });
+        },
+        voteItinerary: function(idx, vote) {
+            var result = $.ajax({
+                url: "/api/updateRating",
+                data: {
+                    rating: vote,
+                    itineraryId: itineraryList.completed[idx].id,
+                },
+                type: 'PUT',
+                success: function(data) {
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
         }
 
     }
