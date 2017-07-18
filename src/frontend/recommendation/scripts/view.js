@@ -65,7 +65,6 @@ var view = (function() {
 
             var itinerary = $("<div></div>").addClass("itinerary");
 
-            console.log(data);
             itinerary.append("<div class='rating'>" + data.rating + "% liked this itinerary of " + data.votes + " votes.</div>");
 
             // Flights
