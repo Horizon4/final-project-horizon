@@ -23,7 +23,7 @@ var view = (function() {
             } else {
               itinerary.style.maxHeight = itinerary.scrollHeight + "px";
               //itinerary.style.padding = "10px 15px";
-            } 
+            }
           }
         }
     }
@@ -76,6 +76,20 @@ var view = (function() {
         controller.recommendItinerary(idx);
     }
 
+    function voteItinerary() {
+        var vote = $(this).data("vote") * 100;
+        var idx = $(this).parent().data("idx");
+        controller.voteItinerary(idx, vote);
+
+        if (vote === 100) {
+            $(this).addClass("up-vote");
+            //$(this).addClass("up-vote", {duration: 1000, easing: "easeOutCubic"});
+        } else {
+            $(this).addClass("down-vote");
+            //$(this).removeClass("down-vote", {duration: 1000, easing: "easeOutCubic"});
+        }
+    }
+
     return {
         init: function() {
             $("#main_wrapper").tabs();
@@ -88,8 +102,14 @@ var view = (function() {
 
             var itinerary = $("<div></div>").addClass("completeItinerary").data("idx", idx);
 
-            var recommendButton = $("<button type='button'>Recommend</button>").click(recommendItinerary);
+            var downVote = $("<div class='vote'></div>").load("/_Shared/images/thumb-down.svg").data("vote", 0).click(voteItinerary);
+            itinerary.append(downVote);
+
+            var recommendButton = $("<button class='recommendBtn' type='button'>Recommend</button>").click(recommendItinerary);
             itinerary.append(recommendButton);
+
+            var upVote = $("<div class='vote'></div>").load("/_Shared/images/thumb-up.svg").data("vote", 1).click(voteItinerary);
+            itinerary.append(upVote);
 
             // Flights
             itinerary.append(createFlight(data.flights));

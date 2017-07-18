@@ -6,6 +6,11 @@ var model = (function() {
         var flightData = itinerary.flight;
         var result = {};
 
+        if (flightData === undefined) {
+            alert("model.js: It looks like you're missing flight data. Something definitely broke.")
+            return {};
+        }
+
         // Repackage flight data
         result.totalPrice = flightData.saleTotal;
         result.departure = {
@@ -50,6 +55,11 @@ var model = (function() {
     function getAccommodations(itinerary) {
         accommodationData = itinerary.accommodation.result;
 
+        if (accommodationData === undefined) {
+            alert("model.js: It looks like you're missing accommodation data. Something definitely broke.")
+            return {};
+        }
+
         // Repackage accommodation data
         var result = {
             address: accommodationData.formatted_address,
@@ -64,6 +74,11 @@ var model = (function() {
     /** Repackage attraction data **/
     function getAttractions(itinerary) {
         var result = [];
+
+        if (itinerary.attractions === undefined) {
+            alert("model.js: It looks like you're missing attractions data. Try clearing your database and try again.")
+            return result;
+        }
 
         // Repackage attraction data
         for (var i = 0; i < itinerary.attractions.length; i++) {
@@ -107,6 +122,8 @@ var model = (function() {
             itineraryList = [];
             for (var i = 0; i < data.length; i++) {
                 var itinerary = JSON.parse(data[i].selectedItinerary);
+                itinerary.rating = data[i].rating;
+                itinerary.votes = data[i].numberOfRatings;
                 itineraryList.push(itinerary);
             }
         },
@@ -119,6 +136,8 @@ var model = (function() {
                 flights: getFlights(itineraryList[idx]),
                 accommodation: getAccommodations(itineraryList[idx]),
                 attractions: getAttractions(itineraryList[idx]),
+                rating: Math.round(itineraryList[idx].rating),
+                votes: itineraryList[idx].votes,
             };
         }
     }
