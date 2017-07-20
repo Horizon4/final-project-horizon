@@ -17,6 +17,7 @@ var searchButtonCheck = (function() {
 
     function searchSubmit(e) {
         e.preventDefault();
+        components.showLoading();
 
         // Get data
         var origin = $("#origin").val();
@@ -27,6 +28,7 @@ var searchButtonCheck = (function() {
 
         // Attempt to create new itinerary
         var success = controller.send(origin, destination, departureDate, returnDate, budget);
+        components.hideLoading();
 
         if (!success){
             alert("Oops, something broke!");

@@ -17,6 +17,7 @@ var searchButtonCheck = (function() {
 
     function searchSubmit(e) {
         e.preventDefault();
+        components.showLoading();
 
         // Get data
         var price = $("#price").val();
@@ -28,6 +29,7 @@ var searchButtonCheck = (function() {
 
         // Attempt to search for flights
         var success = controller.send(price, adult, child, senior, cabin, carrier);
+        components.hideLoading();
 
         if (!success){
             alert("Oops, something broke!");

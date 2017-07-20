@@ -24,15 +24,15 @@
                 <h1 id="searchTitle">Search for Attractions</h1>
                 <form>
                     <div class="formField">
-                        <label for="destinationCity">City</label>
+                        <label for="destinationCity"><div class="red">*</div>City</label>
                         <input type="text" id="destinationCity" placeholder="Which city?" list = "datalist2">
-                        <label for="focusAttraction">Main Attraction Type</label>
+                        <label for="focusAttraction"><div class="red">*</div>Main Attraction Type</label>
                         <input type="text" id="focusAttraction" placeholder="Main type of attraction you'd like to visit?"  list = "datalist1">
-                        <label for="attraction2">Priority 2 Attraction Type</label>
+                        <label for="attraction2"><div class="red">*</div>Priority 2 Attraction Type</label>
                         <input type="text" id="attraction2" placeholder="Second attraction type you'd like to visit?"  list = "datalist1">
-                        <label for="attraction3">Priority 3 Attraction Type</label>
+                        <label for="attraction3"><div class="red">*</div>Priority 3 Attraction Type</label>
                         <input type="text" id="attraction3" placeholder="Third attraction type you'd like to visit?"  list = "datalist1">
-                        <label for="attraction4">Priority 4 Attraction Type</label>
+                        <label for="attraction4"><div class="red">*</div>Priority 4 Attraction Type</label>
                         <input type="text" id="attraction4" placeholder="Fourth attraction type you'd like to visit??"  list = "datalist1">
 
                         <input type="submit" id="submitButton" value="Save &amp; Continue">
@@ -43,6 +43,7 @@
         <div class="light-grey round">
           <div class="container green round">Populating your itinerary with places to visit..</div>
         </div>
+        <div id="loader"></div>
 
     </body>
 </html>
