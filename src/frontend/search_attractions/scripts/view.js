@@ -17,8 +17,7 @@ var searchButtonCheck = (function() {
 
     function searchSubmit(e) {
         e.preventDefault();
-        //alert("Attractions isn't implemented yet. Click to continue to the confirmation page.");
-        //window.location.href = "/search_confirm";
+        components.showLoading();
 
         // Get data
         var destination = $("#destinationCity").val();
@@ -29,6 +28,7 @@ var searchButtonCheck = (function() {
 
         // Attempt to search for attractions
         var success = controller.send(destination, first, second, third, fourth);
+        components.hideLoading();
 
         if (!success){
             alert("Oops, something broke!");

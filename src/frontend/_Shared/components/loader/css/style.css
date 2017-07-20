@@ -1,30 +1,20 @@
-html {
-    -webkit-transition: background-color 1s;
-    transition: background-color 1s;
-}
-html, body {
-    /* For the loading indicator to be vertically centered ensure */
-    /* the html and body elements take up the full viewport */
-    min-height: 100%;
-}
-html.loading {
-    /* Replace #333 with the background-color of your choice */
-    /* Replace loading.gif with the loading image of your choice */
-    background: #333 url('loading.gif') no-repeat 50% 50%;
+.loading_img {
 
-    /* Ensures that the transition only runs in one direction */
-    -webkit-transition: background-color 0;
-    transition: background-color 0;
 }
-body {
-    -webkit-transition: opacity 1s ease-in;
-    transition: opacity 1s ease-in;
-}
-html.loading body {
-    /* Make the contents of the body opaque during loading */
-    opacity: 0;
 
-    /* Ensures that the transition only runs in one direction */
-    -webkit-transition: opacity 0;
-    transition: opacity 0;
+.loading_img .overlay {
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.loading_img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
