@@ -4,3 +4,9 @@
 body {
     background-image: url("d3.png");
 }
+
+.red{
+  color: red;
+  display:inline;
+  float:left;
+}
